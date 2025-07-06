@@ -1,6 +1,6 @@
 # Rigt assignment
 
-A simple admin dashboard build with Vue, Typescript, Pinia, I18n, zod and Vue router
+A simple admin dashboard build with Vue, Vuetify, Typescript, Pinia, I18n, zod and Vue router
 
 ## Project Setup
 
@@ -27,4 +27,3 @@ and
 ```sh
 bun run dev
 ```
-# rigt-assignment
