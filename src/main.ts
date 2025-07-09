@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import '@/assets/main.css'
 import 'vuetify/styles'
 import '@mdi/font/css/materialdesignicons.css'
 import { registerPlugins } from '@/plugins/plugins.ts'

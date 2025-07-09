@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { languageOptions } from '@/features/constants/languageOptions'
-import { useLanguage } from '@/features/composables/useLanguage'
+import { languageOptions } from '@/constants/languageOptions'
+import { useLanguage } from '@/composables/useLanguage'
 
 const { selectedLocale, changeLanguage } = useLanguage()
 </script>
@@ -13,7 +13,8 @@ const { selectedLocale, changeLanguage } = useLanguage()
     item-value="code"
     @update:model-value="changeLanguage"
     max-width="120"
-    class="ma-4 text-primary bg-background"
+    class="text-primary bg-background ma-3"
+    variant="solo"
     density="compact"
   />
 </template>

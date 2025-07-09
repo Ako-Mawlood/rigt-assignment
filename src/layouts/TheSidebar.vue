@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { sidebarTabs } from '@/features/constants/sidebarTabs'
-import { useSidebarController } from '@/features/composables/useSidebarController'
+import { sidebarTabs } from '@/constants/sidebarTabs'
+import { useSidebarController } from '@/composables/useSidebarController'
 
 const { rail, drawer, isTemporary, isPermanent } = useSidebarController()
 </script>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLanguage } from '@/features/composables/useLanguage'
+import { useLanguage } from '@/composables/useLanguage'
 useLanguage()
 </script>
 
