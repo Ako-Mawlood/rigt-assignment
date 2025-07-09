@@ -6,5 +6,5 @@ import { i18n } from '@/plugins/i18n'
 import type { App } from 'vue'
 
 export function registerPlugins(app: App) {
-  app.use(createPinia).use(router).use(vuetify).use(i18n).use(axios).mount('#app')
+  return app.use(createPinia).use(router).use(vuetify).use(i18n).use(axios)
 }

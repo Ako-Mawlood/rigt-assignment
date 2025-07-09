@@ -7,4 +7,4 @@ import App from '@/App.vue'
 
 const app = createApp(App)
 
-registerPlugins(app)
+registerPlugins(app).mount('#app')
