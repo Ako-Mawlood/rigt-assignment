@@ -12,7 +12,8 @@ const { selectedLocale, changeLanguage } = useLanguage()
     item-title="label"
     item-value="code"
     @update:model-value="changeLanguage"
-    max-width="140"
-    variant="solo"
+    max-width="120"
+    class="ma-4 text-primary bg-background"
+    density="compact"
   />
 </template>

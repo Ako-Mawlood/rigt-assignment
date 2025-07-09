@@ -5,9 +5,9 @@ import ChangeLang from '@/features/components/ChangeLang.vue'
 const { toggleSidebar } = useSidebarController()
 </script>
 <template>
-  <v-app-bar color="black" class="d-flex align-center px-4">
+  <v-app-bar color="background" density="compact" flat class="d-flex align-center">
     <template v-slot:prepend>
-      <v-btn icon @click="toggleSidebar">
+      <v-btn class="text-primary" icon @click="toggleSidebar">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
     </template>

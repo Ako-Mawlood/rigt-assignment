@@ -8,7 +8,7 @@ const { rail, drawer, isTemporary, isPermanent } = useSidebarController()
 <template>
   <v-navigation-drawer
     v-model="drawer"
-    color="black"
+    class="bg-background text-primary"
     :rail="rail"
     :temporary="isTemporary"
     :permanent="isPermanent"

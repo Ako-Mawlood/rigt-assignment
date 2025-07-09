@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import TheSidebar from '@/features/dashboard/layouts/TheSidebar.vue'
-import TheHeader from '@/features/dashboard/layouts/TheHeader.vue'
+import TheSidebar from '@/features/layouts/TheSidebar.vue'
+import TheHeader from '@/features/layouts/TheHeader.vue'
 </script>
 
 <template>
