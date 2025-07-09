@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { languageOptions } from '@/shared/constants/languageOptions'
-import { useLanguage } from '@/shared/composables/useLanguage'
+import { languageOptions } from '@/features/constants/languageOptions'
+import { useLanguage } from '@/features/composables/useLanguage'
 
 const { selectedLocale, changeLanguage } = useLanguage()
 </script>

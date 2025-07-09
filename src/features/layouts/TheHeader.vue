@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useSidebarController } from '@/features/dashboard/composables/useSidebarController'
-import ChangeLang from '@/shared/components/ChangeLang.vue'
+import { useSidebarController } from '@/features/composables/useSidebarController'
+import ChangeLang from '@/features/components/ChangeLang.vue'
 
 const { toggleSidebar } = useSidebarController()
 </script>
