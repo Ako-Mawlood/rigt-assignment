@@ -1,5 +1,5 @@
 import { useI18n } from 'vue-i18n'
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted } from 'vue'
 import { vuetify } from '@/plugins/vuetify'
 
 type LangType = 'en' | 'ku'
@@ -10,12 +10,9 @@ export function useLanguage() {
 
   const { locale } = useI18n()
 
-  const isRtl = computed(() => locale.value === 'ku')
-
   function changeLanguage(lang: LangType) {
     locale.value = lang
     localStorage.setItem('language', lang)
-    document.documentElement.setAttribute('dir', isRtl.value ? 'rtl' : 'ltr')
     vuetify.locale.current.value = lang
   }
 
