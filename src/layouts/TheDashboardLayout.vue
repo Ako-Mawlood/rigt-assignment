@@ -1,0 +1,14 @@
+<script setup lang="ts">
+import TheSidebar from '@/layouts/TheSidebar.vue'
+import TheHeader from '@/layouts/TheHeader.vue'
+</script>
+
+<template>
+  <v-layout>
+    <TheSidebar />
+    <TheHeader />
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-layout>
+</template>
