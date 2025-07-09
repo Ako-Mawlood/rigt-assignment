@@ -8,7 +8,7 @@ const { rail, drawer, isTemporary, isPermanent } = useSidebarController()
 <template>
   <v-navigation-drawer
     v-model="drawer"
-    class="bg-background text-primary"
+    class="bg-background"
     :rail="rail"
     :temporary="isTemporary"
     :permanent="isPermanent"
@@ -18,7 +18,12 @@ const { rail, drawer, isTemporary, isPermanent } = useSidebarController()
     </v-list>
 
     <v-list density="compact" v-for="tab in sidebarTabs" :key="tab.id" nav>
-      <v-list-item :to="tab.path" :prepend-icon="tab.icon" :title="$t(tab.title)" />
+      <v-list-item
+        active-class="text-primary"
+        :to="tab.path"
+        :prepend-icon="tab.icon"
+        :title="$t(tab.title)"
+      />
     </v-list>
   </v-navigation-drawer>
 </template>
