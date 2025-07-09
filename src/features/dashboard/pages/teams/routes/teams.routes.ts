@@ -1,5 +1,4 @@
-import TheTeamsPage from '../TheTeamsPage.vue'
-
+import TheTeamsPage from '@/features/dashboard/pages/teams/TheTeamsPage.vue'
 export const teamsRoutes = {
   path: '/dashboard/teams',
   component: TheTeamsPage,
