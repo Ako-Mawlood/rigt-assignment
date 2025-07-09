@@ -1,0 +1,103 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "name": "Development",
+      "type": "Engineering",
+      "imageUrl": "https://images.unsplash.com/photo-1581090700227-1b5f7926b39d?fit=crop&w=600&q=80",
+      "location": "Head Office",
+      "createdAt": "2023-01-10"
+    },
+    {
+      "id": 2,
+      "name": "Design",
+      "type": "Creative",
+      "imageUrl": "https://images.unsplash.com/photo-1611262588024-d12430b98930?fit=crop&w=600&q=80",
+      "location": "Remote",
+      "createdAt": "2023-02-14"
+    },
+    {
+      "id": 3,
+      "name": "Marketing",
+      "type": "Business",
+      "imageUrl": "https://images.unsplash.com/photo-1581090700226-1b5f7926b39e?fit=crop&w=600&q=80",
+      "location": "Branch Office",
+      "createdAt": "2023-03-20"
+    },
+    {
+      "id": 4,
+      "name": "HR",
+      "type": "Administrative",
+      "imageUrl": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?fit=crop&w=600&q=80",
+      "location": "Head Office",
+      "createdAt": "2023-04-05"
+    }
+  ],
+  "staffs": [
+    {
+      "id": 1,
+      "firstName": "Ako",
+      "lastName": "Mawlood",
+      "teamType": "Engineering",
+      "teamId": 1,
+      "description": "Frontend Developer specialized in React and Vue.",
+      "date": "2024-11-10",
+      "status": "active",
+      "email": "ako@example.com",
+      "phone": "+9647500000001",
+      "avatar": "https://randomuser.me/api/portraits/men/75.jpg"
+    },
+    {
+      "id": 2,
+      "firstName": "Sara",
+      "lastName": "Omar",
+      "teamType": "Creative",
+      "teamId": 2,
+      "description": "UI/UX Designer with a strong background in mobile apps.",
+      "date": "2023-07-22",
+      "status": "active",
+      "email": "sara@example.com",
+      "phone": "+9647500000002",
+      "avatar": "https://randomuser.me/api/portraits/women/65.jpg"
+    },
+    {
+      "id": 3,
+      "firstName": "Rebaz",
+      "lastName": "Ahmed",
+      "teamType": "Business",
+      "teamId": 3,
+      "description": "Marketing Specialist focused on digital outreach.",
+      "date": "2024-01-12",
+      "status": "inactive",
+      "email": "rebaz@example.com",
+      "phone": "+9647500000003",
+      "avatar": "https://randomuser.me/api/portraits/men/52.jpg"
+    },
+    {
+      "id": 4,
+      "firstName": "Hawkar",
+      "lastName": "Karim",
+      "teamType": "Administrative",
+      "teamId": 4,
+      "description": "HR Manager handling recruitment and employee relations.",
+      "date": "2022-10-08",
+      "status": "active",
+      "email": "hawkar@example.com",
+      "phone": "+9647500000004",
+      "avatar": "https://randomuser.me/api/portraits/men/30.jpg"
+    },
+    {
+      "id": 5,
+      "firstName": "Dilan",
+      "lastName": "Rashid",
+      "teamType": "Engineering",
+      "teamId": 1,
+      "description": "Backend Developer working on Node.js and MongoDB.",
+      "date": "2023-09-15",
+      "status": "on leave",
+      "email": "dilan@example.com",
+      "phone": "+9647500000005",
+      "avatar": "https://randomuser.me/api/portraits/women/40.jpg"
+    }
+  ]
+}
