@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { useLanguage } from '@/composables/useLanguage'
+useLanguage()
+</script>
+
 <template>
-  <div></div>
+  <v-app>
+    <router-view />
+  </v-app>
 </template>
