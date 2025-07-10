@@ -1,4 +1,4 @@
-import TheDashboardLayout from '@/features/dashboard/layouts/TheDashboardLayout.vue'
+import TheDashboardLayout from '@/layouts/TheDashboardLayout.vue'
 import { teamsRoutes } from '@/features/dashboard/pages/teams/routes/teams.routes'
 import { staffsRoutes } from '@/features/dashboard/pages/staffs/staffs.routes'
 
