@@ -7,6 +7,7 @@ import { getTeams } from '@/features/dashboard/pages/teams/api/teams.api'
 import SearchField from '@/components/SearchField.vue'
 
 import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard.vue'
+import PaginationControls from '@/components/PaginationControls.vue'
 
 const searchRef = ref<InstanceType<typeof SearchField> | null>(null)
 const route = useRoute()
@@ -46,6 +47,13 @@ const { data: teams, refetch } = useQuery<TeamType[]>({
             </v-col>
           </v-row>
         </v-container>
+      </template>
+      <template #footer>
+        <PaginationControls
+          v-model:page="page"
+          v-model:itemsPerPage="teamsPerPage"
+          @refetch="refetch"
+        />
       </template>
     </v-data-iterator>
   </div>
