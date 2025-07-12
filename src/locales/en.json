@@ -3,5 +3,7 @@
   "teams": "Teams",
   "staffs": "Staffs",
   "search": "Search",
-  "view team": "View team"
+  "view team": "View team",
+  "delete": "Delete",
+  "edit": "Edit"
 }

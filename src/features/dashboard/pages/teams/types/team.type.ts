@@ -1,5 +1,5 @@
 export type TeamType = {
-  id: string
+  id: number
   name: string
   type: string
   imageUrl: string
