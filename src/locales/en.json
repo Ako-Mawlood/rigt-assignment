@@ -1,5 +1,9 @@
 {
   "rigt": "Rigt Official",
   "teams": "Teams",
-  "staffs": "Staffs"
+  "staffs": "Staffs",
+  "search": "Search",
+  "view team": "View team",
+  "delete": "Delete",
+  "edit": "Edit"
 }
