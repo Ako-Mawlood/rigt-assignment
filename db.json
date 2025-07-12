@@ -2,17 +2,17 @@
   "teams": [
     {
       "id": 1,
-      "name": "Development",
+      "name": "D",
       "type": "Engineering",
-      "imageUrl": "https://images.unsplash.com/photo-1581090700227-1b5f7926b39d?fit=crop&w=600&q=80",
+      "imageUrl": "http://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=3368&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "location": "Head Office",
       "createdAt": "2023-01-10"
     },
     {
       "id": 2,
       "name": "HR",
-      "type": "rek",
-      "imageUrl": "https://images.unsplash.com/photo-1581090700227-1b5f7926b39d?fit=crop&w=600&q=80",
+      "type": "active",
+      "imageUrl": "http://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=3368&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "location": "Head Office",
       "createdAt": "2023-01-10"
     },
@@ -20,15 +20,55 @@
       "id": 3,
       "name": "Teams",
       "type": "active",
-      "imageUrl": "https://images.unsplash.com/photo-1581090700227-1b5f7926b39d?fit=crop&w=600&q=80",
+      "imageUrl": "http://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=3368&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "location": "Head Office",
       "createdAt": "2023-01-10"
     },
     {
       "id": 4,
+      "name": "Management",
+      "type": "active",
+      "imageUrl": "http://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=3368&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location": "Head Office",
+      "createdAt": "2023-01-10"
+    },
+    {
+      "id": 5,
+      "name": "CEO",
+      "type": "active",
+      "imageUrl": "http://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=3368&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location": "Head Office",
+      "createdAt": "2023-01-10"
+    },
+    {
+      "id": 6,
+      "name": "am",
+      "type": "active",
+      "imageUrl": "http://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=3368&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location": "Head Office",
+      "createdAt": "2023-01-10"
+    },
+    {
+      "id": 7,
       "name": "am",
       "type": "res",
-      "imageUrl": "https://images.unsplash.com/photo-1581090700227-1b5f7926b39d?fit=crop&w=600&q=80",
+      "imageUrl": "http://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=3368&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location": "Head Office",
+      "createdAt": "2023-01-10"
+    },
+    {
+      "id": 8,
+      "name": "Teams",
+      "type": "active",
+      "imageUrl": "http://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=3368&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "location": "Head Office",
+      "createdAt": "2023-01-10"
+    },
+    {
+      "id": 9,
+      "name": "am",
+      "type": "res",
+      "imageUrl": "http://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=3368&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "location": "Head Office",
       "createdAt": "2023-01-10"
     }
