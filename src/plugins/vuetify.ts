@@ -12,7 +12,7 @@ const lightTheme: ThemeDefinition = {
     surface: '#FFFFFF',
     onSurface: '#121212',
     onSurfaceHigh: '#222222',
-    onSurfaceMedium: '#666666',
+    onSurfaceMedium: '#888888',
     background: '#F6F6F6',
     onBackground: '#121212',
     outline: '#E5E7EB',
