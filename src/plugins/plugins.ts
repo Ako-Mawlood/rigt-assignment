@@ -6,5 +6,7 @@ import { VueQueryPlugin } from '@tanstack/vue-query'
 import type { App } from 'vue'
 
 export function registerPlugins(app: App) {
+
   return app.use(createPinia).use(router).use(vuetify).use(i18n).use(VueQueryPlugin)
+
 }

@@ -15,7 +15,7 @@ export default defineConfigWithVueTs(
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': 'error',
       'vue/multi-word-component-names': 'off',
-      'no-console-log': 'error',
+      'no-console': 'error',
     },
   },
 
