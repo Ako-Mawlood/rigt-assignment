@@ -1,0 +1,100 @@
+<script setup lang="ts">
+import { useQuery } from '@tanstack/vue-query'
+import { useRoute, useRouter } from 'vue-router'
+import { getTeam } from '@/features/dashboard/pages/teams/api/teams.api'
+import { ref } from 'vue'
+import type { TeamType } from '@/features/dashboard/pages/teams/types/team.type'
+
+const route = useRoute()
+const isOpen = ref(true)
+
+const id = Number(route.params.id)
+
+const {
+  data: team,
+  isLoading,
+  isError,
+} = useQuery<TeamType>({
+  queryKey: ['team', id],
+  queryFn: () => getTeam(id),
+})
+</script>
+
+<template>
+  <v-dialog v-model="isOpen" max-width="600" persistent style="z-index: 1000">
+    <v-card v-if="isLoading" class="text-center py-8 rounded-lg">
+      <v-progress-circular indeterminate color="primary" size="64" />
+      <div class="text-h6 mt-4">Loading team details...</div>
+    </v-card>
+
+    <v-card v-else-if="isError" class="text-center d-flex flex-column align-center py-8 rounded-lg">
+      <v-icon color="error" size="64">mdi-alert-circle</v-icon>
+      <h3 class="mt-4 text-error">Oops... we could not fetch the data</h3>
+      <v-btn class="mt-4" color="error" to="/dashboard/teams" text="Close" />
+    </v-card>
+
+    <v-card v-else-if="team" class="rounded-lg">
+      <div class="position-relative">
+        <v-img :src="team.imageUrl" height="200px" cover>
+          <v-btn
+            icon
+            color="white"
+            class="position-absolute top-0 right-0 ma-4"
+            to="/dashboard/teams"
+          >
+            <v-icon icon="mdi-close" />
+          </v-btn>
+        </v-img>
+      </div>
+
+      <v-card-title class="px-4">
+        <div class="d-flex align-center flex-wrap">
+          <span class="text-h5 font-weight-bold">{{ team.name }}</span>
+          <v-chip class="ml-3" color="primary" size="small" density="compact">
+            {{ team.type }}
+          </v-chip>
+          <v-chip
+            :color="team.isActive ? 'green' : 'red'"
+            class="font-weight-bold mx-2"
+            size="small"
+            density="compact"
+          >
+            {{ team.isActive ? 'Active' : 'Inactive' }}
+          </v-chip>
+        </div>
+      </v-card-title>
+
+      <v-card-subtitle class="px-4 pb-0 d-flex align-center mt-1">
+        <v-icon icon="mdi-map-marker" size="small" class="mr-1" />
+        <span>{{ team.location }}</span>
+        <v-divider vertical class="mx-3"></v-divider>
+        <v-icon icon="mdi-clock" size="small" class="mr-1" />
+        <span>{{ team.timezone }}</span>
+      </v-card-subtitle>
+
+      <v-card-text class="px-4 pt-3">
+        <p class="text-body-1 mb-4">{{ team.description }}</p>
+
+        <v-divider class="my-3" />
+
+        <div class="d-flex flex-column flex-md-row">
+          <v-col cols="12" md="6">
+            <div class="d-flex align-center text-medium-emphasis">
+              <v-icon icon="mdi-account-group" size="small" class="mr-2" />
+              <span>Members: </span>
+              <span class="text-black ml-1">{{ team.membersCount }}</span>
+            </div>
+          </v-col>
+
+          <v-col cols="12" md="6">
+            <div class="d-flex align-center text-medium-emphasis">
+              <v-icon icon="mdi-calendar" size="small" class="mr-2" />
+              <span>Created: </span>
+              <span class="text-black ml-1">{{ team.createdAt }}</span>
+            </div>
+          </v-col>
+        </div>
+      </v-card-text>
+    </v-card>
+  </v-dialog>
+</template>
