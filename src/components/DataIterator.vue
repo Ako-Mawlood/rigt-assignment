@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SearchField from '@/components/SearchField.vue'
-import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard.vue'
 import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
 
