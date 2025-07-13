@@ -3,14 +3,12 @@ import { computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 const router = useRouter()
 const route = useRoute()
-
+const { pagesCount } = defineProps(['pagesCount'])
 const page = defineModel<number>('page')
 const itemsPerPage = defineModel<number>('itemsPerPage')
 const emit = defineEmits(['refetch'])
-
-const pageCount = 3
-const pages = computed(() => [...Array(pageCount).keys()].map((i) => i + 1))
-const perPageOptions = computed(() => Array.from({ length: 15 }, (_, i) => i + 1))
+const pages = computed(() => [...Array(pagesCount).keys()].map((i) => i + 1))
+const perPageOptions = [5, 10, 15, 20]
 
 watch(page, () => {
   emit('refetch')
@@ -61,7 +59,7 @@ watch(itemsPerPage, () => {
         {{ pageNumber }}
       </v-btn>
       <v-btn
-        :disabled="Number(page) >= pageCount"
+        :disabled="Number(page) >= pagesCount"
         density="comfortable"
         icon="mdi-arrow-right"
         variant="tonal"
