@@ -10,6 +10,7 @@ const lightTheme: ThemeDefinition = {
     primary: '#93348D',
     onPrimary: '#FFFFFF',
     surface: '#FFFFFF',
+    surfaceOpacity: 'rgba(255,255,255,0.3)',
     onSurface: '#121212',
     onSurfaceHigh: '#222222',
     onSurfaceMedium: '#888888',

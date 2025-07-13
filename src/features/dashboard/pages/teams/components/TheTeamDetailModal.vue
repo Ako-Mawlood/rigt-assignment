@@ -28,7 +28,7 @@ const {
     </v-card>
 
     <v-card v-else-if="isError" class="text-center d-flex flex-column align-center py-8 rounded-lg">
-      <v-icon color="error" size="64">mdi-alert-circle</v-icon>
+      <v-icon color="error" size="64" icon="mdi-alert-circle" />
       <h3 class="mt-4 text-error">Oops... we could not fetch the data</h3>
       <v-btn class="mt-4" color="error" to="/dashboard/teams" text="Close" />
     </v-card>
@@ -38,7 +38,7 @@ const {
         <v-img :src="team.imageUrl" height="200px" cover>
           <v-btn
             icon
-            color="white"
+            color="surfaceOpacity"
             class="position-absolute top-0 right-0 ma-4"
             to="/dashboard/teams"
           >
@@ -50,7 +50,7 @@ const {
       <v-card-title class="px-4">
         <div class="d-flex align-center flex-wrap">
           <span class="text-h5 font-weight-bold">{{ team.name }}</span>
-          <v-chip class="ml-3" color="primary" size="small" density="compact">
+          <v-chip class="ml-3 font-weight-bold" color="primary" size="small" density="compact">
             {{ team.type }}
           </v-chip>
           <v-chip
@@ -67,7 +67,7 @@ const {
       <v-card-subtitle class="px-4 pb-0 d-flex align-center mt-1">
         <v-icon icon="mdi-map-marker" size="small" class="mr-1" />
         <span>{{ team.location }}</span>
-        <v-divider vertical class="mx-3"></v-divider>
+        <v-divider vertical class="mx-3" />
         <v-icon icon="mdi-clock" size="small" class="mr-1" />
         <span>{{ team.timezone }}</span>
       </v-card-subtitle>
