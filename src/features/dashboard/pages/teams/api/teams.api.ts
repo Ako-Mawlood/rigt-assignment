@@ -11,3 +11,14 @@ export async function getTeam(id: number) {
     console.error(error.response?.data || 'Unexpected error occurred')
   }
 }
+
+export async function deleteTeam(id: number) {
+  try {
+    const res = await axios.delete(`/teams/${id}`)
+
+    return res.data
+  } catch (err) {
+    const error = err as AxiosError
+    console.error(error.response?.data || 'Unexpected error occurred')
+  }
+}

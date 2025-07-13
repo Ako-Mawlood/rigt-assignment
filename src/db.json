@@ -1,19 +1,7 @@
 {
   "teams": [
     {
-      "id": 1,
-      "name": "Engineering",
-      "type": "Tech",
-      "description": "Responsible for product development and technical infrastructure.",
-      "imageUrl": "https://images.unsplash.com/photo-1581093588401-99fcdc1f8d02?fit=crop&w=600&q=80",
-      "location": "Head Office",
-      "isActive": true,
-      "membersCount": 12,
-      "createdAt": "2023-01-10",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 2,
+      "id": "2",
       "name": "Human Resources",
       "type": "HR",
       "description": "Handles hiring, onboarding, and employee relations.",
@@ -25,7 +13,7 @@
       "timezone": "Asia/Baghdad"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Marketing",
       "type": "Business",
       "description": "Manages campaigns, branding, and customer outreach.",
@@ -37,19 +25,7 @@
       "timezone": "Asia/Baghdad"
     },
     {
-      "id": 4,
-      "name": "Finance",
-      "type": "Accounting",
-      "description": "Handles budgets, expenses, and financial reporting.",
-      "imageUrl": "https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?fit=crop&w=600&q=80",
-      "location": "Branch Office",
-      "isActive": false,
-      "membersCount": 4,
-      "createdAt": "2023-03-20",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 5,
+      "id": "5",
       "name": "Sales",
       "type": "Business",
       "description": "Drives revenue through client acquisition and relationship building.",
@@ -61,7 +37,7 @@
       "timezone": "Asia/Baghdad"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Customer Support",
       "type": "Support",
       "description": "Provides assistance to users and resolves technical issues.",
@@ -71,59 +47,11 @@
       "membersCount": 7,
       "createdAt": "2023-04-20",
       "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 7,
-      "name": "Design",
-      "type": "Creative",
-      "description": "Focuses on UI/UX and visual assets across the product.",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fit=crop&w=600&q=80",
-      "location": "Remote",
-      "isActive": true,
-      "membersCount": 6,
-      "createdAt": "2023-05-10",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 8,
-      "name": "Legal",
-      "type": "Compliance",
-      "description": "Ensures the company complies with regulations and legal standards.",
-      "imageUrl": "https://images.unsplash.com/photo-1588776814546-66ed95f1bc65?fit=crop&w=600&q=80",
-      "location": "Branch Office",
-      "isActive": false,
-      "membersCount": 3,
-      "createdAt": "2023-05-22",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 9,
-      "name": "Product Management",
-      "type": "Product",
-      "description": "Oversees the product lifecycle and roadmap strategy.",
-      "imageUrl": "https://images.unsplash.com/photo-1591696205602-2a1d2063c3a6?fit=crop&w=600&q=80",
-      "location": "Head Office",
-      "isActive": true,
-      "membersCount": 9,
-      "createdAt": "2023-06-01",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 10,
-      "name": "Operations",
-      "type": "Logistics",
-      "description": "Manages internal processes and daily organizational logistics.",
-      "imageUrl": "https://images.unsplash.com/photo-1618221542521-558e4c7c7699?fit=crop&w=600&q=80",
-      "location": "Warehouse",
-      "isActive": true,
-      "membersCount": 11,
-      "createdAt": "2023-06-18",
-      "timezone": "Asia/Baghdad"
     }
   ],
   "staff": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "Ako",
       "lastName": "Mawlood",
       "teamType": "Engineering",
@@ -136,7 +64,7 @@
       "avatar": "https://randomuser.me/api/portraits/men/75.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "firstName": "Sara",
       "lastName": "Omar",
       "teamType": "Creative",
@@ -149,7 +77,7 @@
       "avatar": "https://randomuser.me/api/portraits/women/65.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "firstName": "Rebaz",
       "lastName": "Ahmed",
       "teamType": "Business",
@@ -162,7 +90,7 @@
       "avatar": "https://randomuser.me/api/portraits/men/52.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "firstName": "Hawkar",
       "lastName": "Karim",
       "teamType": "Administrative",
@@ -175,7 +103,7 @@
       "avatar": "https://randomuser.me/api/portraits/men/30.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "firstName": "Dilan",
       "lastName": "Rashid",
       "teamType": "Engineering",
