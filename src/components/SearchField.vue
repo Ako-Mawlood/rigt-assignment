@@ -6,7 +6,7 @@ const page = defineModel<number>('page')
 const emit = defineEmits(['refetch'])
 const router = useRouter()
 function handleSearch() {
-  if (search.value?.length) {
+  if ((search.value as string).trim().length) {
     page.value = 1
     router.push({
       query: { q: search.value },
