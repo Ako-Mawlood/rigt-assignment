@@ -25,7 +25,6 @@ export async function uploadFile(file: File) {
       },
     )
 
-    console.log('Cloudinary response:', res.data)
     return res.data
   } catch (error) {
     console.error('Cloudinary upload error:', error)

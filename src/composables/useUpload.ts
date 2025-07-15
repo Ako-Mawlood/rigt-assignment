@@ -1,8 +1,14 @@
 import { useMutation } from '@tanstack/vue-query'
 import { ref } from 'vue'
+import type { TeamFormDataType } from '@/features/dashboard/pages/teams/utils/team.validations'
 import { uploadFile } from '@/api/upload.api'
 
-export function useUpload(setFieldValue) {
+type SetFieldValue = (
+  field: keyof TeamFormDataType,
+  value: TeamFormDataType[keyof TeamFormDataType],
+) => void
+
+export function useUpload(setFieldValue: SetFieldValue) {
   const file = ref<File | null>(null)
 
   const { mutate } = useMutation({
@@ -15,12 +21,13 @@ export function useUpload(setFieldValue) {
 
   function handleChangeFile(e: Event) {
     const target = e.target as HTMLInputElement
-
     const selectedFile = target.files?.[0]
-    console.log(selectedFile)
     if (selectedFile) {
       file.value = selectedFile
       mutate(selectedFile)
+    } else {
+      file.value = null
+      setFieldValue('imageUrl', null)
     }
   }
 

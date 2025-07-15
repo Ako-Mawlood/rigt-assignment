@@ -60,36 +60,37 @@
       "id": "ca06"
     },
     {
-      "id": "1e20",
-      "name": "sdf",
-      "type": "Design",
-      "description": "sdfasdasfsadff",
-      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752564456/ww973nhbakeugfmtyb8x.jpg",
-      "location": "sdf",
+      "id": "1087",
+      "name": "tam",
+      "type": "Development",
+      "description": "team",
+      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752575251/cgihasoogkhha9dkdeno.jpg",
+      "location": "team",
       "isActive": true,
       "membersCount": 10,
-      "timezone": "assdfsf"
+      "timezone": "asd"
     },
     {
-      "id": "8762",
-      "name": "Management",
-      "type": "Sales",
-      "description": "eib",
-      "location": "erbil",
+      "id": "a4c0",
+      "name": "new Team",
+      "type": "Development",
+      "description": "asdf",
+      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752575569/dahjo3vn8jdooboz2zaa.png",
+      "location": "asdfaf",
       "isActive": true,
-      "membersCount": 10,
-      "timezone": "dsf"
+      "membersCount": 4,
+      "timezone": "dsfasdf"
     },
     {
-      "id": "7286",
-      "name": "new team",
-      "type": "Design",
+      "id": "52f5",
+      "name": "New Team",
+      "type": "Development",
       "description": "sdf",
-      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752564755/pvcytpyh43joc1oekedp.jpg",
-      "location": "sd",
+      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752576083/iellcldwgaukzz9ecmcb.jpg",
+      "location": "ss",
       "isActive": true,
-      "membersCount": 10,
-      "timezone": "sdff"
+      "membersCount": 3,
+      "timezone": "af"
     }
   ],
   "staff": [
