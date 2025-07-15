@@ -8,7 +8,7 @@ import { getTeam } from '@/features/dashboard/pages/teams/api/teams.api'
 
 const isOpen = ref(true)
 const route = useRoute()
-const id = route.params.id
+const id = route.params.id as string
 const { data, isLoading, isError } = useQuery({
   queryKey: ['team', id],
   queryFn: () => getTeam(id as string),
@@ -28,13 +28,13 @@ const { data, isLoading, isError } = useQuery({
         <template v-else-if="isError">
           <div class="text-center d-flex flex-column align-center py-8 rounded-lg">
             <v-icon color="error" size="64" icon="mdi-alert-circle" />
-            <h3 class="mt-4 text-error">{{ $t('teamForm.loadError') }}</h3>
+            <h3 class="mt-4 text-error">{{ $t('loadError') }}</h3>
             <v-btn class="mt-4" color="error" to="/dashboard/teams" :text="$t('close')" />
           </div>
         </template>
 
         <template v-else>
-          <TeamForm :initialValues="data" :mutationFn="editTeam" />
+          <TeamForm :initialValues="data" :mutationFn="editTeam" :mutationKey="['edit-team', id]" />
         </template>
       </v-card>
     </v-dialog>

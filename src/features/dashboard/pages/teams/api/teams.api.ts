@@ -1,6 +1,6 @@
 import type { AxiosError } from 'axios'
 import axios from '@/plugins/axios'
-import { type TeamFormDataType } from '@/features/dashboard/pages/teams/utils/team.validations'
+import type { TeamMutationType } from '@/features/dashboard/pages/teams/types/team.type'
 
 export async function getTeam(id: string) {
   try {
@@ -24,9 +24,9 @@ export async function deleteTeam(id: string) {
   }
 }
 
-export async function addTeam(data: TeamFormDataType) {
+export async function addTeam({ formData }: Omit<TeamMutationType, 'id'>) {
   try {
-    const res = await axios.post(`/teams`, data)
+    const res = await axios.post(`/teams`, formData)
     return res.data
   } catch (err) {
     const error = err as AxiosError
@@ -34,9 +34,9 @@ export async function addTeam(data: TeamFormDataType) {
   }
 }
 
-export async function editTeam(data: TeamFormDataType) {
+export async function editTeam({ formData, id }: TeamMutationType) {
   try {
-    const res = await axios.put(`/teams`, data)
+    const res = await axios.put(`/teams/${id}`, formData)
     return res.data
   } catch (err) {
     const error = err as AxiosError

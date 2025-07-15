@@ -15,9 +15,9 @@
     "deleteConfirmation": "Are you sure you want to delete this team? This action cannot be undone."
   },
 
+  "loadError": "Could not fetch the team",
   "teamForm": {
     "createNewTeam": "Create new team",
-    "loadError": "Could not fetch the team",
     "editTeam": "Edit team",
     "newTeam": "New team",
     "name": "Team Name",

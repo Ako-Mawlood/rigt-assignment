@@ -38,7 +38,11 @@ const lightTheme: ThemeDefinition = {
 }
 
 export const vuetify = createVuetify({
-  components,
+  components: {
+    ...components,
+    VFileUpload,
+  },
+
   directives,
   theme: {
     defaultTheme: 'light',

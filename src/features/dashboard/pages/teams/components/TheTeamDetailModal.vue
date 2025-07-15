@@ -24,18 +24,20 @@ const {
   <v-dialog v-model="isOpen" max-width="600" persistent style="z-index: 1000">
     <v-card v-if="isLoading" class="text-center py-8 rounded-lg">
       <v-progress-circular indeterminate color="primary" size="64" />
-      <div class="text-h6 mt-4">Loading team details...</div>
+      <div class="text-h6 mt-4">Loading...</div>
     </v-card>
 
-    <v-card v-else-if="isError" class="text-center d-flex flex-column align-center py-8 rounded-lg">
-      <v-icon color="error" size="64" icon="mdi-alert-circle" />
-      <h3 class="mt-4 text-error">Oops... we could not fetch the data</h3>
-      <v-btn class="mt-4" color="error" to="/dashboard/teams" text="Close" />
-    </v-card>
+    <template v-else-if="isError">
+      <div class="text-center d-flex flex-column align-center py-8 rounded-lg">
+        <v-icon color="error" size="64" icon="mdi-alert-circle" />
+        <h3 class="mt-4 text-error">{{ $t('loadError') }}</h3>
+        <v-btn class="mt-4" color="error" to="/dashboard/teams" :text="$t('close')" />
+      </div>
+    </template>
 
     <v-card v-else-if="team" class="rounded-lg">
       <div class="position-relative">
-        <v-img :src="team.imageUrl" height="200px" cover>
+        <v-img :src="team.image.url" height="200px" cover>
           <v-btn
             icon
             color="surfaceOpacity"

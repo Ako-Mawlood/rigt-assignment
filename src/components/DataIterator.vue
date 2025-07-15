@@ -13,12 +13,18 @@ const { data, isLoading, refetch, page, pagesCount, search, searchRef, itemsPerP
     <template #header>
       <SearchField ref="searchRef" v-model:search="search" @refetch="refetch" v-model:page="page" />
     </template>
+
     <template #no-data>
-      <div class="text-center py-16">
+      <div v-if="search" class="text-center py-16">
         <h1 class="text-h6 text-primary mb-4">No results found</h1>
-        <v-btn density="compact" @click="searchRef?.clearSearch()"> Clear search </v-btn>
+        <v-btn density="compact" @click="searchRef?.clearSearch()">Clear search</v-btn>
+      </div>
+
+      <div v-else class="text-center py-16">
+        <slot name="no-yet" />
       </div>
     </template>
+
     <template #default>
       <v-container class="pa-2" fluid>
         <v-row v-if="data.length">
