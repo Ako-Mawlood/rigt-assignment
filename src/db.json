@@ -1,85 +1,169 @@
 {
   "teams": [
     {
-      "id": "2",
-      "name": "Human Resources",
-      "type": "HR",
-      "description": "Handles hiring, onboarding, and employee relations.",
-      "imageUrl": "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?fit=crop&w=600&q=80",
-      "location": "Branch Office",
+      "name": "Maccers",
+      "type": "Development",
+      "description": "Responsible for developing and maintaining software applications",
+      "image": {
+        "display_name": "building",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752610159/xrhsxdroqv7fw2ulv7rb.avif",
+        "format": "avif"
+      },
+      "location": "Erbil 40m road",
       "isActive": true,
-      "membersCount": 5,
-      "createdAt": "2023-02-15",
-      "timezone": "Asia/Baghdad"
+      "membersCount": 12,
+      "timezone": "Erbil-Baghdad",
+      "id": "7ed7"
     },
     {
-      "id": "3",
-      "name": "Marketing",
-      "type": "Business",
-      "description": "Manages campaigns, branding, and customer outreach.",
-      "imageUrl": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?fit=crop&w=600&q=80",
-      "location": "Head Office",
+      "name": "Seilds",
+      "type": "Customer Support",
+      "description": "Responsible for supporting and helping customers and make them pleased",
+      "image": {
+        "display_name": "bee",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752610662/qsnz2qkrj3makqim28q6.jpg",
+        "format": "jpg"
+      },
+      "location": "Duhok, central bank",
+      "isActive": true,
+      "membersCount": 3,
+      "timezone": "Duhok/Badhdad",
+      "id": "5c96"
+    },
+    {
+      "name": "Techsy",
+      "type": "Marketing",
+      "description": "Drives product visibility and market outreach through creative campaigns",
+      "image": {
+        "display_name": "8254661",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752610904/rpyez4ylhi6pzkdugvhl.jpg",
+        "format": "jpg"
+      },
+      "location": "Sulaimani Polytechnic Area",
       "isActive": true,
       "membersCount": 8,
-      "createdAt": "2023-03-01",
-      "timezone": "Asia/Baghdad"
+      "timezone": "Sulaimani/Basra",
+      "id": "3df9"
     },
     {
-      "id": "5",
-      "name": "Sales",
-      "type": "Business",
-      "description": "Drives revenue through client acquisition and relationship building.",
-      "imageUrl": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?fit=crop&w=600&q=80",
-      "location": "Remote",
+      "name": "Inquix",
+      "type": "Sales",
+      "description": "Handles client deals and ensures revenue generation",
+      "image": {
+        "display_name": "download (1)",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611054/jxaszakfjnnjrz8igpsz.jpg",
+        "format": "jpg"
+      },
+      "location": "Erbil Empire Street",
       "isActive": true,
-      "membersCount": 10,
-      "createdAt": "2023-04-05",
-      "timezone": "Asia/Baghdad"
+      "membersCount": 6,
+      "timezone": "Erbil-Baghdad",
+      "id": "2ea1"
     },
     {
-      "id": "6",
-      "name": "Customer Support",
-      "type": "Support",
-      "description": "Provides assistance to users and resolves technical issues.",
-      "imageUrl": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?fit=crop&w=600&q=80",
-      "location": "Head Office",
-      "isActive": true,
-      "membersCount": 7,
-      "createdAt": "2023-04-20",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": "a4c0",
-      "name": "new Team",
+      "name": "Netcore",
       "type": "Development",
-      "description": "asdf",
-      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752575569/dahjo3vn8jdooboz2zaa.png",
-      "location": "asdfaf",
+      "description": "Full-stack team responsible for core platform development",
+      "image": {
+        "display_name": "images",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611075/ysrpt8hnmisk4vl0onni.jpg",
+        "format": "jpg"
+      },
+      "location": "Zakho Tech Park",
+      "isActive": false,
+      "membersCount": 10,
+      "timezone": "Zakho/Basra",
+      "id": "c4f2"
+    },
+    {
+      "name": "Pixweld",
+      "type": "Design",
+      "description": "Creates user-centered designs and brand materials",
+      "image": {
+        "display_name": "images (2)",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611370/teok1cal79rn4pq471y1.jpg",
+        "format": "jpg"
+      },
+      "location": "Kirkuk Design District",
       "isActive": true,
       "membersCount": 4,
-      "timezone": "dsfasdf"
+      "timezone": "Kirkuk/Baghdad",
+      "id": "a1b3"
     },
     {
-      "id": "07bf",
-      "name": "name",
-      "type": "Development",
-      "description": "description",
-      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752577889/ch37zv9zazlohphmcvru.jpg",
-      "location": "location",
+      "name": "Helpify",
+      "type": "Customer Support",
+      "description": "24/7 assistance team ensuring great user experience",
+      "image": {
+        "display_name": "download (2)",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611138/me16ts9dsbl7omnmadds.jpg",
+        "format": "jpg"
+      },
+      "location": "Halabja Service Center",
       "isActive": false,
-      "membersCount": 2,
-      "timezone": "adfasf"
+      "membersCount": 5,
+      "timezone": "Halabja/Sulaymaniyah",
+      "id": "8d94"
     },
     {
-      "id": "89b0",
-      "name": "Development",
-      "type": "Development",
-      "description": "saf",
-      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752579301/v3bvdgaqzkwixli7vqrf.jpg",
-      "location": "afd",
+      "name": "Stratix",
+      "type": "Business Strategy",
+      "description": "Planning and executing long-term business goals",
+      "image": {
+        "display_name": "download",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611198/mwmhb7jsxuwkj3nudxi4.jpg",
+        "format": "jpg"
+      },
+      "location": "Erbil Tech Valley",
       "isActive": true,
-      "membersCount": 2,
-      "timezone": "as"
+      "membersCount": 7,
+      "timezone": "Erbil-Baghdad",
+      "id": "f713"
+    },
+    {
+      "name": "Voix",
+      "type": "Human Resources",
+      "description": "Responsible for hiring, culture, and internal policies",
+      "image": {
+        "display_name": "download (1)",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611310/vba3clr4xzvyunfvehrq.jpg",
+        "format": "jpg"
+      },
+      "location": "Duhok People Square",
+      "isActive": true,
+      "membersCount": 9,
+      "timezone": "Duhok/Basra",
+      "id": "bb2e"
+    },
+    {
+      "name": "Boosters",
+      "type": "Marketing",
+      "description": "Promotes brand engagement across multiple platforms",
+      "image": {
+        "display_name": "images (1)",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611329/frpbyevsvywrjxn5m38r.jpg",
+        "format": "jpg"
+      },
+      "location": "Erbil Mazi Mall",
+      "isActive": true,
+      "membersCount": 11,
+      "timezone": "Erbil-Baghdad",
+      "id": "af22"
+    },
+    {
+      "name": "Datawise",
+      "type": "Business Strategy",
+      "description": "Analyzes market data for business insights and direction",
+      "image": {
+        "display_name": "asdlfjasldfj;asf",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611341/ven9zrcaiycf6hd89e4x.jpg",
+        "format": "jpg"
+      },
+      "location": "Soran Business Tower",
+      "isActive": false,
+      "membersCount": 6,
+      "timezone": "Soran/Baghdad",
+      "id": "dd51"
     }
   ],
   "staff": [

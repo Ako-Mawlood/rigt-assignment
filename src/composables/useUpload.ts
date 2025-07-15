@@ -9,13 +9,19 @@ type SetFieldValue = (
 ) => void
 
 export function useUpload(setFieldValue: SetFieldValue) {
-  const file = ref<File | null>(null)
-
-  const { mutate } = useMutation({
+  const hasUploaded = ref(false)
+  const { mutate, isPending: isUploading } = useMutation({
     mutationKey: ['upload'],
     mutationFn: (f: File) => uploadFile(f),
     onSuccess: (data) => {
-      setFieldValue('imageUrl', data.url)
+      setFieldValue('image', {
+        display_name: data.display_name,
+        url: data.url,
+        format: data.format,
+      })
+    },
+    onError: () => {
+      hasUploaded.value = false
     },
   })
 
@@ -23,13 +29,12 @@ export function useUpload(setFieldValue: SetFieldValue) {
     const target = e.target as HTMLInputElement
     const selectedFile = target.files?.[0]
     if (selectedFile) {
-      file.value = selectedFile
+      hasUploaded.value = true
       mutate(selectedFile)
     } else {
-      file.value = null
-      setFieldValue('imageUrl', null)
+      setFieldValue('image', null)
     }
   }
 
-  return { file, handleChangeFile }
+  return { handleChangeFile, hasUploaded, isUploading }
 }

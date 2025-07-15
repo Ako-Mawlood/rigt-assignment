@@ -12,12 +12,20 @@ import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard
         :text="$t('teamForm.newTeam')"
         density="comfortable"
         color="primary"
-      >
-      </v-btn>
+      />
     </v-row>
     <DataIterator url="/teams">
       <template #item="{ item }">
         <TheTeamCard :team="item" />
+      </template>
+      <template #no-yet>
+        <h1>No teams created yet</h1>
+        <v-btn
+          to="/dashboard/teams/add"
+          :text="$t('teamForm.newTeam')"
+          density="comfortable"
+          color="primary"
+        />
       </template>
     </DataIterator>
   </div>
