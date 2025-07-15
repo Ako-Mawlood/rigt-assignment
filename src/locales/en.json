@@ -8,6 +8,7 @@
   "edit": "Edit",
   "cancel": "Cancel",
   "done": "Done",
+  "close": "Close",
 
   "deleteTeam": {
     "deleteTitle": "Delete Team",
@@ -16,6 +17,7 @@
 
   "teamForm": {
     "createNewTeam": "Create new team",
+    "loadError": "Could not fetch the team",
     "editTeam": "Edit team",
     "newTeam": "New team",
     "name": "Team Name",
