@@ -128,7 +128,7 @@ const onSubmit = handleSubmit((formData) => {
         color="primary"
         :loading="isPending"
       >
-        {{ $t('teamForm.submit') }}
+        {{ $t('done') }}
       </v-btn>
     </div>
   </v-form>

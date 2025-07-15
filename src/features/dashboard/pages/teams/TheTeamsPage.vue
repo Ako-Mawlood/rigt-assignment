@@ -7,8 +7,12 @@ import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard
   <div class="pa-4">
     <v-row justify="space-between" class="pa-4">
       <h2 class="text-primary">{{ $t('teams') }}</h2>
-      <v-btn to="/dashboard/teams/add" density="comfortable" color="primary">
-        {{ $t('teamForm.newTeam') }}
+      <v-btn
+        to="/dashboard/teams/add"
+        :text="$t('teamForm.newTeam')"
+        density="comfortable"
+        color="primary"
+      >
       </v-btn>
     </v-row>
     <DataIterator url="/teams">

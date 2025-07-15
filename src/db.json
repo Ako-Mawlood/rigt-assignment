@@ -49,17 +49,6 @@
       "timezone": "Asia/Baghdad"
     },
     {
-      "id": "1087",
-      "name": "tam",
-      "type": "Development",
-      "description": "team",
-      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752575251/cgihasoogkhha9dkdeno.jpg",
-      "location": "team",
-      "isActive": true,
-      "membersCount": 10,
-      "timezone": "asd"
-    },
-    {
       "id": "a4c0",
       "name": "new Team",
       "type": "Development",
@@ -69,39 +58,6 @@
       "isActive": true,
       "membersCount": 4,
       "timezone": "dsfasdf"
-    },
-    {
-      "id": "52f5",
-      "name": "New Team",
-      "type": "Development",
-      "description": "sdf",
-      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752576083/iellcldwgaukzz9ecmcb.jpg",
-      "location": "ss",
-      "isActive": true,
-      "membersCount": 3,
-      "timezone": "af"
-    },
-    {
-      "id": "556b",
-      "name": "sdf",
-      "type": "Design",
-      "description": "sdf",
-      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752577406/n5sb1wxsdmgnwn7xiija.jpg",
-      "location": "sdf",
-      "isActive": true,
-      "membersCount": 3,
-      "timezone": "saaf"
-    },
-    {
-      "id": "fea3",
-      "name": "sdf",
-      "type": "Development",
-      "description": "sdf",
-      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752577827/y64ipcw8plh9s9doos4n.jpg",
-      "location": "df",
-      "isActive": true,
-      "membersCount": 3,
-      "timezone": "sdf"
     },
     {
       "id": "07bf",

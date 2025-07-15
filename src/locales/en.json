@@ -7,8 +7,16 @@
   "delete": "Delete",
   "edit": "Edit",
   "cancel": "Cancel",
+  "done": "Done",
+
+  "deleteTeam": {
+    "deleteTitle": "Delete Team",
+    "deleteConfirmation": "Are you sure you want to delete this team? This action cannot be undone."
+  },
+
   "teamForm": {
-    "newTeam": "NewTeam",
+    "createNewTeam": "Create new team",
+    "newTeam": "New team",
     "name": "Team Name",
     "type": "Team Type",
     "location": "Location",
@@ -16,7 +24,6 @@
     "uploadImage": "Upload image",
     "isActive": "Is Active?",
     "membersCount": "Members Count",
-    "timezone": "Timezone",
-    "submit": "Create Team"
+    "timezone": "Timezone"
   }
 }

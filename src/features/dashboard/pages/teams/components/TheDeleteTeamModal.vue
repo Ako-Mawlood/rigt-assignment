@@ -29,8 +29,8 @@ const { mutate, isPending } = useMutation({
       <v-card
         max-width="400"
         prepend-icon="mdi-delete"
-        title="Delete Team"
-        text="Are you sure you want to delete this team? This action cannot be undone."
+        :title="$t('deleteTeam.deleteTitle')"
+        :text="$t('deleteTeam.deleteConfirmation')"
       >
         <template v-slot:actions>
           <div class="d-flex">
