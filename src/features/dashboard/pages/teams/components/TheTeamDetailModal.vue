@@ -8,7 +8,7 @@ import type { TeamType } from '@/features/dashboard/pages/teams/types/team.type'
 const route = useRoute()
 const isOpen = ref(true)
 
-const id = Number(route.params.id)
+const id = route.params.id as string
 
 const {
   data: team,
@@ -83,14 +83,6 @@ const {
               <v-icon icon="mdi-account-group" size="small" class="mr-2" />
               <span>Members: </span>
               <span class="text-black ml-1">{{ team.membersCount }}</span>
-            </div>
-          </v-col>
-
-          <v-col cols="12" md="6">
-            <div class="d-flex align-center text-medium-emphasis">
-              <v-icon icon="mdi-calendar" size="small" class="mr-2" />
-              <span>Created: </span>
-              <span class="text-black ml-1">{{ team.createdAt }}</span>
             </div>
           </v-col>
         </div>

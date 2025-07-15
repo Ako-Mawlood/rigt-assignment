@@ -5,6 +5,25 @@
   "search": "گەڕان",
   "view team": "بینینی تیم",
   "delete": "سڕینەوە",
+  "edit": "دەستکاری",
+  "cancel": "هەڵوەشاندنەوە",
+  "done": "تەواو",
+  "deleteTeam": {
+    "deleteTitle": "سڕینەوەی تیم",
+    "deleteConfirmation": "دڵنیایت کە دەتەوێت ئەم تیمە بسڕیتەوە؟ ئەم کردارە ڕەوشتییە و ناتوانرێت وەربگرێتەوە."
+  },
 
-  "edit": "دەستکاری"
+  "teamForm": {
+    "createNewTeam": "دروست کردنی تیم",
+    "newTeam": "تیمی نوێ",
+    "name": "ناوی تیم",
+    "type": "جۆری تیم",
+    "location": "شوێن",
+    "description": "وەسف",
+    "uploadImage": "وێنە",
+    "isActive": "ئایا چالاکە؟",
+    "membersCount": "ژمارەی ئەندامەکان",
+    "timezone": "کاتی ناوچە",
+    "submit": "دروستکردنی تیم"
+  }
 }

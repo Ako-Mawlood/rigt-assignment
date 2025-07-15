@@ -1,12 +1,18 @@
 export type TeamType = {
-  id: number
+  id: string
   name: string
-  type: string
-  description: 'string'
-  imageUrl: string
+  type:
+    | 'Development'
+    | 'Design'
+    | 'Marketing'
+    | 'Sales'
+    | 'Human Resources'
+    | 'Customer Support'
+    | 'Business Strategy'
+  description?: 'string'
+  imageUrl?: string
   location: string
   isActive: boolean
   membersCount: number
-  createdAt: string
   timezone: string
 }

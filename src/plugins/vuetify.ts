@@ -3,6 +3,7 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import type { ThemeDefinition } from 'vuetify/lib/types.mjs'
 import '@mdi/font/css/materialdesignicons.css'
+import { VFileUpload } from 'vuetify/labs/VFileUpload'
 
 const lightTheme: ThemeDefinition = {
   dark: false,

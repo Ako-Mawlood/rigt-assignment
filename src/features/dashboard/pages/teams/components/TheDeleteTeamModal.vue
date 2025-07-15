@@ -9,7 +9,7 @@ const isOpen = ref(true)
 const queryClient = useQueryClient()
 const route = useRoute()
 const router = useRouter()
-const id = Number(route.params.id)
+const id = route.params.id as string
 
 const { mutate, isPending } = useMutation({
   mutationKey: ['delete-team', id],
@@ -29,18 +29,14 @@ const { mutate, isPending } = useMutation({
       <v-card
         max-width="400"
         prepend-icon="mdi-delete"
-        title="Delete Team"
-        text="Are you sure you want to delete this team? This action cannot be undone."
+        :title="$t('deleteTeam.deleteTitle')"
+        :text="$t('deleteTeam.deleteConfirmation')"
       >
         <template v-slot:actions>
           <div class="d-flex">
-            <v-btn
-              class="ml-auto"
-              text="Cancel"
-              to="/dashboard/teams"
-              variant="elevated"
-              density="compact"
-            />
+            <v-btn class="ml-auto" to="/dashboard/teams" variant="elevated" density="compact">{{
+              $t('cancel')
+            }}</v-btn>
             <v-btn
               class="ms-2"
               @click="mutate"
@@ -50,7 +46,9 @@ const { mutate, isPending } = useMutation({
               :loading="isPending"
               variant="elevated"
               density="compact"
-            />
+            >
+              {{ $t('delete') }}
+            </v-btn>
           </div>
         </template>
       </v-card>

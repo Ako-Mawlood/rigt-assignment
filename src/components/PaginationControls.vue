@@ -51,6 +51,7 @@ watch(itemsPerPage, () => {
         v-for="pageNumber in pages"
         :key="pageNumber"
         variant="elevated"
+        density="comfortable"
         class="ml-2"
         :color="page === pageNumber ? 'primary' : 'onPrimary'"
         min-width="40"
