@@ -60,37 +60,36 @@
       "id": "ca06"
     },
     {
-      "id": "680b",
-      "name": "Team name",
-      "type": "Development",
-      "description": "dsf",
-      "imageUrl": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?fit=crop&w=600&q=80",
-      "location": "De",
-      "isActive": true,
-      "membersCount": 1,
-      "timezone": "team"
-    },
-    {
-      "id": "asdf",
+      "id": "1e20",
       "name": "sdf",
-      "type": "Development",
-      "description": "sdf",
-      "imageUrl": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?fit=crop&w=600&q=80",
+      "type": "Design",
+      "description": "sdfasdasfsadff",
+      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752564456/ww973nhbakeugfmtyb8x.jpg",
       "location": "sdf",
       "isActive": true,
-      "membersCount": 3333,
-      "timezone": "wwwwwww"
+      "membersCount": 10,
+      "timezone": "assdfsf"
     },
     {
-      "id": "4ca8",
-      "name": "asdfsf",
-      "type": "Development",
-      "description": "ssdf",
-      "imageUrl": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?fit=crop&w=600&q=80",
-      "location": "ss",
+      "id": "8762",
+      "name": "Management",
+      "type": "Sales",
+      "description": "eib",
+      "location": "erbil",
       "isActive": true,
       "membersCount": 10,
-      "timezone": "sd"
+      "timezone": "dsf"
+    },
+    {
+      "id": "7286",
+      "name": "new team",
+      "type": "Design",
+      "description": "sdf",
+      "imageUrl": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752564755/pvcytpyh43joc1oekedp.jpg",
+      "location": "sd",
+      "isActive": true,
+      "membersCount": 10,
+      "timezone": "sdff"
     }
   ],
   "staff": [

@@ -16,7 +16,6 @@ const queryClient = useQueryClient()
 const router = useRouter()
 const isOpen = ref(true)
 
-const { file, handleChangeFile, secret_url } = useUpload()
 const { errors, defineField, handleSubmit, setFieldValue } = useForm<TeamFormDataType>({
   validationSchema: toTypedSchema(teamSchema),
   initialValues: {
@@ -24,6 +23,8 @@ const { errors, defineField, handleSubmit, setFieldValue } = useForm<TeamFormDat
     membersCount: 10,
   },
 })
+
+const { handleChangeFile } = useUpload(setFieldValue)
 
 const [name, nameAttrs] = defineField('name')
 const [type, typeAttrs] = defineField('type')
@@ -45,12 +46,6 @@ const { mutate, isPending } = useMutation({
 
 const onSubmit = handleSubmit((formData) => {
   mutate(formData)
-})
-
-watch(file, () => {
-  if (secret_url.value) {
-    setFieldValue('imageUrl', secret_url.value)
-  }
 })
 </script>
 

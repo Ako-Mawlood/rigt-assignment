@@ -2,15 +2,14 @@ import { useMutation } from '@tanstack/vue-query'
 import { ref } from 'vue'
 import { uploadFile } from '@/api/upload.api'
 
-export function useUpload() {
+export function useUpload(setFieldValue) {
   const file = ref<File | null>(null)
-  const secret_url = ref<string | null>(null)
 
   const { mutate } = useMutation({
     mutationKey: ['upload'],
     mutationFn: (f: File) => uploadFile(f),
     onSuccess: (data) => {
-      secret_url.value = data.secure_url
+      setFieldValue('imageUrl', data.url)
     },
   })
 
@@ -25,5 +24,5 @@ export function useUpload() {
     }
   }
 
-  return { file, handleChangeFile, secret_url }
+  return { file, handleChangeFile }
 }
