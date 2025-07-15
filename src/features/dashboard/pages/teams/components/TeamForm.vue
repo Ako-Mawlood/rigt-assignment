@@ -13,7 +13,7 @@ import { useUpload } from '@/composables/useUpload'
 
 const { mutationFn, initialValues } = defineProps<{
   mutationFn: (formData: TeamFormDataType) => Promise<TeamFormDataType>
-  initialValues?: TeamFormDataType
+  initialValues?: Partial<TeamFormDataType>
 }>()
 
 const queryClient = useQueryClient()
