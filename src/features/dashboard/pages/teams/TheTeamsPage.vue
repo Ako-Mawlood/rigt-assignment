@@ -4,14 +4,17 @@ import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard
 </script>
 
 <template>
-  <router-view />
-
   <div class="pa-4">
-    <h2 class="text-primary">{{ $t('teams') }}</h2>
+    <v-row justify="space-between" class="pa-4">
+      <h2 class="text-primary">{{ $t('teams') }}</h2>
+      <v-btn to="/dashboard/teams/add" density="comfortable" color="primary" text="New team" />
+    </v-row>
     <DataIterator url="/teams">
       <template #item="{ item }">
         <TheTeamCard :team="item" />
       </template>
     </DataIterator>
   </div>
+
+  <router-view />
 </template>

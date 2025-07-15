@@ -9,7 +9,7 @@ const isOpen = ref(true)
 const queryClient = useQueryClient()
 const route = useRoute()
 const router = useRouter()
-const id = Number(route.params.id)
+const id = route.params.id as string
 
 const { mutate, isPending } = useMutation({
   mutationKey: ['delete-team', id],

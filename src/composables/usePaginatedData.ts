@@ -29,6 +29,7 @@ export function usePaginatedData(url: string) {
       })
 
       totalItems.value = res.data.items
+
       return res.data.data
     } catch (err) {
       const error = err as AxiosError
