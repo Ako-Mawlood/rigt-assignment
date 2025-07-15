@@ -12,7 +12,7 @@ export function usePaginatedData(url: string) {
 
   const searchRef = ref<InstanceType<typeof SearchField> | null>(null)
   const search = ref(route.query.q || '')
-  const itemsPerPage = ref(Number(localStorage.getItem('itemsPerPage')) || 5)
+  const itemsPerPage = ref(Number(localStorage.getItem('itemsPerPage')) || 10)
   const totalItems = ref<number>(0)
   const page = ref(Number(route.query.page) || 1)
 
