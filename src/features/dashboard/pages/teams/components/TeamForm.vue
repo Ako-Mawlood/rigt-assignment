@@ -55,7 +55,7 @@ const onSubmit = handleSubmit((formData) => {
       <v-text-field
         v-model="name"
         v-bind="nameAttrs"
-        label="Team Name"
+        :label="$t('teamForm.name')"
         :error-messages="errors.name"
         variant="solo"
       />
@@ -63,7 +63,7 @@ const onSubmit = handleSubmit((formData) => {
         v-model="type"
         v-bind="typeAttrs"
         :items="teamTypeOptions"
-        label="Team Type"
+        :label="$t('teamForm.type')"
         :error-messages="errors.type"
         variant="solo"
         validate-on="submit"
@@ -73,7 +73,7 @@ const onSubmit = handleSubmit((formData) => {
     <v-text-field
       v-model="location"
       v-bind="locationAttrs"
-      label="Location"
+      :label="$t('teamForm.location')"
       :error-messages="errors.location"
       variant="solo"
     />
@@ -81,7 +81,7 @@ const onSubmit = handleSubmit((formData) => {
     <v-textarea
       v-model="description"
       v-bind="descriptionAttrs"
-      label="Description"
+      :label="$t('teamForm.description')"
       :error-messages="errors.description"
       outlined
       rows="2"
@@ -89,19 +89,19 @@ const onSubmit = handleSubmit((formData) => {
     />
 
     <v-file-input
-      label="Upload image"
+      :label="$t('teamForm.uploadImage')"
       accept="image/*"
       :error-messages="errors.imageUrl"
       variant="solo"
       @change="handleChangeFile"
     />
 
-    <v-switch v-model="isActive" v-bind="isActiveAttrs" label="Is Active?" />
+    <v-switch v-model="isActive" v-bind="isActiveAttrs" :label="$t('teamForm.isActive')" />
 
     <v-text-field
       v-model="membersCount"
       v-bind="membersCountAttrs"
-      label="Members Count"
+      :label="$t('teamForm.membersCount')"
       type="number"
       min="1"
       :error-messages="errors.membersCount"
@@ -111,14 +111,16 @@ const onSubmit = handleSubmit((formData) => {
     <v-text-field
       v-model="timezone"
       v-bind="timezoneAttrs"
-      label="Timezone"
+      :label="$t('teamForm.timezone')"
       :error-messages="errors.timezone"
       class="mb-4"
       variant="solo"
     />
 
     <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
-      <v-btn variant="flat" density="comfortable" to="/dashboard/teams"> Cancel </v-btn>
+      <v-btn variant="flat" density="comfortable" to="/dashboard/teams">
+        {{ $t('cancel') }}
+      </v-btn>
       <v-btn
         type="submit"
         @click="onSubmit"
@@ -126,7 +128,7 @@ const onSubmit = handleSubmit((formData) => {
         color="primary"
         :loading="isPending"
       >
-        Create Team
+        {{ $t('teamForm.submit') }}
       </v-btn>
     </div>
   </v-form>

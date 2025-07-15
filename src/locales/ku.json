@@ -5,6 +5,19 @@
   "search": "گەڕان",
   "view team": "بینینی تیم",
   "delete": "سڕینەوە",
+  "edit": "دەستکاری",
+  "cancel": "هەڵوەشاندنەوە",
 
-  "edit": "دەستکاری"
+  "teamForm": {
+    "newTeam": "تیمی نوێ",
+    "name": "ناوی تیم",
+    "type": "جۆری تیم",
+    "location": "شوێن",
+    "description": "وەسف",
+    "uploadImage": "وێنە",
+    "isActive": "ئایا چالاکە؟",
+    "membersCount": "ژمارەی ئەندامەکان",
+    "timezone": "کاتی ناوچە",
+    "submit": "دروستکردنی تیم"
+  }
 }

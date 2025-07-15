@@ -5,5 +5,18 @@
   "search": "Search",
   "view team": "View team",
   "delete": "Delete",
-  "edit": "Edit"
+  "edit": "Edit",
+  "cancel": "Cancel",
+  "teamForm": {
+    "newTeam": "NewTeam",
+    "name": "Team Name",
+    "type": "Team Type",
+    "location": "Location",
+    "description": "Description",
+    "uploadImage": "Upload image",
+    "isActive": "Is Active?",
+    "membersCount": "Members Count",
+    "timezone": "Timezone",
+    "submit": "Create Team"
+  }
 }

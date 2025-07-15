@@ -34,13 +34,9 @@ const { mutate, isPending } = useMutation({
       >
         <template v-slot:actions>
           <div class="d-flex">
-            <v-btn
-              class="ml-auto"
-              text="Cancel"
-              to="/dashboard/teams"
-              variant="elevated"
-              density="compact"
-            />
+            <v-btn class="ml-auto" to="/dashboard/teams" variant="elevated" density="compact">{{
+              $t('cancel')
+            }}</v-btn>
             <v-btn
               class="ms-2"
               @click="mutate"
@@ -50,7 +46,9 @@ const { mutate, isPending } = useMutation({
               :loading="isPending"
               variant="elevated"
               density="compact"
-            />
+            >
+              {{ $t('delete') }}
+            </v-btn>
           </div>
         </template>
       </v-card>

@@ -26,7 +26,7 @@ export async function deleteTeam(id: string) {
 
 export async function addTeam(data: TeamFormDataType) {
   try {
-    const res = await axios.post(`/teams`, { ...data })
+    const res = await axios.post(`/teams`, data)
     return res.data
   } catch (err) {
     const error = err as AxiosError
