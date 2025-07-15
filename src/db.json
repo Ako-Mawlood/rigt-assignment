@@ -80,6 +80,16 @@
       "isActive": true,
       "membersCount": 2,
       "timezone": "as"
+    },
+    {
+      "id": "bf6a",
+      "name": "asdf",
+      "type": "Development",
+      "description": "dsf",
+      "location": "sdf",
+      "isActive": false,
+      "membersCount": 33,
+      "timezone": "asdfaf"
     }
   ],
   "staff": [

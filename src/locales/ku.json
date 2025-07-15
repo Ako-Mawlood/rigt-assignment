@@ -15,6 +15,7 @@
 
   "teamForm": {
     "createNewTeam": "دروست کردنی تیم",
+    "editTeam": "دەستکاریکردنی تیم",
     "newTeam": "تیمی نوێ",
     "name": "ناوی تیم",
     "type": "جۆری تیم",

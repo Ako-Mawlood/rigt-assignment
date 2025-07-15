@@ -33,3 +33,13 @@ export async function addTeam(data: TeamFormDataType) {
     console.error(error.response?.data || 'Unexpected error occurred')
   }
 }
+
+export async function editTeam(data: TeamFormDataType) {
+  try {
+    const res = await axios.put(`/teams`, data)
+    return res.data
+  } catch (err) {
+    const error = err as AxiosError
+    console.error(error.response?.data || 'Unexpected error occurred')
+  }
+}

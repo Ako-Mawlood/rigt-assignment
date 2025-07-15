@@ -16,6 +16,7 @@
 
   "teamForm": {
     "createNewTeam": "Create new team",
+    "editTeam": "Edit team",
     "newTeam": "New team",
     "name": "Team Name",
     "type": "Team Type",
