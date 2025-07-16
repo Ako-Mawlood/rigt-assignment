@@ -15,10 +15,14 @@ import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard
       />
     </v-row>
     <DataIterator url="/teams">
-      <template #item="{ item }">
-        <TheTeamCard :team="item" />
+      <template #items="{ items }">
+        <v-row v-if="items.length">
+          <v-col v-for="item in items" :key="item.id" cols="12" sm="6" md="4" lg="3">
+            <TheTeamCard :team="item" />
+          </v-col>
+        </v-row>
       </template>
-      <template #no-yet>
+      <template #no-data-yet>
         <h1>No teams created yet</h1>
         <v-btn
           to="/dashboard/teams/add"
