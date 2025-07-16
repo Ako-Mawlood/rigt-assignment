@@ -6,7 +6,7 @@ import DataIterator from '@/components/DataIterator.vue'
     <h2 class="text-primary">{{ $t('members') }}</h2>
     <DataIterator url="/members">
       <template #items="{ items }">
-        <v-data-table :items="items" hide-default-footer></v-data-table>
+        <v-data-table :items="items" hide-default-footer> </v-data-table>
       </template>
     </DataIterator>
   </div>
