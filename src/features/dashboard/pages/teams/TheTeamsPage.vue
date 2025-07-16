@@ -14,7 +14,7 @@ import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard
         color="primary"
       />
     </v-row>
-    <DataIterator url="/teams">
+    <DataIterator url="/teams" queryKey="teams">
       <template #items="{ items }">
         <v-row v-if="items.length">
           <v-col v-for="item in items" :key="item.id" cols="12" sm="6" md="4" lg="3">

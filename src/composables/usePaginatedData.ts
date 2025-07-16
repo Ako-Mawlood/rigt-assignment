@@ -7,7 +7,7 @@ import axios from '@/plugins/axios'
 import { useQuery } from '@tanstack/vue-query'
 import type { SearchQueryType } from '@/types/SearchQuery.type'
 
-export function usePaginatedData(url: string) {
+export function usePaginatedData(url: string, queryKey: string) {
   const route = useRoute()
 
   const searchRef = ref<InstanceType<typeof SearchField> | null>(null)
@@ -18,12 +18,12 @@ export function usePaginatedData(url: string) {
 
   const pagesCount = computed(() => Math.ceil(totalItems.value / itemsPerPage.value))
 
-  async function fetchData(page: number, teamsPerPage: number, q: SearchQueryType) {
+  async function fetchData(page: number, itemsPerPage: number, q: SearchQueryType) {
     try {
       const res = await axios.get(url, {
         params: {
           _page: page,
-          _per_page: teamsPerPage,
+          _per_page: itemsPerPage,
           name: q,
         },
       })
@@ -38,7 +38,7 @@ export function usePaginatedData(url: string) {
   }
 
   const query = useQuery({
-    queryKey: ['teams', page.value, search.value],
+    queryKey: [queryKey, page.value, search.value],
     queryFn: () => fetchData(page.value, itemsPerPage.value, search.value),
   })
 
