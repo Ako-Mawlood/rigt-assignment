@@ -11,4 +11,4 @@ export const sidebarTabs = [
     path: '/dashboard/members',
     icon: 'mdi-briefcase-account',
   },
-]
+] as const
