@@ -1,10 +1,15 @@
-import type { TeamTypeOptions } from '@/features/dashboard/pages/teams/types/team.type'
+import type { MemberFormDataType } from '@/features/dashboard/pages/members/utils/member.validations'
+import { type CompanyPositionsType } from '@/constants/companyPositionOptions'
 
 export type MemberType = {
   id: string
   name: string
   email: string
   phoneNumber: string
-  team: TeamTypeOptions
-  status: 'active' | 'inactive'
+  position: CompanyPositionsType
+}
+
+export type MemberMutationType = {
+  formData: MemberFormDataType
+  id?: string
 }
