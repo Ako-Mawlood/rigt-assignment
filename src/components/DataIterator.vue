@@ -21,17 +21,13 @@ const { data, isLoading, refetch, page, pagesCount, search, searchRef, itemsPerP
       </div>
 
       <div v-else class="text-center py-16">
-        <slot name="no-yet" />
+        <slot name="no-data-yet" />
       </div>
     </template>
 
     <template #default>
       <v-container class="pa-2" fluid>
-        <v-row v-if="data.length">
-          <v-col v-for="item in data" :key="item.id" cols="12" sm="6" md="4" lg="3">
-            <slot name="item" :item="item" />
-          </v-col>
-        </v-row>
+        <slot name="items" :items="data" />
       </v-container>
     </template>
     <template #footer>
