@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ActionsMenu from '@/components/ActionsMenu.vue'
 import type { TeamType } from '@/features/dashboard/pages/teams/types/team.type'
 
 const { team } = defineProps<{ team: TeamType }>()
@@ -18,22 +19,7 @@ const { team } = defineProps<{ team: TeamType }>()
         </h3>
       </v-col>
       <v-col cols="2" class="py-2">
-        <v-menu>
-          <template #activator="{ props }">
-            <v-btn
-              append-icon="mdi-dots-vertical"
-              class="ml-auto pl-1 ma-1"
-              min-width="20"
-              variant="text"
-              v-bind="props"
-            />
-          </template>
-
-          <v-list>
-            <v-list-item :to="`/dashboard/teams/edit/${team.id}`" :title="$t('edit')" />
-            <v-list-item :to="`/dashboard/teams/delete/${team.id}`" :title="$t('delete')" />
-          </v-list>
-        </v-menu>
+        <ActionsMenu :id="team.id" />
       </v-col>
     </div>
   </v-card>
