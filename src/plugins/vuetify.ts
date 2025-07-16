@@ -3,6 +3,7 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import type { ThemeDefinition } from 'vuetify/lib/types.mjs'
 import '@mdi/font/css/materialdesignicons.css'
+import { VFileUpload } from 'vuetify/labs/VFileUpload'
 
 const lightTheme: ThemeDefinition = {
   dark: false,
@@ -10,6 +11,7 @@ const lightTheme: ThemeDefinition = {
     primary: '#93348D',
     onPrimary: '#FFFFFF',
     surface: '#FFFFFF',
+    surfaceOpacity: 'rgba(255,255,255,0.3)',
     onSurface: '#121212',
     onSurfaceHigh: '#222222',
     onSurfaceMedium: '#888888',
@@ -36,7 +38,11 @@ const lightTheme: ThemeDefinition = {
 }
 
 export const vuetify = createVuetify({
-  components,
+  components: {
+    ...components,
+    VFileUpload,
+  },
+
   directives,
   theme: {
     defaultTheme: 'light',
