@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import ActionsMenu from '@/components/ActionsMenu.vue'
 import DataIterator from '@/components/DataIterator.vue'
 import { headers } from '@/constants/membersTableHeaders.ts'
+import type { MemberType } from '@/features/dashboard/pages/members/types/member.type'
 </script>
 <template>
   <div class="pa-4">
@@ -8,7 +10,9 @@ import { headers } from '@/constants/membersTableHeaders.ts'
     <DataIterator url="/members" queryKey="members">
       <template #items="{ items }">
         <v-data-table :items="items" :headers="headers" hide-default-footer>
-          <template #item.actions="{ item }"> actions </template>
+          <template #item.actions="{ item }">
+            <ActionsMenu :id="(item as MemberType).id" />
+          </template>
         </v-data-table>
       </template>
     </DataIterator>
