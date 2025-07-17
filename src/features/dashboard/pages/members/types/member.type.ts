@@ -1,4 +1,4 @@
-import type { MemberFormDataType } from '@/features/dashboard/pages/members/utils/member.validations'
+import type { MemberFormDataType } from '@/features/dashboard/pages/members/utils/validations/member.validations'
 import { type CompanyPositionsType } from '@/constants/companyPositionOptions'
 
 export type MemberType = {

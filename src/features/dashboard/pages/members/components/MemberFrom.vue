@@ -8,7 +8,7 @@ import { useMutation, useQueryClient } from '@tanstack/vue-query'
 import {
   memberSchema,
   type MemberFormDataType,
-} from '@/features/dashboard/pages/members/utils/member.validations'
+} from '@/features/dashboard/pages/members/utils/validations/member.validations'
 import type { MemberMutationType } from '@/features/dashboard/pages/members/types/member.type'
 import { workTypes } from '../constants/workTypes'
 
@@ -32,7 +32,7 @@ const { errors, defineField, handleSubmit } = useForm<MemberFormDataType>({
     email: '',
     phoneNumber: '',
     position: 'Chief Executive Officer',
-    workType: 'Contract',
+    workType: 'On-site',
     ...initialValues,
   },
 })
@@ -76,20 +76,23 @@ const onSubmit = handleSubmit((formData) => {
       variant="solo"
     />
 
-    <v-text-field
+    <v-phone-input
       v-model="phoneNumber"
       v-bind="phoneNumberAttrs"
       :label="$t('memberForm.phoneNumber')"
       :error-messages="errors.phoneNumber"
       outlined
       rows="2"
+      :preferCountries="['IQ']"
       variant="solo"
+      min-width="300"
     />
     <v-select
       v-model="workType"
-      :label="$t('memberFom.workType')"
+      :label="$t('memberForm.workType')"
       v-bind="workTypeAttrs"
       :items="workTypes"
+      variant="solo"
     />
     <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
       <v-btn variant="flat" density="comfortable" to="/dashboard/members">

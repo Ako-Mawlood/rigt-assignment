@@ -29,9 +29,10 @@
     "membersCount": "Members Count",
     "timezone": "Timezone"
   },
+
   "memberForm": {
     "editMember": "Edit member",
-    "newTeam": "New member",
+    "newMember": "New member",
     "addNewMember": "Add new member ",
     "name": "Member Name",
     "email": "Member Email",

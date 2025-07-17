@@ -10,7 +10,7 @@ import type { MemberType } from '@/features/dashboard/pages/members/types/member
       <h2 class="text-primary">{{ $t('member') }}</h2>
       <v-btn
         to="/dashboard/members/add"
-        :text="$t('membersForm.newMember')"
+        :text="$t('memberForm.newMember')"
         density="comfortable"
         color="primary"
       />

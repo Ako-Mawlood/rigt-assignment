@@ -1,6 +1,6 @@
 import z from 'zod'
 import { companyPositions } from '@/constants/companyPositionOptions'
-import { workTypes } from '../constants/workTypes'
+import { workTypes } from '../../constants/workTypes'
 
 export const memberSchema = z.object({
   name: z.string().min(1, 'Name is required'),

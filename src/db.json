@@ -214,6 +214,30 @@
       "position": "Chief Executive Officer",
       "phoneNumber": "07504051046",
       "workType": "On-site"
+    },
+    {
+      "id": "b3c4",
+      "name": "Sangar Mawlood",
+      "email": "Sangar@gmail.com",
+      "position": "Chief Executive Officer",
+      "phoneNumber": "+9647507981403",
+      "workType": "Remote"
+    },
+    {
+      "id": "44d4",
+      "name": "member",
+      "email": "member@gmail.com",
+      "position": "Chief Executive Officer",
+      "phoneNumber": "+96412444444",
+      "workType": "On-site"
+    },
+    {
+      "id": "db55",
+      "name": " member",
+      "email": "a@gmail.com",
+      "position": "Chief Executive Officer",
+      "phoneNumber": "+9647501222222",
+      "workType": "On-site"
     }
   ]
 }
