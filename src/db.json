@@ -168,12 +168,12 @@
   ],
   "members": [
     {
-      "id": "1",
       "name": "Jane Doe",
       "email": "jane.doe@example.com",
+      "position": "Chief Executive Officer",
       "phoneNumber": "+9647501234567",
-      "team": "Design",
-      "status": "active"
+      "workType": "On-site",
+      "id": "1"
     },
     {
       "id": "2",
@@ -232,12 +232,12 @@
       "workType": "On-site"
     },
     {
-      "id": "db55",
       "name": " member",
-      "email": "a@gmail.com",
+      "email": "akooooooooooooo@gmail.com",
       "position": "Chief Executive Officer",
       "phoneNumber": "+9647501222222",
-      "workType": "On-site"
+      "workType": "On-site",
+      "id": "db55"
     }
   ]
 }
