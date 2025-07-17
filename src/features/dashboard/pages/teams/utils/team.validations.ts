@@ -1,4 +1,4 @@
-import z, { url } from 'zod'
+import z from 'zod'
 import { teamTypeOptions } from '@/features/dashboard/pages/teams/constants/teamTypeOptions'
 
 export const teamSchema = z.object({
