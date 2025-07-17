@@ -76,7 +76,7 @@ const onSubmit = handleSubmit((formData) => {
       variant="solo"
     />
 
-    <v-textarea
+    <v-text-field
       v-model="phoneNumber"
       v-bind="phoneNumberAttrs"
       :label="$t('memberForm.phoneNumber')"
@@ -87,7 +87,7 @@ const onSubmit = handleSubmit((formData) => {
     />
     <v-select
       v-model="workType"
-      :label="$t('memberForm.workType')"
+      :label="$t('memberFom.workType')"
       v-bind="workTypeAttrs"
       :items="workTypes"
     />
