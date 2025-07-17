@@ -66,8 +66,14 @@ const onSubmit = handleSubmit((formData) => {
         :error-messages="errors.name"
         variant="solo"
       />
+      <v-select
+        v-model="workType"
+        :label="$t('memberForm.workType')"
+        v-bind="workTypeAttrs"
+        :items="workTypes"
+        variant="solo"
+      />
     </div>
-
     <v-text-field
       v-model="email"
       v-bind="emailAttrs"
@@ -87,13 +93,7 @@ const onSubmit = handleSubmit((formData) => {
       variant="solo"
       min-width="300"
     />
-    <v-select
-      v-model="workType"
-      :label="$t('memberForm.workType')"
-      v-bind="workTypeAttrs"
-      :items="workTypes"
-      variant="solo"
-    />
+
     <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
       <v-btn variant="flat" density="comfortable" to="/dashboard/members">
         {{ $t('cancel') }}

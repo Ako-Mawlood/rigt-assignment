@@ -15,7 +15,7 @@ function handleSearch() {
   }
 }
 function clearSearch() {
-  router.push('/dashboard/teams')
+  router.push({ path: router.currentRoute.value.path, query: {} })
   search.value = ''
   emit('refetch')
 }
