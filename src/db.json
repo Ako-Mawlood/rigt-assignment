@@ -168,46 +168,6 @@
   ],
   "members": [
     {
-      "name": "Jane Doe",
-      "email": "jane.doe@example.com",
-      "position": "Chief Executive Officer",
-      "phoneNumber": "+9647501234567",
-      "workType": "On-site",
-      "id": "1"
-    },
-    {
-      "id": "2",
-      "name": "John Smith",
-      "email": "john.smith@example.com",
-      "phoneNumber": "+9647507654321",
-      "team": "Development",
-      "status": "inactive"
-    },
-    {
-      "id": "3",
-      "name": "Nora Karim",
-      "email": "nora.karim@example.com",
-      "phoneNumber": "+9647709876543",
-      "team": "Marketing",
-      "status": "active"
-    },
-    {
-      "id": "8534",
-      "name": "Ako Mawlood",
-      "email": "ako.mawlood01@gmial.com",
-      "position": "Chief Executive Officer",
-      "phoneNumber": "07504454545",
-      "isActive": true
-    },
-    {
-      "id": "af05",
-      "name": "mamosta karwan",
-      "email": "karwan@gmail.com",
-      "position": "Chief Executive Officer",
-      "phoneNumber": "07502232344",
-      "isActive": true
-    },
-    {
       "id": "241b",
       "name": "Ako Mawlood",
       "email": "ako.mawlood01@gmail.com",
