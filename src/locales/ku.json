@@ -28,5 +28,14 @@
     "membersCount": "ژمارەی ئەندامەکان",
     "timezone": "کاتی ناوچە",
     "submit": "دروستکردنی تیم"
+  },
+  "memberForm": {
+    "editMember": "دەستکاریکردنی ئەندام",
+    "newMember": "ئەندامی نوێ",
+    "addNewMember": "زیادکردنی ئەندامی نوێ",
+    "name": "ناوی ئەندام",
+    "email": "ئیمەیڵی ئەندام",
+    "phoneNumber": "ژمارەی تەلەفۆن",
+    "workType": "جۆری کار"
   }
 }
