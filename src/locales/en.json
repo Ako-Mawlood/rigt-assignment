@@ -31,9 +31,9 @@
   },
 
   "memberForm": {
+    "addNewMember": "Add new member ",
     "editMember": "Edit member",
     "newMember": "New member",
-    "addNewMember": "Add new member ",
     "name": "Member Name",
     "email": "Member Email",
     "phoneNumber": "Phone Number",

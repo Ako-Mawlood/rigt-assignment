@@ -9,7 +9,7 @@ const isOpen = ref(true)
 <template>
   <div class="text-center pa-4">
     <v-dialog v-model="isOpen" persistent max-width="600">
-      <v-card title="create it now ">
+      <v-card :title="$t('memberForm.addNewMember')">
         <MemberFrom :mutationFn="addMember" :mutationKey="['add-member']" />
       </v-card>
     </v-dialog>

@@ -11,7 +11,7 @@ const route = useRoute()
 const id = route.params.id as string
 const { data, isLoading, isError } = useQuery({
   queryKey: ['team', id],
-  queryFn: () => getTeam(id as string),
+  queryFn: () => getTeam(id),
 })
 </script>
 

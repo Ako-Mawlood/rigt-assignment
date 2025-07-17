@@ -5,7 +5,6 @@ import { type MemberMutationType } from '@/features/dashboard/pages/members/type
 export async function getMember(id: string) {
   try {
     const res = await axios.get(`/members/${id}`)
-
     return res.data
   } catch (err) {
     const error = err as AxiosError
