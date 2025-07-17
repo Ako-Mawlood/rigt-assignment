@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'kurdish-font';
+  src: url('/public/fonts/kurdish-font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.kurdish-font {
+  font-family: 'kurdish-font';
+}
