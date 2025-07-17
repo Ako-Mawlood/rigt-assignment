@@ -1,0 +1,8 @@
+export const headers = [
+  { title: 'Name', key: 'name' },
+  { title: 'Email', key: 'email' },
+  { title: 'Phone', key: 'phoneNumber' },
+  { title: 'Work Type', key: 'workType' },
+  { title: 'Email', key: 'email' },
+  { title: 'Actions', key: 'actions', sortable: false },
+] as const
