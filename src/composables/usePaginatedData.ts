@@ -1,4 +1,4 @@
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { computed, ref, reactive, watch } from 'vue'
 import SearchField from '@/components/SearchField.vue'
 import type { AxiosError } from 'axios'
@@ -13,6 +13,7 @@ export function usePaginatedData(
   initialFilters: Record<string, any> = {},
 ) {
   const route = useRoute()
+  const router = useRouter()
   const searchRef = ref<InstanceType<typeof SearchField> | null>(null)
   const search = ref(route.query.q || '')
   const itemsPerPage = ref(Number(localStorage.getItem('itemsPerPage')) || 10)
@@ -47,6 +48,7 @@ export function usePaginatedData(
 
   watch(filters, () => {
     page.value = 1
+    router.push({ query: { ...route.query, ...filters } })
     query.refetch()
   })
 

@@ -22,7 +22,7 @@ function clearSearch() {
 defineExpose({ clearSearch })
 </script>
 <template>
-  <v-toolbar flat elevation="0" className="px-2 no-shadow">
+  <v-col cols="4" :md="6" class="d-flex align-center">
     <v-text-field
       v-model="search"
       :placeholder="$t('search')"
@@ -34,14 +34,14 @@ defineExpose({ clearSearch })
       density="compact"
       @keyup.enter="handleSearch"
       @click:clear="clearSearch"
-      max-width="400"
     />
+
     <v-btn
       @click.prevent="handleSearch"
       :text="$t('search')"
       color="primary"
-      class="ml-4"
+      class="mx-4"
       variant="elevated"
     />
-  </v-toolbar>
+  </v-col>
 </template>
