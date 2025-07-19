@@ -7,6 +7,7 @@ const { url, queryKey } = defineProps(['url', 'queryKey'])
 const { data, isLoading, refetch, page, pagesCount, search, searchRef, itemsPerPage } =
   usePaginatedData(url, queryKey)
 </script>
+
 <template>
   <div v-if="isLoading">Loading</div>
   <v-data-iterator v-if="data" :items="data" class="mt-10" :items-per-page="5">
