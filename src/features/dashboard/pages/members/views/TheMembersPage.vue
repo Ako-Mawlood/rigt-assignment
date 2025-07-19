@@ -7,7 +7,7 @@ import type { MemberType } from '@/features/dashboard/pages/members/types/member
 <template>
   <div class="pa-4">
     <v-row justify="space-between" class="pa-4">
-      <h2 class="text-primary">{{ $t('member') }}</h2>
+      <h2 class="text-primary">{{ $t('members') }}</h2>
       <v-btn
         to="/dashboard/members/add"
         :text="$t('memberForm.newMember')"

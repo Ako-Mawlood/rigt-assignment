@@ -7,7 +7,7 @@ export const sidebarTabs = [
   },
   {
     id: 2,
-    title: 'Members',
+    title: 'members',
     path: '/dashboard/members',
     icon: 'mdi-briefcase-account',
   },
