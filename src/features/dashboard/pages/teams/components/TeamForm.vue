@@ -25,7 +25,7 @@ const router = useRouter()
 const route = useRoute()
 const id = route.params.id as string
 const isOpen = ref(true)
-
+// TODO: remove initial values
 const { errors, defineField, handleSubmit, setFieldValue } = useForm<TeamFormDataType>({
   validationSchema: toTypedSchema(teamSchema),
   initialValues: {
@@ -53,7 +53,7 @@ const { mutate, isPending } = useMutation({
   onSuccess: () => {
     isOpen.value = false
     queryClient.invalidateQueries({ queryKey: ['teams'] })
-    router.push('/dashboard/teams')
+    router.push({ path: '/dashboard/teams', query: route.query })
   },
 })
 
@@ -147,7 +147,11 @@ const onSubmit = handleSubmit((formData) => {
     <v-switch v-model="isActive" v-bind="isActiveAttrs" :label="$t('teamForm.isActive')" />
 
     <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
-      <v-btn variant="flat" density="comfortable" to="/dashboard/teams">
+      <v-btn
+        variant="flat"
+        density="comfortable"
+        @click="$router.push({ path: '/dashboard/teams', query: $route.query })"
+      >
         {{ $t('cancel') }}
       </v-btn>
       <v-btn
@@ -158,7 +162,7 @@ const onSubmit = handleSubmit((formData) => {
         color="primary"
         :loading="isPending"
       >
-        {{ $t('done') }}
+        {{ $t('submit') }}
       </v-btn>
     </div>
   </v-form>
