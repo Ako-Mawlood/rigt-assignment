@@ -41,7 +41,9 @@
     "name": "ناوی ئەندام",
     "email": "ئیمەیڵی ئەندام",
     "phoneNumber": "ژمارەی تەلەفۆن",
-    "workType": "جۆری کار"
+    "workType": "جۆری کار",
+    "position": "بەش",
+    "dateOfBirth": "ڕۆژی لەدایکبوون"
   },
 
   "deleteMember": {

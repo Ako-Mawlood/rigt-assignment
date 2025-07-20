@@ -5,6 +5,7 @@ import { useRoute } from 'vue-router'
 import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import { useMutation, useQueryClient } from '@tanstack/vue-query'
+import { companyPositions } from '@/constants/companyPositionOptions'
 import {
   memberSchema,
   type MemberFormDataType,
@@ -24,15 +25,11 @@ const router = useRouter()
 const route = useRoute()
 const id = route.params.id as string
 const isOpen = ref(true)
+const isDateOfBirthOpen = ref(false)
 
 const { errors, defineField, handleSubmit } = useForm<MemberFormDataType>({
   validationSchema: toTypedSchema(memberSchema),
   initialValues: {
-    name: '',
-    email: '',
-    phoneNumber: '',
-    position: 'Chief Executive Officer',
-    workType: 'On-site',
     ...initialValues,
   },
 })
@@ -41,6 +38,8 @@ const [name, nameAttrs] = defineField('name')
 const [email, emailAttrs] = defineField('email')
 const [phoneNumber, phoneNumberAttrs] = defineField('phoneNumber')
 const [workType, workTypeAttrs] = defineField('workType')
+const [position, positionAttrs] = defineField('position')
+const [dateOfBirth, dateOfBirthAttrs] = defineField('dateOfBirth')
 
 const { mutate, isPending } = useMutation({
   mutationKey,
@@ -66,14 +65,31 @@ const onSubmit = handleSubmit((formData) => {
         :error-messages="errors.name"
         variant="solo"
       />
-      <v-select
-        v-model="workType"
-        :label="$t('memberForm.workType')"
-        v-bind="workTypeAttrs"
-        :items="workTypes"
-        variant="solo"
-      />
+      <v-menu
+        v-model="isDateOfBirthOpen"
+        transition="slide-y-transition"
+        :close-on-content-click="false"
+      >
+        <template #activator="{ props }">
+          <v-text-field
+            v-model="dateOfBirth"
+            v-bind="{ ...props, ...dateOfBirthAttrs }"
+            :label="$t('memberForm.dateOfBirth')"
+            variant="solo"
+            :error-messages="errors.dateOfBirth"
+            readonly
+          />
+        </template>
+        <v-date-picker
+          v-model="dateOfBirth"
+          v-bind="dateOfBirthAttrs"
+          :label="$t('memberForm.dateOfBirth')"
+          variant="solo"
+          @update:model-value="isDateOfBirthOpen = false"
+        />
+      </v-menu>
     </div>
+
     <v-text-field
       v-model="email"
       v-bind="emailAttrs"
@@ -81,6 +97,25 @@ const onSubmit = handleSubmit((formData) => {
       :error-messages="errors.email"
       variant="solo"
     />
+
+    <div style="gap: 10px" class="d-flex">
+      <v-select
+        v-model="position"
+        v-bind="positionAttrs"
+        :label="$t('memberForm.position')"
+        :items="companyPositions"
+        :error-messages="errors.position"
+        variant="solo"
+      />
+      <v-select
+        v-model="workType"
+        :label="$t('memberForm.workType')"
+        v-bind="workTypeAttrs"
+        :items="workTypes"
+        :error-messages="errors.workType"
+        variant="solo"
+      />
+    </div>
 
     <v-phone-input
       v-model="phoneNumber"

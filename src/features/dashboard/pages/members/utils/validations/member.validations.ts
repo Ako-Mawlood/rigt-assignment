@@ -3,10 +3,13 @@ import { companyPositions } from '@/constants/companyPositionOptions'
 import { workTypes } from '../../constants/workTypes'
 
 export const memberSchema = z.object({
-  name: z.string().min(1, 'Name is required'),
-  email: z.string().min(1, { message: 'Email is required' }).email(),
+  name: z.string(),
+  email: z.string().email(),
   position: z.enum(companyPositions),
-  phoneNumber: z.string().min(1, 'phone number is required'),
+  phoneNumber: z.string(),
+  dateOfBirth: z.date().refine((date) => date <= new Date(), {
+    message: 'Date of birth must be in the past',
+  }),
   workType: z.enum(workTypes),
 })
 
