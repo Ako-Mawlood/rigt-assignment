@@ -1,24 +1,31 @@
 <script setup lang="ts">
 import type { SearchQueryType } from '@/types/SearchQuery.type'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
+
 const search = defineModel<SearchQueryType>('search')
 const page = defineModel<number>('page')
 const emit = defineEmits(['refetch'])
 const router = useRouter()
+const route = useRoute()
+
 function handleSearch() {
   if ((search.value as string).trim().length) {
     page.value = 1
     router.push({
-      query: { q: search.value },
+      query: { ...route.query, q: search.value },
     })
     emit('refetch')
   }
 }
+
 function clearSearch() {
-  router.push({ path: router.currentRoute.value.path, query: {} })
+  const currentQuery = { ...route.query }
+  delete currentQuery.q
+  router.push({ query: currentQuery })
   search.value = ''
   emit('refetch')
 }
+
 defineExpose({ clearSearch })
 </script>
 <template>
