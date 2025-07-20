@@ -168,29 +168,13 @@
   ],
   "members": [
     {
-      "id": "241b",
-      "name": "Ako Mawlood",
-      "email": "ako.mawlood01@gmail.com",
-      "position": "Chief Executive Officer",
-      "phoneNumber": "07504051046",
-      "workType": "On-site"
-    },
-    {
-      "id": "b3c4",
-      "name": "Sangar Mawlood",
-      "email": "Sangar@gmail.com",
-      "position": "Chief Executive Officer",
-      "phoneNumber": "+9647507981403",
-      "workType": "Remote"
-    },
-    {
-      "id": "c332",
       "name": "new ",
       "email": "email@gmail.com",
       "position": "Operations Manager",
       "phoneNumber": "+9647503938393",
-      "dateOfBirth": "2025-07-14T21:00:00.000Z",
-      "workType": "Remote"
+      "dateOfBirth": "2004-07-06T20:00:00.000Z",
+      "workType": "Remote",
+      "id": "c332"
     },
     {
       "id": "d968",
@@ -200,6 +184,33 @@
       "phoneNumber": "+96433388383",
       "dateOfBirth": "2025-07-07T21:00:00.000Z",
       "workType": "Hybrid"
+    },
+    {
+      "id": "d3f0",
+      "name": "New User",
+      "email": "Ako@gmail.com",
+      "position": "Marketing Specialist",
+      "phoneNumber": "+9647507981403",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "Hybrid"
+    },
+    {
+      "id": "2123",
+      "name": "Aras",
+      "email": "asdf@gmail.com",
+      "position": "Chief Executive Officer",
+      "phoneNumber": "+9647518383833",
+      "dateOfBirth": "2025-07-01T21:00:00.000Z",
+      "workType": "On-site"
+    },
+    {
+      "id": "9c82",
+      "name": "Soran Qadr",
+      "email": "soran.qadr@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647503348921",
+      "dateOfBirth": "2025-03-04T21:00:00.000Z",
+      "workType": "Remote"
     }
   ]
 }
