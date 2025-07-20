@@ -4,8 +4,19 @@ import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
 
 const { url, queryKey } = defineProps(['url', 'queryKey'])
-const { data, isLoading, refetch, filters, page, pagesCount, search, searchRef, itemsPerPage } =
-  usePaginatedData(url, queryKey)
+const {
+  data,
+  isLoading,
+  refetch,
+  filters,
+  handleFilter,
+  resetFilter,
+  page,
+  pagesCount,
+  search,
+  searchRef,
+  itemsPerPage,
+} = usePaginatedData(url, queryKey)
 </script>
 
 <template>
@@ -19,7 +30,12 @@ const { data, isLoading, refetch, filters, page, pagesCount, search, searchRef, 
           @refetch="refetch"
           v-model:page="page"
         />
-        <slot name="filters" :filters="filters" />
+        <slot
+          name="filters"
+          :filters="filters"
+          :handleFilter="handleFilter"
+          :resetFilter="resetFilter"
+        />
       </v-row>
     </template>
 

@@ -4,5 +4,6 @@ export const headers = [
   { title: 'Phone', key: 'phoneNumber' },
   { title: 'Work Type', key: 'workType' },
   { title: 'Position', key: 'position' },
+  { title: 'Birthday', key: 'dateOfBirth' },
   { title: 'Actions', key: 'actions', sortable: false },
 ] as const

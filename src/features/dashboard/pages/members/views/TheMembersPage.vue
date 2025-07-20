@@ -18,8 +18,12 @@ import TheMembersTableFilters from '@/features/dashboard/pages/members/component
     </v-row>
 
     <DataTable url="/members" queryKey="members">
-      <template #filters="{ filters }">
-        <TheMembersTableFilters :filters="filters" />
+      <template #filters="{ filters, handleFilter, resetFilter }">
+        <TheMembersTableFilters
+          :filters="filters"
+          @handleFilter="handleFilter"
+          @resetFilter="resetFilter"
+        />
       </template>
       <template #items="{ items }">
         <v-data-table :items="items" :headers="headers" hide-default-footer>

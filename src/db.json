@@ -182,6 +182,15 @@
       "position": "Chief Executive Officer",
       "phoneNumber": "+9647507981403",
       "workType": "Remote"
+    },
+    {
+      "id": "c332",
+      "name": "new ",
+      "email": "email@gmail.com",
+      "position": "Operations Manager",
+      "phoneNumber": "+9647503938393",
+      "dateOfBirth": "2025-07-14T21:00:00.000Z",
+      "workType": "Remote"
     }
   ]
 }

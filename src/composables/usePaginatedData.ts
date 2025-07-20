@@ -3,24 +3,21 @@ import { computed, ref, reactive, watch } from 'vue'
 import SearchField from '@/components/SearchField.vue'
 import type { AxiosError } from 'axios'
 import axios from '@/plugins/axios'
-
 import { useQuery } from '@tanstack/vue-query'
 import type { SearchQueryType } from '@/types/SearchQuery.type'
+import { useQueryClient } from '@tanstack/vue-query'
 
-export function usePaginatedData(
-  url: string,
-  queryKey: string,
-  initialFilters: Record<string, any> = {},
-) {
+export function usePaginatedData(url: string, queryKey: string) {
   const route = useRoute()
-  const router = useRouter()
+  const queryClient = useQueryClient()
   const searchRef = ref<InstanceType<typeof SearchField> | null>(null)
   const search = ref(route.query.q || '')
   const itemsPerPage = ref(Number(localStorage.getItem('itemsPerPage')) || 10)
   const totalItems = ref<number>(0)
   const page = ref(Number(route.query.page) || 1)
-  const filters = reactive({ ...initialFilters })
+  const filters = reactive<Record<string, string>>({})
 
+  const router = useRouter()
   const pagesCount = computed(() => Math.ceil(totalItems.value / itemsPerPage.value))
 
   async function fetchData(page: number, itemsPerPage: number, q: SearchQueryType) {
@@ -40,17 +37,30 @@ export function usePaginatedData(
       console.error(error.response?.data || 'Unexpected error occurred')
     }
   }
-
-  const query = useQuery({
-    queryKey: [queryKey, page.value, search.value],
-    queryFn: () => fetchData(page.value, itemsPerPage.value, search.value),
-  })
-
-  watch(filters, () => {
+  function resetFilter(filterName: string[]) {
+    filterName.forEach((name) => delete filters[name])
+    router.push({ path: route.path, query: { ...filters } })
+    queryClient.invalidateQueries({ queryKey: ['members'] })
+  }
+  function handleFilter() {
     page.value = 1
     router.push({ query: { ...route.query, ...filters } })
     query.refetch()
+  }
+  const query = useQuery({
+    queryKey: [queryKey, page.value, search.value, { ...route.query }],
+    queryFn: () => fetchData(page.value, itemsPerPage.value, search.value),
   })
 
-  return { ...query, filters, pagesCount, searchRef, search, itemsPerPage, page }
+  return {
+    ...query,
+    filters,
+    handleFilter,
+    resetFilter,
+    pagesCount,
+    searchRef,
+    search,
+    itemsPerPage,
+    page,
+  }
 }

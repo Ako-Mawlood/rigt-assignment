@@ -22,14 +22,12 @@ function clearSearch() {
 defineExpose({ clearSearch })
 </script>
 <template>
-  <v-col cols="4" :md="6" class="d-flex align-center">
+  <v-col cols="9" :md="6" class="d-flex align-center">
     <v-text-field
       v-model="search"
       :placeholder="$t('search')"
-      prepend-inner-icon="mdi-magnify"
       variant="solo"
       clearable
-      persistent-clear
       hide-details
       density="compact"
       @keyup.enter="handleSearch"
@@ -37,9 +35,10 @@ defineExpose({ clearSearch })
     />
 
     <v-btn
-      @click.prevent="handleSearch"
+      @click="handleSearch"
       :text="$t('search')"
       color="primary"
+      prepend-icon="mdi-magnify"
       class="mx-4"
       variant="elevated"
     />
