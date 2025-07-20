@@ -29,9 +29,7 @@ const isDateOfBirthOpen = ref(false)
 
 const { errors, defineField, handleSubmit } = useForm<MemberFormDataType>({
   validationSchema: toTypedSchema(memberSchema),
-  initialValues: {
-    ...initialValues,
-  },
+  initialValues,
 })
 
 const [name, nameAttrs] = defineField('name')
