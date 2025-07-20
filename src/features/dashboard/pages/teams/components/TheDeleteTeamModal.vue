@@ -17,7 +17,7 @@ const { mutate, isPending } = useMutation({
 
   onSuccess: () => {
     isOpen.value = false
-    router.push('/dashboard/teams')
+    router.push({ path: '/dashboard/teams', query: route.query })
     queryClient.invalidateQueries({ queryKey: ['teams'] })
   },
 })
@@ -34,9 +34,13 @@ const { mutate, isPending } = useMutation({
       >
         <template v-slot:actions>
           <div class="d-flex">
-            <v-btn class="ml-auto" to="/dashboard/teams" variant="elevated" density="compact">{{
-              $t('cancel')
-            }}</v-btn>
+            <v-btn
+              class="ml-auto"
+              @click="$router.push({ path: '/dashboard/teams', query: $route.query })"
+              variant="elevated"
+              density="compact"
+              >{{ $t('cancel') }}</v-btn
+            >
             <v-btn
               class="ms-2"
               @click="mutate"
