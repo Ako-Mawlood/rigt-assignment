@@ -27,6 +27,7 @@ export function usePaginatedData(url: string, queryKey: string) {
           _page: page,
           _per_page: itemsPerPage,
           name: q,
+          ...route.query,
           ...filters,
         },
       })
@@ -37,10 +38,10 @@ export function usePaginatedData(url: string, queryKey: string) {
       console.error(error.response?.data || 'Unexpected error occurred')
     }
   }
-  function resetFilter(filterName: string[]) {
+  async function resetFilter(filterName: string[]) {
     filterName.forEach((name) => delete filters[name])
-    router.push({ path: route.path, query: { ...filters } })
-    queryClient.invalidateQueries({ queryKey: ['members'] })
+    await router.push({ path: route.path, query: { ...filters } })
+    query.refetch()
   }
   function handleFilter() {
     page.value = 1
