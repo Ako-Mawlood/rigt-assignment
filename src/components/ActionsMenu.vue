@@ -14,8 +14,14 @@ const { id } = defineProps<{ id: string }>()
     </template>
 
     <v-list>
-      <v-list-item :to="`${$route.fullPath}/edit/${id}`" :title="$t('edit')" />
-      <v-list-item :to="`${$route.fullPath}/delete/${id}`" :title="$t('delete')" />
+      <v-list-item
+        @click="$router.push({ path: `${$route.path}/edit/${id}`, query: $route.query })"
+        :title="$t('edit')"
+      />
+      <v-list-item
+        @click="$router.push({ path: `${$route.path}/delete/${id}`, query: $route.query })"
+        :title="$t('delete')"
+      />
     </v-list>
   </v-menu>
 </template>

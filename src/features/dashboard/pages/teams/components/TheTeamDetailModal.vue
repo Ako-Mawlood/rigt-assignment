@@ -31,7 +31,12 @@ const {
       <div class="text-center d-flex flex-column align-center py-8 rounded-lg">
         <v-icon color="error" size="64" icon="mdi-alert-circle" />
         <h3 class="mt-4 text-error">{{ $t('loadError') }}</h3>
-        <v-btn class="mt-4" color="error" to="/dashboard/teams" :text="$t('close')" />
+        <v-btn
+          class="mt-4"
+          color="error"
+          @click="$router.push({ path: '/dashboard/teams', query: $route.query })"
+          :text="$t('close')"
+        />
       </div>
     </template>
 
@@ -42,7 +47,7 @@ const {
             icon
             color="surfaceOpacity"
             class="position-absolute top-0 right-0 ma-4"
-            to="/dashboard/teams"
+            @click="$router.push({ path: '/dashboard/teams', query: $route.query })"
           >
             <v-icon icon="mdi-close" />
           </v-btn>
