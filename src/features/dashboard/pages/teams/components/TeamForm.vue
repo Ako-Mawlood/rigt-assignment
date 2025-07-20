@@ -25,17 +25,10 @@ const router = useRouter()
 const route = useRoute()
 const id = route.params.id as string
 const isOpen = ref(true)
-// TODO: remove initial values
+
 const { errors, defineField, handleSubmit, setFieldValue } = useForm<TeamFormDataType>({
   validationSchema: toTypedSchema(teamSchema),
-  initialValues: {
-    name: '',
-    description: '',
-    location: '',
-    timezone: '',
-    type: 'Development',
-    ...initialValues,
-  },
+  initialValues,
 })
 
 const { handleChangeFile, isUploading, hasUploaded } = useUpload(setFieldValue)
@@ -52,8 +45,8 @@ const { mutate, isPending } = useMutation({
   mutationFn,
   onSuccess: () => {
     isOpen.value = false
+    router.push('/dashboard/teams')
     queryClient.invalidateQueries({ queryKey: ['teams'] })
-    router.push({ path: '/dashboard/teams', query: route.query })
   },
 })
 

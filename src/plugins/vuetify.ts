@@ -7,7 +7,7 @@ import { VFileUpload } from 'vuetify/labs/VFileUpload'
 
 const lightTheme: ThemeDefinition = {
   colors: {
-    primary: '#93348D',
+    primary: '#724190ff',
     onPrimary: '#FFFFFF',
     surface: '#FFFFFF',
     surfaceOpacity: 'rgba(255,255,255,0.3)',
