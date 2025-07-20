@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import ActionsMenu from '@/components/ActionsMenu.vue'
-import DataIterator from '@/components/DataIterator.vue'
+import DataTable from '@/components/DataTable.vue'
 import { headers } from '@/features/dashboard/pages/members/constants/membersTableHeaders'
 import type { MemberType } from '@/features/dashboard/pages/members/types/member.type'
+import TheMembersTableFilters from '@/features/dashboard/pages/members/components/TheMembersTableFilters.vue'
 </script>
 <template>
   <div class="pa-4">
@@ -16,7 +17,14 @@ import type { MemberType } from '@/features/dashboard/pages/members/types/member
       />
     </v-row>
 
-    <DataIterator url="/members" queryKey="members">
+    <DataTable url="/members" queryKey="members">
+      <template #filters="{ filters, handleFilter, resetFilter }">
+        <TheMembersTableFilters
+          :filters="filters"
+          @handleFilter="handleFilter"
+          @resetFilter="resetFilter"
+        />
+      </template>
       <template #items="{ items }">
         <v-data-table :items="items" :headers="headers" hide-default-footer>
           <template #item.actions="{ item }">
@@ -24,7 +32,7 @@ import type { MemberType } from '@/features/dashboard/pages/members/types/member
           </template>
         </v-data-table>
       </template>
-    </DataIterator>
+    </DataTable>
   </div>
   <router-view />
 </template>
