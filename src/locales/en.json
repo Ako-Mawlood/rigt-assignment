@@ -38,7 +38,9 @@
     "name": "Member Name",
     "email": "Member Email",
     "phoneNumber": "Phone Number",
-    "workType": "Work Type"
+    "workType": "Work Type",
+    "position": "Position",
+    "dateOfBirth": "Date of Birth"
   },
   "deleteMember": {
     "deleteTitle": "Delete Member",
