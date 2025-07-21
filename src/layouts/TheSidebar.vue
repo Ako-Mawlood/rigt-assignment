@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { sidebarTabs } from '@/constants/sidebarTabs'
 import { useSidebarController } from '@/composables/useSidebarController'
+import ChangeLang from '@/components/ChangeLang.vue'
 
 const { rail, drawer, isTemporary, isPermanent } = useSidebarController()
 </script>
@@ -8,7 +9,7 @@ const { rail, drawer, isTemporary, isPermanent } = useSidebarController()
 <template>
   <v-navigation-drawer
     v-model="drawer"
-    class="bg-background"
+    class="bg-background position-fixed h-screen"
     :rail="rail"
     :temporary="isTemporary"
     :permanent="isPermanent"
@@ -25,5 +26,9 @@ const { rail, drawer, isTemporary, isPermanent } = useSidebarController()
         :title="$t(tab.title)"
       />
     </v-list>
+
+    <div class="position-absolute w-100 bottom-0">
+      <ChangeLang />
+    </div>
   </v-navigation-drawer>
 </template>
