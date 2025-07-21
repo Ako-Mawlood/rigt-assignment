@@ -17,8 +17,8 @@ const { data, isLoading, refetch, page, pagesCount, search, searchRef, itemsPerP
 
     <template #no-data>
       <div v-if="search" class="text-center py-16">
-        <h1 class="text-h6 text-primary mb-4">No results found</h1>
-        <v-btn density="compact" @click="searchRef?.clearSearch()">Clear search</v-btn>
+        <h1 class="text-primary mb-4">{{ $t('noResultsFound') }}</h1>
+        <v-btn density="compact" @click="searchRef?.clearSearch()">{{ $t('clearSearch') }}</v-btn>
       </div>
 
       <div v-else class="text-center py-16">

@@ -24,7 +24,7 @@ const {
   <v-dialog v-model="isOpen" max-width="600" persistent style="z-index: 1000">
     <v-card v-if="isLoading" class="text-center py-8 rounded-lg">
       <v-progress-circular indeterminate color="primary" size="64" />
-      <div class="text-h6 mt-4">Loading...</div>
+      <div class="mt-4">Loading...</div>
     </v-card>
 
     <template v-else-if="isError">
@@ -56,7 +56,7 @@ const {
 
       <v-card-title class="px-4">
         <div class="d-flex align-center flex-wrap">
-          <span class="text-h5 font-weight-bold">{{ team.name }}</span>
+          <span class="font-weight-bold">{{ team.name }}</span>
           <v-chip class="ml-3 font-weight-bold" color="primary" size="small" density="compact">
             {{ team.type }}
           </v-chip>

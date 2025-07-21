@@ -41,7 +41,7 @@ const {
 
     <template #no-data>
       <div v-if="search" class="text-center py-16">
-        <h1 class="text-h6 text-primary mb-4">No results found</h1>
+        <h1 class="text-primary mb-4">No results found</h1>
         <v-btn density="compact" @click="searchRef?.clearSearch()">Clear search</v-btn>
       </div>
 

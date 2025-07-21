@@ -15,6 +15,8 @@
   "filter": "Filter",
   "reset": "Reset",
   "resetAll": "Reset All",
+  "noResultsFound": "No results found",
+  "clearSearch": "Clear Search",
 
   "deleteTeam": {
     "deleteTitle": "Delete Team",
