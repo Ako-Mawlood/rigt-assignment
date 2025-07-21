@@ -21,17 +21,6 @@ import { workTypeColors } from '../constants/colors'
 
     <template #items="{ items }: { items: MemberType[] }">
       <v-data-table :items="items" :headers="headers" hide-default-footer>
-        <template
-          v-for="header in headers"
-          :key="header.key"
-          #[`column.${header.key}`]="{ column }"
-        >
-          <v-icon v-if="header.icon" size="small" class="mr-1 text-medium-emphasis">
-            {{ header.icon }}
-          </v-icon>
-          {{ column.title }}
-        </template>
-
         <template #item.phoneNumber="{ item }">
           <span>{{ formatPhone(item.phoneNumber) }}</span>
         </template>

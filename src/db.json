@@ -26,7 +26,7 @@
       },
       "location": "Duhok, central bank",
       "isActive": true,
-      "membersCount": 3,
+      "membersCount": 6,
       "timezone": "Duhok/Badhdad",
       "id": "5c96"
     },
@@ -56,7 +56,7 @@
       },
       "location": "Erbil Empire Street",
       "isActive": true,
-      "membersCount": 6,
+      "membersCount": 13,
       "timezone": "Erbil-Baghdad",
       "id": "2ea1"
     },

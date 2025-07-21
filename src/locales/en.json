@@ -11,6 +11,13 @@
   "submit": "Submit",
   "open": "Open",
   "close": "Close",
+  "filters": "Filters",
+  "filter": "Filter",
+  "reset": "Reset",
+  "resetAll": "Reset All",
+  "noResultsFound": "No results found",
+  "clearSearch": "Clear Search",
+  "loading": "Loading",
 
   "deleteTeam": {
     "deleteTitle": "Delete Team",
@@ -29,7 +36,8 @@
     "uploadImage": "Upload image",
     "isActive": "Is Active?",
     "membersCount": "Members Count",
-    "timezone": "Timezone"
+    "timezone": "Timezone",
+    "noTeamsCreatedYet": "No teams created yet"
   },
 
   "memberForm": {
@@ -42,6 +50,10 @@
     "workType": "Work Type",
     "position": "Position",
     "dateOfBirth": "Date of Birth"
+  },
+  "memberFilter": {
+    "filterByWorkType": "Filter by work type",
+    "filterByPosition": "Filter by position"
   },
   "deleteMember": {
     "deleteTitle": "Delete Member",

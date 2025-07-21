@@ -20,7 +20,7 @@ const {
 </script>
 
 <template>
-  <div v-if="isLoading">Loading</div>
+  <p class="text-lg" v-if="isLoading">{{ $t('loading') }}</p>
   <v-data-iterator v-if="data" :items="data" class="mt-10" :items-per-page="5">
     <template #header>
       <v-row justify="space-between" align="center" class="pa-4">
@@ -41,8 +41,8 @@ const {
 
     <template #no-data>
       <div v-if="search" class="text-center py-16">
-        <h1 class="text-h6 text-primary mb-4">No results found</h1>
-        <v-btn density="compact" @click="searchRef?.clearSearch()">Clear search</v-btn>
+        <h1 class="text-primary mb-4">{{ $t('noResultsFound') }}</h1>
+        <v-btn density="compact" @click="searchRef?.clearSearch()">{{ $t('clearSearch') }}</v-btn>
       </div>
 
       <div v-else class="text-center py-16">

@@ -1,6 +1,6 @@
 import type { MemberFormDataType } from '@/features/dashboard/pages/members/utils/validations/member.validations'
 import { type CompanyPositionsType } from '@/constants/companyPositionOptions'
-import type { WorkType } from '../constants/workTypes'
+import type { WorkType } from '@/features/dashboard/pages/members/constants/workTypes'
 
 export type MemberType = {
   id: string

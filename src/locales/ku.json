@@ -10,6 +10,13 @@
   "submit": "ناردن",
   "close": "داخستن",
   "done": "تەواو",
+  "filters": "پاڵاوتنەکان",
+  "filter": "پاڵاوتن",
+  "reset": "سڕینەوەی",
+  "resetAll": "سڕینەوەی پاڵاوتنەکان",
+  "noResultsFound": "هیچ ئەنجامێک نەدۆزرایەوە",
+  "clearSearch": "سڕینەوەی گەڕان",
+  "loading": "چاوەروانبە...",
 
   "vuetify": {
     "open": "کردنەوە"
@@ -33,7 +40,8 @@
     "isActive": "ئایا چالاکە؟",
     "membersCount": "ژمارەی ئەندامەکان",
     "timezone": "کاتی ناوچە",
-    "submit": "دروستکردنی تیم"
+    "submit": "دروستکردنی تیم",
+    "noTeamsCreatedYet": "هیچ تیمێک نیە"
   },
   "memberForm": {
     "editMember": "دەستکاریکردنی ئەندام",
@@ -47,6 +55,10 @@
     "dateOfBirth": "ڕۆژی لەدایکبوون"
   },
 
+  "memberFilter": {
+    "filterByWorkType": "پاڵاوتن بە جۆری کار",
+    "filterByPosition": "پاڵاوتن بە پۆست"
+  },
   "deleteMember": {
     "deleteTitle": "سڕینەوەی ئەندام",
     "deleteConfirmation": "دڵنیایت کە دەتەوێت ئەم ئەندامە بسڕیتەوە؟ ئەم کردارە ڕەوشتییە و ناتوانرێت وەربگرێتەوە."
