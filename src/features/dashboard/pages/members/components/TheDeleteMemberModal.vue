@@ -2,8 +2,7 @@
 import { useMutation, useQueryClient } from '@tanstack/vue-query'
 import { ref } from 'vue'
 import { deleteMember } from '@/features/dashboard/pages/members/api/members.api'
-import { useRoute } from 'vue-router'
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 const isOpen = ref(true)
 const queryClient = useQueryClient()
@@ -17,7 +16,7 @@ const { mutate, isPending } = useMutation({
 
   onSuccess: () => {
     isOpen.value = false
-    router.push('/dashboard/members')
+    router.push({ path: '/dashboard/members', query: route.query })
     queryClient.invalidateQueries({ queryKey: ['members'] })
   },
 })
@@ -34,9 +33,13 @@ const { mutate, isPending } = useMutation({
       >
         <template v-slot:actions>
           <div class="d-flex">
-            <v-btn class="ml-auto" to="/dashboard/members" variant="elevated" density="compact">{{
-              $t('cancel')
-            }}</v-btn>
+            <v-btn
+              class="ml-auto"
+              @click="$router.push({ path: '/dashboard/members', query: $route.query })"
+              :text="$t('cancel')"
+              variant="elevated"
+              density="compact"
+            />
             <v-btn
               class="ms-2"
               @click="mutate"

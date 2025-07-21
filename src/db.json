@@ -213,15 +213,6 @@
   ],
   "members": [
     {
-      "name": "new ",
-      "email": "email@gmail.com",
-      "position": "Operations Manager",
-      "phoneNumber": "+9647503938393",
-      "dateOfBirth": "2004-07-06T20:00:00.000Z",
-      "workType": "Remote",
-      "id": "c332"
-    },
-    {
       "id": "d968",
       "name": "asff",
       "email": "adf@gmail.com",
@@ -249,13 +240,31 @@
       "workType": "On-site"
     },
     {
-      "id": "9c82",
       "name": "Soran Qadr",
       "email": "soran.qadr@gmail.com",
       "position": "Software Developer",
       "phoneNumber": "+9647503348921",
-      "dateOfBirth": "2025-03-04T21:00:00.000Z",
+      "dateOfBirth": "2025-03-12T21:00:00.000Z",
+      "workType": "Remote",
+      "id": "9c82"
+    },
+    {
+      "id": "bece",
+      "name": "Soran Qadr",
+      "email": "ma@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647504444444",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
       "workType": "Remote"
+    },
+    {
+      "id": "4be9",
+      "name": "Soran Qadr",
+      "email": "e@gmai.com",
+      "position": "Project Manager",
+      "phoneNumber": "+9647503333333",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "On-site"
     }
   ]
 }

@@ -37,17 +37,22 @@ defineExpose({ clearSearch })
       clearable
       hide-details
       density="compact"
+      prepend-inner-icon="mdi-magnify"
       @keyup.enter="handleSearch"
       @click:clear="clearSearch"
     />
 
     <v-btn
       @click="handleSearch"
-      :text="$t('search')"
       color="primary"
       prepend-icon="mdi-magnify"
       class="mx-4"
       variant="elevated"
-    />
+      density="comfortable"
+      rounded="lg"
+      icon
+    >
+      <v-icon>mdi-magnify</v-icon>
+    </v-btn>
   </v-col>
 </template>

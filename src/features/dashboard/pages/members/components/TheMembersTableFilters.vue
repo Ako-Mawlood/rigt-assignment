@@ -92,7 +92,12 @@ onMounted(() => {
           size="x-small"
           max-width="80"
           color="primary"
-          @click="emit('resetFilter', ['workType', 'position'])"
+          @click="
+            () => {
+              emit('resetFilter', ['workType', 'position'])
+              menu = false
+            }
+          "
           text="Reset all"
         />
       </div>
