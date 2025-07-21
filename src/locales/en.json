@@ -11,6 +11,10 @@
   "submit": "Submit",
   "open": "Open",
   "close": "Close",
+  "filters": "Filters",
+  "filter": "Filter",
+  "reset": "Reset",
+  "resetAll": "Reset All",
 
   "deleteTeam": {
     "deleteTitle": "Delete Team",
@@ -42,6 +46,10 @@
     "workType": "Work Type",
     "position": "Position",
     "dateOfBirth": "Date of Birth"
+  },
+  "memberFilter": {
+    "filterByWorkType": "Filter by work type",
+    "filterByPosition": "Filter by position"
   },
   "deleteMember": {
     "deleteTitle": "Delete Member",

@@ -27,23 +27,23 @@ onMounted(() => {
         variant="outlined"
         color="primary"
         density="comfortable"
-        text="filter"
+        :text="$t('filter')"
         class="text-capitalize"
         prepend-icon="mdi-filter-variant"
       />
     </template>
 
     <v-card min-width="300">
-      <v-card-title class="text-body-2 text-primary">Filters</v-card-title>
+      <v-card-title class="text-body-2 text-primary">{{ $t('filters') }}</v-card-title>
       <v-divider />
 
       <div style="gap: 16px" class="pa-4 d-flex flex-column">
         <div>
           <div class="d-flex justify-space-between pb-1 align-center">
-            <p class="text-body-2">Work type</p>
+            <p class="text-body-2">{{ $t('memberForm.workType') }}</p>
             <v-btn
               variant="text"
-              text="Reset"
+              :text="$t('reset')"
               @click="emit('resetFilter', ['workType'])"
               size="x-small"
               color="primary"
@@ -57,7 +57,7 @@ onMounted(() => {
             item-value="value"
             input-class="text-large"
             density="compact"
-            placeholder="Filter by work type"
+            :placeholder="$t('memberFilter.filterByWorkType')"
             variant="solo"
             hide-details
           />
@@ -65,10 +65,10 @@ onMounted(() => {
 
         <div>
           <div class="d-flex justify-space-between align-center mb-1">
-            <p class="text-body-2">Position</p>
+            <p class="text-body-2">{{ $t('memberForm.position') }}</p>
             <v-btn
               variant="text"
-              text="Reset"
+              :text="$t('reset')"
               @click="emit('resetFilter', ['position'])"
               size="x-small"
               color="primary"
@@ -82,7 +82,7 @@ onMounted(() => {
             item-title="text"
             item-value="value"
             density="compact"
-            placeholder="Filter by position"
+            :placeholder="$t('memberFilter.filterByPosition')"
             hide-details
             variant="solo"
           />
@@ -98,7 +98,7 @@ onMounted(() => {
               menu = false
             }
           "
-          text="Reset all"
+          :text="$t('resetAll')"
         />
       </div>
     </v-card>
