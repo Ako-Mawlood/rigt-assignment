@@ -35,24 +35,22 @@ const { mutate, isPending } = useMutation({
         <template v-slot:actions>
           <div class="d-flex">
             <v-btn
-              class="ml-auto"
+              class="ml-auto text-capitalize font-weight-bold"
               @click="$router.push({ path: '/dashboard/teams', query: $route.query })"
               variant="elevated"
               density="compact"
-              >{{ $t('cancel') }}</v-btn
-            >
+              :text="$t('cancel')"
+            />
             <v-btn
-              class="ms-2"
+              class="ms-2 text-capitalize font-weight-bold"
               @click="mutate"
-              text="Delete"
+              :text="$t('delete')"
               color="error"
               :prepend-icon="isPending ? 'mdi-loading' : 'mdi-delete'"
               :loading="isPending"
               variant="elevated"
               density="compact"
-            >
-              {{ $t('delete') }}
-            </v-btn>
+            />
           </div>
         </template>
       </v-card>

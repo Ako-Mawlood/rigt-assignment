@@ -23,15 +23,17 @@ const {
   <p class="text-lg" v-if="isLoading">{{ $t('loading') }}</p>
   <v-data-iterator v-if="data" :items="data" class="mt-10" :items-per-page="5">
     <template #header>
-      <v-row justify="space-between" align="center" class="pa-4">
+      <v-row justify="space-between" align="center">
         <SearchField
           ref="searchRef"
           v-model:search="search"
           @refetch="refetch"
           v-model:page="page"
+          class="order-2 order-sm-1"
         />
+
         <slot
-          name="filters"
+          name="header-append"
           :filters="filters"
           :handleFilter="handleFilter"
           :resetFilter="resetFilter"

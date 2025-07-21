@@ -29,7 +29,7 @@ function clearSearch() {
 defineExpose({ clearSearch })
 </script>
 <template>
-  <v-col cols="9" :md="6" class="d-flex align-center">
+  <v-col cols="12" :sm="7" :md="5" class="d-flex align-center">
     <v-text-field
       v-model="search"
       :placeholder="$t('search')"
@@ -47,9 +47,9 @@ defineExpose({ clearSearch })
       color="primary"
       prepend-icon="mdi-magnify"
       class="mx-4"
-      variant="elevated"
+      variant="tonal"
       density="comfortable"
-      rounded="lg"
+      rounded
       icon
     >
       <v-icon>mdi-magnify</v-icon>
