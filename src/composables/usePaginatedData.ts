@@ -5,11 +5,9 @@ import type { AxiosError } from 'axios'
 import axios from '@/plugins/axios'
 import { useQuery } from '@tanstack/vue-query'
 import type { SearchQueryType } from '@/types/SearchQuery.type'
-import { useQueryClient } from '@tanstack/vue-query'
 
 export function usePaginatedData(url: string, queryKey: string) {
   const route = useRoute()
-  const queryClient = useQueryClient()
   const searchRef = ref<InstanceType<typeof SearchField> | null>(null)
   const search = ref(route.query.q || '')
   const itemsPerPage = ref(Number(localStorage.getItem('itemsPerPage')) || 10)

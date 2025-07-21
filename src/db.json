@@ -10,7 +10,7 @@
         "format": "png"
       },
       "location": "Erbil 40m road",
-      "isActive": true,
+      "isActive": false,
       "membersCount": 15,
       "timezone": "Erbil-Baghdad",
       "id": "7ed7"
@@ -209,6 +209,21 @@
       "membersCount": 33,
       "timezone": "33",
       "id": "600d"
+    },
+    {
+      "id": "b697",
+      "name": "10",
+      "type": "Development",
+      "description": "asas",
+      "image": {
+        "display_name": "6",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753090300/we2qu8k4l03mfolirtn1.png",
+        "format": "png"
+      },
+      "location": "hawler",
+      "isActive": true,
+      "membersCount": 1,
+      "timezone": "GMT"
     }
   ],
   "members": [
@@ -265,6 +280,15 @@
       "phoneNumber": "+9647503333333",
       "dateOfBirth": "2025-06-30T21:00:00.000Z",
       "workType": "On-site"
+    },
+    {
+      "id": "1c40",
+      "name": "karaa",
+      "email": "karaa.kamaran@email.com",
+      "position": "Finance Manager",
+      "phoneNumber": "+9647500000000",
+      "dateOfBirth": "2025-07-22T21:00:00.000Z",
+      "workType": "Remote"
     }
   ]
 }

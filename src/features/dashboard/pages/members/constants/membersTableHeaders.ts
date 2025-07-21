@@ -1,4 +1,5 @@
 export const headers = [
+  { title: 'id', key: 'id', sortable: false },
   { title: 'Name', key: 'name', icon: 'mdi-account' },
   { title: 'Email', key: 'email', icon: 'mdi-email', sortable: false },
   { title: 'Phone', key: 'phoneNumber', icon: 'mdi-phone', sortable: false },
