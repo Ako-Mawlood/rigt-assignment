@@ -24,7 +24,7 @@ onMounted(() => {
     <template #activator="{ props }">
       <v-btn
         v-bind="props"
-        variant="outlined"
+        variant="tonal"
         color="primary"
         density="comfortable"
         :text="$t('filter')"

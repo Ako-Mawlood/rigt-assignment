@@ -11,12 +11,22 @@ import { workTypeColors } from '../constants/colors'
 
 <template>
   <DataTable url="/members" queryKey="members">
-    <template #filters="{ filters, handleFilter, resetFilter }">
-      <TheMembersTableFilters
-        :filters="filters"
-        @handleFilter="handleFilter"
-        @resetFilter="resetFilter"
-      />
+    <template #header-append="{ filters, handleFilter, resetFilter }">
+      <div style="gap: 10px" class="d-flex ml-auto order-1 order-sm-2">
+        <TheMembersTableFilters
+          :filters="filters"
+          @handleFilter="handleFilter"
+          @resetFilter="resetFilter"
+        />
+
+        <v-btn
+          @click="$router.push({ path: '/dashboard/members/add', query: $route.query })"
+          :text="$t('memberForm.newMember')"
+          density="comfortable"
+          class="text-capitalize mr-4"
+          color="primary"
+        />
+      </div>
     </template>
 
     <template #items="{ items }: { items: MemberType[] }">
@@ -24,7 +34,6 @@ import { workTypeColors } from '../constants/colors'
         <template #item.phoneNumber="{ item }">
           <span>{{ formatPhone(item.phoneNumber) }}</span>
         </template>
-
         <template #item.dateOfBirth="{ item }">
           <span>{{ dateFormatter(item.dateOfBirth) }}</span>
         </template>
@@ -34,7 +43,7 @@ import { workTypeColors } from '../constants/colors'
         </template>
 
         <template #item.position="{ item }">
-          <v-chip color="purple-lighten-1" density="compact" :text="item.position" />
+          <v-chip color="pink" density="compact" :text="item.position" />
         </template>
 
         <template #item.actions="{ item }">

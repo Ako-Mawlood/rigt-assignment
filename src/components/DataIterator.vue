@@ -12,7 +12,16 @@ const { data, isLoading, refetch, page, pagesCount, search, searchRef, itemsPerP
   <p class="text-lg" v-if="isLoading">{{ $t('loading') }}</p>
   <v-data-iterator v-if="data" :items="data" class="mt-10" :items-per-page="5">
     <template #header>
-      <SearchField ref="searchRef" v-model:search="search" @refetch="refetch" v-model:page="page" />
+      <v-row justify="space-between" align="center" class="pa-4">
+        <SearchField
+          ref="searchRef"
+          class="order-2 order-sm-1"
+          v-model:search="search"
+          @refetch="refetch"
+          v-model:page="page"
+        />
+        <slot name="header-append" />
+      </v-row>
     </template>
 
     <template #no-data>
