@@ -7,7 +7,7 @@ import TheMembersTable from '@/features/dashboard/pages/members/components/TheMe
     <v-row justify="space-between" class="pa-4">
       <h2 class="text-primary">{{ $t('members') }}</h2>
       <v-btn
-        to="/dashboard/members/add"
+        @click="$router.push({ path: '/dashboard/members/add', query: $route.query })"
         :text="$t('memberForm.newMember')"
         density="comfortable"
         color="primary"

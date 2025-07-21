@@ -24,7 +24,7 @@ const queryClient = useQueryClient()
 const router = useRouter()
 const route = useRoute()
 const id = route.params.id as string
-const isOpen = ref(true)
+const isModalOpen = ref(true)
 const isDateOfBirthOpen = ref(false)
 
 const { errors, defineField, handleSubmit } = useForm<MemberFormDataType>({
@@ -43,9 +43,9 @@ const { mutate, isPending } = useMutation({
   mutationKey,
   mutationFn,
   onSuccess: () => {
-    isOpen.value = false
+    isModalOpen.value = false
     queryClient.invalidateQueries({ queryKey: ['members'] })
-    router.push('/dashboard/members')
+    router.push({ path: '/dashboard/members', query: route.query })
   },
 })
 
@@ -128,9 +128,12 @@ const onSubmit = handleSubmit((formData) => {
     />
 
     <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
-      <v-btn variant="flat" density="comfortable" to="/dashboard/members">
-        {{ $t('cancel') }}
-      </v-btn>
+      <v-btn
+        variant="flat"
+        density="comfortable"
+        :text="$t('cancel')"
+        @click="$router.push({ path: '/dashboard/members', query: $route.query })"
+      />
       <v-btn
         type="submit"
         @click="onSubmit"
@@ -138,7 +141,7 @@ const onSubmit = handleSubmit((formData) => {
         color="primary"
         :loading="isPending"
       >
-        {{ $t('done') }}
+        {{ $t('submit') }}
       </v-btn>
     </div>
   </v-form>
