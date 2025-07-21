@@ -7,9 +7,7 @@ export const memberSchema = z.object({
   email: z.string().email(),
   position: z.enum(companyPositions),
   phoneNumber: z.string(),
-  dateOfBirth: z.date().refine((date) => date <= new Date(), {
-    message: 'Date of birth must be in the past',
-  }),
+  dateOfBirth: z.string(),
   workType: z.enum(workTypes),
 })
 
