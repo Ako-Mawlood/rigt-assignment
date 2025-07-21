@@ -36,7 +36,8 @@
     "uploadImage": "Upload image",
     "isActive": "Is Active?",
     "membersCount": "Members Count",
-    "timezone": "Timezone"
+    "timezone": "Timezone",
+    "noTeamsCreatedYet": "No teams created yet"
   },
 
   "memberForm": {

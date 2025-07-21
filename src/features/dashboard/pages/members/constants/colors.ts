@@ -1,5 +1,4 @@
-import { type CompanyPositionsType } from '@/constants/companyPositionOptions'
-import { type WorkType } from './workTypes'
+import { type WorkType } from '@/features/dashboard/pages/members/constants/workTypes'
 
 export const workTypeColors: Record<WorkType, string> = {
   'On-site': 'green',

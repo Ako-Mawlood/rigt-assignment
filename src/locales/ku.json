@@ -40,7 +40,8 @@
     "isActive": "ئایا چالاکە؟",
     "membersCount": "ژمارەی ئەندامەکان",
     "timezone": "کاتی ناوچە",
-    "submit": "دروستکردنی تیم"
+    "submit": "دروستکردنی تیم",
+    "noTeamsCreatedYet": "هیچ تیمێک نیە"
   },
   "memberForm": {
     "editMember": "دەستکاریکردنی ئەندام",

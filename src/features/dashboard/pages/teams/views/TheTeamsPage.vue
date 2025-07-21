@@ -23,7 +23,7 @@ import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard
         </v-row>
       </template>
       <template #no-data-yet>
-        <h1>No teams created yet</h1>
+        <h1>{{ $t('teamForm.noTeamsCreatedYet') }}</h1>
         <v-btn
           to="/dashboard/teams/add"
           :text="$t('teamForm.newTeam')"
