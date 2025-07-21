@@ -17,6 +17,7 @@
   "resetAll": "Reset All",
   "noResultsFound": "No results found",
   "clearSearch": "Clear Search",
+  "loading": "Loading",
 
   "deleteTeam": {
     "deleteTitle": "Delete Team",

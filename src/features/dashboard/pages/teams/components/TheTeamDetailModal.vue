@@ -24,7 +24,8 @@ const {
   <v-dialog v-model="isOpen" max-width="600" persistent style="z-index: 1000">
     <v-card v-if="isLoading" class="text-center py-8 rounded-lg">
       <v-progress-circular indeterminate color="primary" size="64" />
-      <div class="mt-4">Loading...</div>
+
+      <p class="text-sm">{{ $t('loading') }}</p>
     </v-card>
 
     <template v-else-if="isError">

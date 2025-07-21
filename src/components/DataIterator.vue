@@ -9,7 +9,7 @@ const { data, isLoading, refetch, page, pagesCount, search, searchRef, itemsPerP
 </script>
 
 <template>
-  <div v-if="isLoading">Loading</div>
+  <p class="text-lg" v-if="isLoading">{{ $t('loading') }}</p>
   <v-data-iterator v-if="data" :items="data" class="mt-10" :items-per-page="5">
     <template #header>
       <SearchField ref="searchRef" v-model:search="search" @refetch="refetch" v-model:page="page" />
