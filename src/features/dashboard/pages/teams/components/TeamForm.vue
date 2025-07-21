@@ -87,7 +87,7 @@ const onSubmit = handleSubmit((formData) => {
       v-bind="descriptionAttrs"
       :label="$t('teamForm.description')"
       :error-messages="errors.description"
-      outlined
+      density="compact"
       rows="2"
       variant="solo"
     />
@@ -118,7 +118,7 @@ const onSubmit = handleSubmit((formData) => {
       @change="handleChangeFile"
       density="compact"
       max-height="50"
-      class="text-xs"
+      class="text-xs text-primary"
     />
     <div
       v-if="initialValues?.image?.url && !hasUploaded"
@@ -137,11 +137,17 @@ const onSubmit = handleSubmit((formData) => {
       </div>
     </div>
 
-    <v-switch v-model="isActive" v-bind="isActiveAttrs" :label="$t('teamForm.isActive')" />
+    <v-switch
+      v-model="isActive"
+      v-bind="isActiveAttrs"
+      color="primary"
+      :label="$t('teamForm.isActive')"
+    />
 
     <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
       <v-btn
-        variant="flat"
+        variant="tonal"
+        color="primary"
         density="comfortable"
         @click="$router.push({ path: '/dashboard/teams', query: $route.query })"
       >

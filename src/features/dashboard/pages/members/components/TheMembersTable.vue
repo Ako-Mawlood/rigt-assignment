@@ -30,7 +30,7 @@ import { workTypeColors } from '../constants/colors'
     </template>
 
     <template #items="{ items }: { items: MemberType[] }">
-      <v-data-table :items="items" :headers="headers" hide-default-footer>
+      <v-data-table :items="items" class="bg-surface" :headers="headers" hide-default-footer>
         <template #item.phoneNumber="{ item }">
           <span>{{ formatPhone(item.phoneNumber) }}</span>
         </template>

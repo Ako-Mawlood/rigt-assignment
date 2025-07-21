@@ -49,7 +49,7 @@ defineExpose({ clearSearch })
       class="ml-4"
       variant="tonal"
       density="comfortable"
-      rounded="lg"
+      rounded
       icon
     >
       <v-icon>mdi-magnify</v-icon>

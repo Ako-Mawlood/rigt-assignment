@@ -129,8 +129,9 @@ const onSubmit = handleSubmit((formData) => {
 
     <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
       <v-btn
-        variant="flat"
         density="comfortable"
+        variant="tonal"
+        color="primary"
         :text="$t('cancel')"
         @click="$router.push({ path: '/dashboard/members', query: $route.query })"
       />

@@ -8,7 +8,10 @@ const isOpen = ref(true)
 <template>
   <div class="text-center pa-4">
     <v-dialog v-model="isOpen" persistent max-width="600">
-      <v-card :title="$t('teamForm.createNewTeam')">
+      <v-card>
+        <v-card-title class="text-primary font-weight-bold mt-2">
+          {{ $t('teamForm.createNewTeam') }}
+        </v-card-title>
         <TeamForm
           :initialValues="{ isActive: true }"
           :mutationFn="addTeam"
