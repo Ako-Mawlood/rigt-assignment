@@ -6,7 +6,7 @@ const { team } = defineProps<{ team: TeamType }>()
 </script>
 <template>
   <v-card
-    @click="$router.push(`/dashboard/teams/detail/${team.id}`)"
+    @click="$router.push({ path: `/dashboard/teams/detail/${team.id}`, query: $route.query })"
     rounded="md"
     class="d-flex cursor-pointer flex-column justify-space-between"
   >

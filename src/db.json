@@ -5,13 +5,13 @@
       "type": "Development",
       "description": "Responsible for developing and maintaining software applications",
       "image": {
-        "display_name": "building",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752610159/xrhsxdroqv7fw2ulv7rb.avif",
-        "format": "avif"
+        "display_name": "1",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753052652/sarodndh8bow0nsbvmqx.png",
+        "format": "png"
       },
       "location": "Erbil 40m road",
       "isActive": true,
-      "membersCount": 12,
+      "membersCount": 15,
       "timezone": "Erbil-Baghdad",
       "id": "7ed7"
     },
@@ -20,9 +20,9 @@
       "type": "Customer Support",
       "description": "Responsible for supporting and helping customers and make them pleased",
       "image": {
-        "display_name": "bee",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752610662/qsnz2qkrj3makqim28q6.jpg",
-        "format": "jpg"
+        "display_name": "2",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753052670/bljiatsutyatjr4rw5yn.png",
+        "format": "png"
       },
       "location": "Duhok, central bank",
       "isActive": true,
@@ -35,9 +35,9 @@
       "type": "Marketing",
       "description": "Drives product visibility and market outreach through creative campaigns",
       "image": {
-        "display_name": "8254661",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752610904/rpyez4ylhi6pzkdugvhl.jpg",
-        "format": "jpg"
+        "display_name": "3",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753052687/eopyedyujuqbiaffxlli.png",
+        "format": "png"
       },
       "location": "Sulaimani Polytechnic Area",
       "isActive": true,
@@ -50,9 +50,9 @@
       "type": "Sales",
       "description": "Handles client deals and ensures revenue generation",
       "image": {
-        "display_name": "download (1)",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611054/jxaszakfjnnjrz8igpsz.jpg",
-        "format": "jpg"
+        "display_name": "4",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753052698/x6cjivzwkprcvyxl0tk6.png",
+        "format": "png"
       },
       "location": "Erbil Empire Street",
       "isActive": true,
@@ -65,9 +65,9 @@
       "type": "Development",
       "description": "Full-stack team responsible for core platform development",
       "image": {
-        "display_name": "images",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611075/ysrpt8hnmisk4vl0onni.jpg",
-        "format": "jpg"
+        "display_name": "5",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053698/b9qutskrvwnkqmi5hnfb.png",
+        "format": "png"
       },
       "location": "Zakho Tech Park",
       "isActive": false,
@@ -80,9 +80,9 @@
       "type": "Design",
       "description": "Creates user-centered designs and brand materials",
       "image": {
-        "display_name": "images (2)",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611370/teok1cal79rn4pq471y1.jpg",
-        "format": "jpg"
+        "display_name": "6",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053710/wmqtcqggiingfiak74vh.png",
+        "format": "png"
       },
       "location": "Kirkuk Design District",
       "isActive": true,
@@ -95,9 +95,9 @@
       "type": "Customer Support",
       "description": "24/7 assistance team ensuring great user experience",
       "image": {
-        "display_name": "download (2)",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611138/me16ts9dsbl7omnmadds.jpg",
-        "format": "jpg"
+        "display_name": "7",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053723/onwqjxv1k6ashspcnclp.png",
+        "format": "png"
       },
       "location": "Halabja Service Center",
       "isActive": false,
@@ -110,9 +110,9 @@
       "type": "Business Strategy",
       "description": "Planning and executing long-term business goals",
       "image": {
-        "display_name": "download",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611198/mwmhb7jsxuwkj3nudxi4.jpg",
-        "format": "jpg"
+        "display_name": "8",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053737/j9cfjsvgkp7vmixxnoni.png",
+        "format": "png"
       },
       "location": "Erbil Tech Valley",
       "isActive": true,
@@ -121,28 +121,13 @@
       "id": "f713"
     },
     {
-      "name": "Voix",
-      "type": "Human Resources",
-      "description": "Responsible for hiring, culture, and internal policies",
-      "image": {
-        "display_name": "download (1)",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611310/vba3clr4xzvyunfvehrq.jpg",
-        "format": "jpg"
-      },
-      "location": "Duhok People Square",
-      "isActive": true,
-      "membersCount": 9,
-      "timezone": "Duhok/Basra",
-      "id": "bb2e"
-    },
-    {
       "name": "Boosters",
       "type": "Marketing",
       "description": "Promotes brand engagement across multiple platforms",
       "image": {
-        "display_name": "images (1)",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611329/frpbyevsvywrjxn5m38r.jpg",
-        "format": "jpg"
+        "display_name": "9",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053754/kd0f3uyjd2h825tvqoim.png",
+        "format": "png"
       },
       "location": "Erbil Mazi Mall",
       "isActive": true,
@@ -155,82 +140,131 @@
       "type": "Business Strategy",
       "description": "Analyzes market data for business insights and direction",
       "image": {
-        "display_name": "asdlfjasldfj;asf",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1752611341/ven9zrcaiycf6hd89e4x.jpg",
-        "format": "jpg"
+        "display_name": "12",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053770/qt1er3d3jwbydyg7m1f6.png",
+        "format": "png"
       },
       "location": "Soran Business Tower",
       "isActive": false,
       "membersCount": 6,
       "timezone": "Soran/Baghdad",
       "id": "dd51"
+    },
+    {
+      "name": "Nasters",
+      "type": "Development",
+      "description": "sdf",
+      "image": {
+        "display_name": "10",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053778/lil4b3e5laiqck8sesdk.png",
+        "format": "png"
+      },
+      "location": "asdf",
+      "isActive": true,
+      "membersCount": 33,
+      "timezone": "asdf",
+      "id": "3a85"
+    },
+    {
+      "name": "The Posemp",
+      "type": "Development",
+      "description": "afaf",
+      "image": {
+        "display_name": "13",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053804/sgbswexqam9xnk6uqnaz.png",
+        "format": "png"
+      },
+      "location": "local",
+      "isActive": true,
+      "membersCount": 55,
+      "timezone": "asdf",
+      "id": "eb7e"
+    },
+    {
+      "id": "7240",
+      "name": "Artoses",
+      "type": "Design",
+      "description": "design",
+      "image": {
+        "display_name": "15",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053846/v0bahzawz91sooqrqpnn.png",
+        "format": "png"
+      },
+      "location": "Erbil - Kurdistan",
+      "isActive": true,
+      "membersCount": 5,
+      "timezone": "Erbil - Baghdad"
+    },
+    {
+      "name": "Postures",
+      "type": "Development",
+      "description": "asdfasdf",
+      "image": {
+        "display_name": "14",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753055405/qztp2gybez7qa9r0ediz.png",
+        "format": "png"
+      },
+      "location": "sdfasf",
+      "isActive": true,
+      "membersCount": 33,
+      "timezone": "33",
+      "id": "600d"
     }
   ],
-  "staff": [
+  "members": [
     {
-      "id": "1",
-      "firstName": "Ako",
-      "lastName": "Mawlood",
-      "teamType": "Engineering",
-      "teamId": 1,
-      "description": "Frontend Developer specialized in React and Vue.",
-      "date": "2024-11-10",
-      "status": "active",
-      "email": "ako@example.com",
-      "phone": "+9647500000001",
-      "avatar": "https://randomuser.me/api/portraits/men/75.jpg"
+      "id": "d968",
+      "name": "asff",
+      "email": "adf@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+96433388383",
+      "dateOfBirth": "2025-07-07T21:00:00.000Z",
+      "workType": "Hybrid"
     },
     {
-      "id": "2",
-      "firstName": "Sara",
-      "lastName": "Omar",
-      "teamType": "Creative",
-      "teamId": 2,
-      "description": "UI/UX Designer with a strong background in mobile apps.",
-      "date": "2023-07-22",
-      "status": "active",
-      "email": "sara@example.com",
-      "phone": "+9647500000002",
-      "avatar": "https://randomuser.me/api/portraits/women/65.jpg"
+      "id": "d3f0",
+      "name": "New User",
+      "email": "Ako@gmail.com",
+      "position": "Marketing Specialist",
+      "phoneNumber": "+9647507981403",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "Hybrid"
     },
     {
-      "id": "3",
-      "firstName": "Rebaz",
-      "lastName": "Ahmed",
-      "teamType": "Business",
-      "teamId": 3,
-      "description": "Marketing Specialist focused on digital outreach.",
-      "date": "2024-01-12",
-      "status": "inactive",
-      "email": "rebaz@example.com",
-      "phone": "+9647500000003",
-      "avatar": "https://randomuser.me/api/portraits/men/52.jpg"
+      "id": "2123",
+      "name": "Aras",
+      "email": "asdf@gmail.com",
+      "position": "Chief Executive Officer",
+      "phoneNumber": "+9647518383833",
+      "dateOfBirth": "2025-07-01T21:00:00.000Z",
+      "workType": "On-site"
     },
     {
-      "id": "4",
-      "firstName": "Hawkar",
-      "lastName": "Karim",
-      "teamType": "Administrative",
-      "teamId": 4,
-      "description": "HR Manager handling recruitment and employee relations.",
-      "date": "2022-10-08",
-      "status": "active",
-      "email": "hawkar@example.com",
-      "phone": "+9647500000004",
-      "avatar": "https://randomuser.me/api/portraits/men/30.jpg"
+      "name": "Soran Qadr",
+      "email": "soran.qadr@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647503348921",
+      "dateOfBirth": "2025-03-12T21:00:00.000Z",
+      "workType": "Remote",
+      "id": "9c82"
     },
     {
-      "id": "5",
-      "firstName": "Dilan",
-      "lastName": "Rashid",
-      "teamType": "Engineering",
-      "teamId": 1,
-      "description": "Backend Developer working on Node.js and MongoDB.",
-      "date": "2023-09-15",
-      "status": "on leave",
-      "email": "dilan@example.com",
-      "phone": "+9647500000005",
-      "avatar": "https://randomuser.me/api/portraits/women/40.jpg"
+      "id": "bece",
+      "name": "Soran Qadr",
+      "email": "ma@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647504444444",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "Remote"
+    },
+    {
+      "id": "4be9",
+      "name": "Soran Qadr",
+      "email": "e@gmai.com",
+      "position": "Project Manager",
+      "phoneNumber": "+9647503333333",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "On-site"
     }
   ]
 }

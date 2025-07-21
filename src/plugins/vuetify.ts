@@ -6,16 +6,15 @@ import '@mdi/font/css/materialdesignicons.css'
 import { VFileUpload } from 'vuetify/labs/VFileUpload'
 
 const lightTheme: ThemeDefinition = {
-  dark: false,
   colors: {
-    primary: '#93348D',
+    primary: '#724190ff',
     onPrimary: '#FFFFFF',
     surface: '#FFFFFF',
     surfaceOpacity: 'rgba(255,255,255,0.3)',
     onSurface: '#121212',
     onSurfaceHigh: '#222222',
     onSurfaceMedium: '#888888',
-    background: '#F6F6F6',
+    background: '#ffffff',
     onBackground: '#121212',
     outline: '#E5E7EB',
     error: '#C33028',
@@ -52,6 +51,7 @@ export const vuetify = createVuetify({
   },
   locale: {
     locale: 'en',
+    fallback: 'en',
     rtl: {
       ku: true,
     },

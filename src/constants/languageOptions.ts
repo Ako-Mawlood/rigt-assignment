@@ -7,4 +7,4 @@ export const languageOptions = [
     label: 'كوردی',
     code: 'ku',
   },
-]
+] as const

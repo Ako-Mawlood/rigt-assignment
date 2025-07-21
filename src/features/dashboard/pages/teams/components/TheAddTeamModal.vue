@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import TeamForm from '@/features/dashboard/pages/teams/components/TeamForm.vue'
 import { addTeam } from '@/features/dashboard/pages/teams/api/teams.api'
-
 const isOpen = ref(true)
 </script>
 

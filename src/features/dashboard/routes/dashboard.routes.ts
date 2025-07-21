@@ -1,6 +1,6 @@
 import TheDashboardLayout from '@/layouts/TheDashboardLayout.vue'
 import { teamsRoutes } from '@/features/dashboard/pages/teams/routes/teams.routes'
-import { staffsRoutes } from '@/features/dashboard/pages/staffs/staffs.routes'
+import { membersRoutes } from '@/features/dashboard/pages/members/routes/members.routes'
 
 export const dashboardRoutes = {
   path: '/dashboard',
@@ -11,6 +11,6 @@ export const dashboardRoutes = {
       redirect: '/dashboard/teams',
     },
     teamsRoutes,
-    staffsRoutes,
+    membersRoutes,
   ],
 }

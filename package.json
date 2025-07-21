@@ -18,18 +18,22 @@
     "@vee-validate/zod": "^4.15.1",
     "axios": "^1.10.0",
     "clsx": "^2.1.1",
+    "flag-icons": "^7.5.0",
     "json-server": "^1.0.0-beta.3",
+    "libphonenumber-js": "^1.12.10",
     "pinia": "^3.0.3",
+    "v-phone-input": "^5.0.0",
     "vee-validate": "^4.15.1",
     "vue": "^3.5.17",
     "vue-i18n": "^11.1.9",
     "vue-router": "^4.5.1",
     "vuetify": "^3.8.12",
-    "zod": "^4.0.5"
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.15.32",
+    "@types/vue-tel-input": "^2.1.1",
     "@vitejs/plugin-vue": "^6.0.0",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.5.1",

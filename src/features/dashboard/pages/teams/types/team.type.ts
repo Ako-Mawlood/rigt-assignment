@@ -1,16 +1,18 @@
 import type { TeamFormDataType } from '@/features/dashboard/pages/teams/utils/team.validations'
 
+export type TeamTypeOptions =
+  | 'Development'
+  | 'Design'
+  | 'Marketing'
+  | 'Sales'
+  | 'Human Resources'
+  | 'Customer Support'
+  | 'Business Strategy'
+
 export type TeamType = {
   id: string
   name: string
-  type:
-    | 'Development'
-    | 'Design'
-    | 'Marketing'
-    | 'Sales'
-    | 'Human Resources'
-    | 'Customer Support'
-    | 'Business Strategy'
+  type: TeamTypeOptions
   description: 'string'
   image: {
     display_name: string

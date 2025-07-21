@@ -1,13 +1,15 @@
 {
   "rigt": "Rigt Official",
   "teams": "Teams",
-  "staffs": "Staffs",
+  "members": "Members",
   "search": "Search",
   "view team": "View team",
   "delete": "Delete",
   "edit": "Edit",
   "cancel": "Cancel",
   "done": "Done",
+  "submit": "Submit",
+  "open": "Open",
   "close": "Close",
 
   "deleteTeam": {
@@ -28,5 +30,21 @@
     "isActive": "Is Active?",
     "membersCount": "Members Count",
     "timezone": "Timezone"
+  },
+
+  "memberForm": {
+    "addNewMember": "Add new member ",
+    "editMember": "Edit member",
+    "newMember": "New member",
+    "name": "Member Name",
+    "email": "Member Email",
+    "phoneNumber": "Phone Number",
+    "workType": "Work Type",
+    "position": "Position",
+    "dateOfBirth": "Date of Birth"
+  },
+  "deleteMember": {
+    "deleteTitle": "Delete Member",
+    "deleteConfirmation": "Are you sure you want to delete this member? This action cannot be undone."
   }
 }
