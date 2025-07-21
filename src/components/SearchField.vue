@@ -46,7 +46,7 @@ defineExpose({ clearSearch })
       @click="handleSearch"
       color="primary"
       prepend-icon="mdi-magnify"
-      class="ml-4"
+      class="mx-4"
       variant="tonal"
       density="comfortable"
       rounded

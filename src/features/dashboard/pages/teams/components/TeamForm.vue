@@ -150,6 +150,7 @@ const onSubmit = handleSubmit((formData) => {
         color="primary"
         density="comfortable"
         @click="$router.push({ path: '/dashboard/teams', query: $route.query })"
+        class="text-capitalize font-weight-bold"
       >
         {{ $t('cancel') }}
       </v-btn>
@@ -159,6 +160,7 @@ const onSubmit = handleSubmit((formData) => {
         @click="onSubmit"
         density="comfortable"
         color="primary"
+        class="text-capitalize font-weight-bold"
         :loading="isPending"
       >
         {{ $t('submit') }}

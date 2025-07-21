@@ -23,7 +23,7 @@ import { workTypeColors } from '../constants/colors'
           @click="$router.push({ path: '/dashboard/members/add', query: $route.query })"
           :text="$t('memberForm.newMember')"
           density="comfortable"
-          class="text-capitalize mr-4"
+          class="text-capitalize font-weight-bold mr-4"
           color="primary"
         />
       </div>
@@ -43,7 +43,7 @@ import { workTypeColors } from '../constants/colors'
         </template>
 
         <template #item.position="{ item }">
-          <v-chip color="pink" density="compact" :text="item.position" />
+          <v-chip color="primary" density="compact" :text="item.position" />
         </template>
 
         <template #item.actions="{ item }">

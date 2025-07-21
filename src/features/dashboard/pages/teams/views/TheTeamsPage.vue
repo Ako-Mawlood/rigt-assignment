@@ -14,7 +14,7 @@ import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard
           @click="$router.push({ path: '/dashboard/teams/add', query: $route.query })"
           :text="$t('teamForm.newTeam')"
           density="comfortable"
-          class="order-1 order-sm-2 ml-auto"
+          class="order-1 order-sm-2 ml-auto text-capitalize font-weight-bold"
           color="primary"
         />
       </template>

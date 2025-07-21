@@ -228,13 +228,13 @@
   ],
   "members": [
     {
-      "id": "d968",
-      "name": "asff",
+      "name": "Othman Hasan",
       "email": "adf@gmail.com",
       "position": "Software Developer",
       "phoneNumber": "+96433388383",
       "dateOfBirth": "2025-07-07T21:00:00.000Z",
-      "workType": "Hybrid"
+      "workType": "Hybrid",
+      "id": "d968"
     },
     {
       "id": "d3f0",
@@ -264,13 +264,13 @@
       "id": "9c82"
     },
     {
-      "id": "bece",
-      "name": "Soran Qadr",
+      "name": "Ahmad Qadr",
       "email": "ma@gmail.com",
       "position": "Software Developer",
       "phoneNumber": "+9647504444444",
       "dateOfBirth": "2025-06-30T21:00:00.000Z",
-      "workType": "Remote"
+      "workType": "Remote",
+      "id": "bece"
     },
     {
       "id": "4be9",

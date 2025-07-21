@@ -5,10 +5,11 @@ const { id } = defineProps<{ id: string }>()
   <v-menu>
     <template #activator="{ props }">
       <v-btn
-        append-icon="mdi-dots-vertical"
-        class="ml-auto pl-1 ma-1"
-        min-width="20"
+        icon="mdi-dots-vertical"
+        class="ml-auto ma-1"
         variant="text"
+        size="x-small"
+        rounded
         v-bind="props"
       />
     </template>

@@ -15,7 +15,9 @@ const { rail, drawer, isTemporary, isPermanent } = useSidebarController()
     :permanent="isPermanent"
   >
     <v-list>
-      <v-list-item prepend-avatar="/images/rigt-logo.png" :title="$t('rigt')" />
+      <v-list-item prepend-avatar="/images/rigt-logo.png" class="text-primary text-lg">
+        {{ $t('rigt') }}
+      </v-list-item>
     </v-list>
 
     <v-list density="compact" v-for="tab in sidebarTabs" :key="tab.id" nav>
