@@ -18,10 +18,16 @@ const { id } = defineProps<{ id: string }>()
       <v-list-item
         @click="$router.push({ path: `${$route.path}/edit/${id}`, query: $route.query })"
         :title="$t('edit')"
+        density="compact"
+        prepend-icon="mdi-pencil"
+        size="x-small"
       />
       <v-list-item
         @click="$router.push({ path: `${$route.path}/delete/${id}`, query: $route.query })"
         :title="$t('delete')"
+        density="compact"
+        prepend-icon="mdi-delete"
+        size="x-small"
       />
     </v-list>
   </v-menu>
