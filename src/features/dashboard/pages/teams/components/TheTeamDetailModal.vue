@@ -80,7 +80,7 @@ const {
       </v-card-subtitle>
 
       <v-card-text class="px-4 pt-3">
-        <p class="text-body-1 mb-4">{{ team.description }}</p>
+        <p class="text-sm mb-4">{{ team.description }}</p>
 
         <v-divider class="my-3" />
 

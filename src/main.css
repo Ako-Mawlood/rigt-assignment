@@ -5,6 +5,20 @@
   font-style: normal;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+}
+.text-sm {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+.text-xl {
+  font-size: 1.5rem;
+}
+
 .kurdish-font {
   font-family: 'kurdish-font' !important;
 }

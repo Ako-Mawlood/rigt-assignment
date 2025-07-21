@@ -34,13 +34,13 @@ onMounted(() => {
     </template>
 
     <v-card min-width="300">
-      <v-card-title class="text-body-2 text-primary">{{ $t('filters') }}</v-card-title>
+      <v-card-title class="text-lg text-primary">{{ $t('filters') }}</v-card-title>
       <v-divider />
 
       <div style="gap: 16px" class="pa-4 d-flex flex-column">
         <div>
           <div class="d-flex justify-space-between pb-1 align-center">
-            <p class="text-body-2">{{ $t('memberForm.workType') }}</p>
+            <p class="text-xs">{{ $t('memberForm.workType') }}</p>
             <v-btn
               variant="text"
               :text="$t('reset')"
@@ -65,7 +65,7 @@ onMounted(() => {
 
         <div>
           <div class="d-flex justify-space-between align-center mb-1">
-            <p class="text-body-2">{{ $t('memberForm.position') }}</p>
+            <p class="text-xs">{{ $t('memberForm.position') }}</p>
             <v-btn
               variant="text"
               :text="$t('reset')"
