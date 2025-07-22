@@ -21,7 +21,7 @@ const {
 
 <template>
   <p class="text-lg" v-if="isLoading">{{ $t('loading') }}</p>
-  <v-data-iterator v-if="data" :items="data" class="mt-10" :items-per-page="5">
+  <v-data-iteratorh v-if="data" :items="data" class="mt-10" :items-per-page="5">
     <template #header>
       <v-row justify="space-between" align="center">
         <SearchField
@@ -42,9 +42,16 @@ const {
     </template>
 
     <template #no-data>
-      <div v-if="search" class="text-center py-16">
+      <div v-if="$route.query.q" class="text-center py-16">
         <h1 class="text-primary mb-4">{{ $t('noResultsFound') }}</h1>
-        <v-btn density="compact" @click="searchRef?.clearSearch()">{{ $t('clearSearch') }}</v-btn>
+        <v-btn
+          density="compact"
+          color="primary"
+          class="text-capitalize"
+          variant="tonal"
+          @click="searchRef?.clearSearch()"
+          >{{ $t('clearSearch') }}</v-btn
+        >
       </div>
 
       <div v-else class="text-center py-16">
@@ -67,5 +74,5 @@ const {
         :pagesCount="pagesCount"
       />
     </template>
-  </v-data-iterator>
+  </v-data-iteratorh>
 </template>
