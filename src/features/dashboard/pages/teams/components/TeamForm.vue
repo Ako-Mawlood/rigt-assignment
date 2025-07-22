@@ -122,7 +122,8 @@ const onSubmit = handleSubmit((formData) => {
     />
     <div
       v-if="initialValues?.image?.url && !hasUploaded"
-      class="my-2 pl-4 py-2 justify-start align-center d-flex rounded border"
+      style="gap: 10px"
+      class="my-2 pa-2 justify-start align-center d-flex rounded border"
     >
       <img
         :src="initialValues?.image.url"
@@ -131,7 +132,7 @@ const onSubmit = handleSubmit((formData) => {
         width="40"
         class="rounded cover"
       />
-      <div class="d-flex flex-column ml-4 justify-space-between">
+      <div class="d-flex flex-column justify-space-between">
         <span>{{ initialValues.image.display_name }}.{{ initialValues.image.format }}</span>
         <span class="text-xs text-onSurfaceMedium">image/{{ initialValues.image.format }}</span>
       </div>
