@@ -15,6 +15,7 @@ const { id } = defineProps<{ id: string }>()
     </template>
 
     <v-list>
+      <slot name="actions-prepend" :id="{ id }" />
       <v-list-item
         @click="$router.push({ path: `${$route.path}/edit/${id}`, query: $route.query })"
         :title="$t('edit')"
@@ -29,6 +30,7 @@ const { id } = defineProps<{ id: string }>()
         prepend-icon="mdi-delete"
         size="x-small"
       />
+      <slot name="actions-append" :id="{ id }" />
     </v-list>
   </v-menu>
 </template>

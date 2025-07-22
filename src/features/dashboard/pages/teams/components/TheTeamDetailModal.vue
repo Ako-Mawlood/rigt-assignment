@@ -58,12 +58,12 @@ const {
       <v-card-title class="px-4">
         <div class="d-flex align-center flex-wrap">
           <span class="font-weight-bold">{{ team.name }}</span>
-          <v-chip class="ml-3 font-weight-bold" color="primary" size="small" density="compact">
+          <v-chip class="mx-3 font-weight-bold" color="primary" size="small" density="compact">
             {{ team.type }}
           </v-chip>
           <v-chip
             :color="team.isActive ? 'green' : 'red'"
-            class="font-weight-bold mx-2"
+            class="font-weight-bold"
             size="small"
             density="compact"
           >

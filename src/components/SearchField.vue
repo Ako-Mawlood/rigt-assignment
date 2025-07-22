@@ -34,7 +34,7 @@ defineExpose({ clearSearch })
       v-model="search"
       :placeholder="$t('search')"
       variant="solo"
-      clearable
+      :clearable="!!search || !!$route.query.q"
       hide-details
       density="compact"
       prepend-inner-icon="mdi-magnify"
