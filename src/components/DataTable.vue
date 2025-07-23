@@ -2,6 +2,7 @@
 import SearchField from '@/components/SearchField.vue'
 import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
+import TheMembersTableFilters from '@/features/dashboard/pages/members/components/TheMembersTableFilters.vue'
 
 const { url, queryKey } = defineProps(['url', 'queryKey'])
 const {
@@ -30,14 +31,18 @@ const {
           @refetch="refetch"
           v-model:page="page"
           class="order-2 order-sm-1"
-        />
+        >
+          <template #search-append-inner>
+            <slot
+              name="search-append-inner"
+              :filters="filters"
+              :handleFilter="handleFilter"
+              :resetFilter="resetFilter"
+            />
+          </template>
+        </SearchField>
 
-        <slot
-          name="header-append"
-          :filters="filters"
-          :handleFilter="handleFilter"
-          :resetFilter="resetFilter"
-        />
+        <slot name="header-append" />
       </v-row>
     </template>
 

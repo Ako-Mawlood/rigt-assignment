@@ -14,18 +14,20 @@ const { id } = defineProps<{ id: string }>()
       />
     </template>
 
-    <v-list>
+    <v-list class="pa-0">
       <slot name="actions-prepend" :id="{ id }" />
       <v-list-item
         @click="$router.push({ path: `${$route.path}/edit/${id}`, query: $route.query })"
         :title="$t('edit')"
         density="compact"
         prepend-icon="mdi-pencil"
+        class="px-3"
         size="x-small"
       />
       <v-list-item
         @click="$router.push({ path: `${$route.path}/delete/${id}`, query: $route.query })"
         :title="$t('delete')"
+        class="text-red px-3"
         density="compact"
         prepend-icon="mdi-delete"
         size="x-small"

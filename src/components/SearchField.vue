@@ -40,7 +40,11 @@ defineExpose({ clearSearch })
       prepend-inner-icon="mdi-magnify"
       @keyup.enter="handleSearch"
       @click:clear="clearSearch"
-    />
+    >
+      <template #append-inner>
+        <slot name="search-append-inner" />
+      </template>
+    </v-text-field>
 
     <v-btn
       @click="handleSearch"
