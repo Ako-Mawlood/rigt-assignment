@@ -34,13 +34,17 @@ defineExpose({ clearSearch })
       v-model="search"
       :placeholder="$t('search')"
       variant="solo"
-      clearable
+      :clearable="!!search || !!$route.query.q"
       hide-details
       density="compact"
       prepend-inner-icon="mdi-magnify"
       @keyup.enter="handleSearch"
       @click:clear="clearSearch"
-    />
+    >
+      <template #append-inner>
+        <slot name="search-append-inner" />
+      </template>
+    </v-text-field>
 
     <v-btn
       @click="handleSearch"

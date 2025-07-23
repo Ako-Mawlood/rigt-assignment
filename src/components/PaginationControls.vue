@@ -28,16 +28,17 @@ watch(itemsPerPage, () => {
 </script>
 
 <template>
-  <v-row class="d-flex justify-end align-center">
+  <v-row class="d-flex mt-2 justify-end align-center">
     <v-select
       :items="perPageOptions"
       item-title="label"
       item-value="value"
       v-model="itemsPerPage"
       color="primary"
+      class="mb-2"
       variant="plain"
-      hide-details
       density="compact"
+      hide-details
       max-width="110"
     />
     <div class="d-flex align-center justify-center pa-4">
@@ -47,15 +48,16 @@ watch(itemsPerPage, () => {
         icon="mdi-arrow-left"
         variant="text"
         rounded="lg"
+        size="x-small"
         @click="page = (page as number) - 1"
       >
       </v-btn>
       <v-btn
         v-for="pageNumber in pages"
         :key="pageNumber"
-        density="comfortable"
         variant="flat"
         class="ml-2"
+        size="x-small"
         :color="page === pageNumber ? 'primary' : 'onPrimary'"
         min-width="40"
         @click="page = pageNumber"
@@ -68,6 +70,7 @@ watch(itemsPerPage, () => {
         icon="mdi-arrow-right"
         variant="text"
         class="ml-2"
+        size="x-small"
         rounded="lg"
         @click="page = (page as number) + 1"
       />

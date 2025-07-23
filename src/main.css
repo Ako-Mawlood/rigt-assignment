@@ -20,3 +20,6 @@
 .kurdish-font {
   font-family: 'kurdish-font' !important;
 }
+.v-list-item__spacer {
+  width: 12px !important;
+}

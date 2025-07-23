@@ -24,12 +24,12 @@ onMounted(() => {
     <template #activator="{ props }">
       <v-btn
         v-bind="props"
-        variant="tonal"
+        variant="text"
         color="primary"
         density="comfortable"
-        :text="$t('filter')"
         class="text-capitalize"
-        prepend-icon="mdi-filter-variant"
+        icon="mdi-filter-variant"
+        rounded
       />
     </template>
 
