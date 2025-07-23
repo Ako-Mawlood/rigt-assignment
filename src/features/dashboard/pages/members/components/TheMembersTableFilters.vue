@@ -24,12 +24,12 @@ onMounted(() => {
     <template #activator="{ props }">
       <v-btn
         v-bind="props"
-        variant="outlined"
+        variant="text"
         color="primary"
         density="comfortable"
-        :text="$t('filter')"
         class="text-capitalize"
-        prepend-icon="mdi-filter-variant"
+        icon="mdi-filter-variant"
+        rounded
       />
     </template>
 
@@ -45,6 +45,7 @@ onMounted(() => {
               variant="text"
               :text="$t('reset')"
               @click="emit('resetFilter', ['workType'])"
+              class="text-capitalize"
               size="x-small"
               color="primary"
             />
@@ -70,6 +71,7 @@ onMounted(() => {
               variant="text"
               :text="$t('reset')"
               @click="emit('resetFilter', ['position'])"
+              class="text-capitalize"
               size="x-small"
               color="primary"
             />
@@ -88,10 +90,10 @@ onMounted(() => {
           />
         </div>
         <v-btn
-          class="mt-2 ml-auto"
+          class="mt-2 text-xs text-capitalize ml-auto"
           size="x-small"
-          max-width="80"
           color="primary"
+          variant="tonal"
           @click="
             () => {
               emit('resetFilter', ['workType', 'position'])

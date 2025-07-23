@@ -2,6 +2,7 @@
 import SearchField from '@/components/SearchField.vue'
 import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
+import TheMembersTableFilters from '@/features/dashboard/pages/members/components/TheMembersTableFilters.vue'
 
 const { url, queryKey } = defineProps(['url', 'queryKey'])
 const {
@@ -23,26 +24,39 @@ const {
   <p class="text-lg" v-if="isLoading">{{ $t('loading') }}</p>
   <v-data-iterator v-if="data" :items="data" class="mt-10" :items-per-page="5">
     <template #header>
-      <v-row justify="space-between" align="center" class="pa-4">
+      <v-row justify="space-between" align="center">
         <SearchField
           ref="searchRef"
           v-model:search="search"
           @refetch="refetch"
           v-model:page="page"
-        />
-        <slot
-          name="filters"
-          :filters="filters"
-          :handleFilter="handleFilter"
-          :resetFilter="resetFilter"
-        />
+          class="order-2 order-sm-1"
+        >
+          <template #search-append-inner>
+            <slot
+              name="search-append-inner"
+              :filters="filters"
+              :handleFilter="handleFilter"
+              :resetFilter="resetFilter"
+            />
+          </template>
+        </SearchField>
+
+        <slot name="header-append" />
       </v-row>
     </template>
 
     <template #no-data>
-      <div v-if="search" class="text-center py-16">
+      <div v-if="$route.query.q" class="text-center py-16">
         <h1 class="text-primary mb-4">{{ $t('noResultsFound') }}</h1>
-        <v-btn density="compact" @click="searchRef?.clearSearch()">{{ $t('clearSearch') }}</v-btn>
+        <v-btn
+          density="compact"
+          color="primary"
+          class="text-capitalize"
+          variant="tonal"
+          @click="searchRef?.clearSearch()"
+          >{{ $t('clearSearch') }}</v-btn
+        >
       </div>
 
       <div v-else class="text-center py-16">

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { perPageOptions } from '@/constants/perPageOptions'
+
 const router = useRouter()
 const route = useRoute()
 const { pagesCount } = defineProps(['pagesCount'])
@@ -8,7 +10,6 @@ const page = defineModel<number>('page')
 const itemsPerPage = defineModel<number>('itemsPerPage')
 const emit = defineEmits(['refetch'])
 const pages = computed(() => [...Array(pagesCount).keys()].map((i) => i + 1))
-const perPageOptions = [5, 10, 15, 20]
 
 watch(page, () => {
   emit('refetch')
@@ -27,32 +28,36 @@ watch(itemsPerPage, () => {
 </script>
 
 <template>
-  <v-row class="d-flex justify-end align-center">
+  <v-row class="d-flex mt-2 justify-end align-center">
     <v-select
       :items="perPageOptions"
+      item-title="label"
+      item-value="value"
       v-model="itemsPerPage"
-      variant="solo-filled"
-      hide-details
+      color="primary"
+      class="mb-2"
+      variant="plain"
       density="compact"
-      max-width="90"
-    >
-    </v-select>
+      hide-details
+      max-width="110"
+    />
     <div class="d-flex align-center justify-center pa-4">
       <v-btn
         :disabled="page === 1"
         density="comfortable"
         icon="mdi-arrow-left"
-        variant="tonal"
+        variant="text"
         rounded="lg"
+        size="x-small"
         @click="page = (page as number) - 1"
       >
       </v-btn>
       <v-btn
         v-for="pageNumber in pages"
         :key="pageNumber"
-        variant="elevated"
-        density="comfortable"
+        variant="flat"
         class="ml-2"
+        size="x-small"
         :color="page === pageNumber ? 'primary' : 'onPrimary'"
         min-width="40"
         @click="page = pageNumber"
@@ -63,8 +68,9 @@ watch(itemsPerPage, () => {
         :disabled="Number(page) >= pagesCount"
         density="comfortable"
         icon="mdi-arrow-right"
-        variant="tonal"
+        variant="text"
         class="ml-2"
+        size="x-small"
         rounded="lg"
         @click="page = (page as number) + 1"
       />

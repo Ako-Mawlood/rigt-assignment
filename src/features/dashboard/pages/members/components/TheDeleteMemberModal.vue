@@ -34,14 +34,14 @@ const { mutate, isPending } = useMutation({
         <template v-slot:actions>
           <div class="d-flex">
             <v-btn
-              class="ml-auto"
+              class="ml-auto font-weight-bold text-capitalize"
               @click="$router.push({ path: '/dashboard/members', query: $route.query })"
               :text="$t('cancel')"
               variant="elevated"
               density="compact"
             />
             <v-btn
-              class="ms-2"
+              class="ms-2 font-weight-bold text-capitalize"
               @click="mutate"
               text="Delete"
               color="error"

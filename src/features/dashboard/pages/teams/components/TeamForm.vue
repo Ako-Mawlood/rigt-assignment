@@ -87,7 +87,7 @@ const onSubmit = handleSubmit((formData) => {
       v-bind="descriptionAttrs"
       :label="$t('teamForm.description')"
       :error-messages="errors.description"
-      outlined
+      density="compact"
       rows="2"
       variant="solo"
     />
@@ -118,11 +118,12 @@ const onSubmit = handleSubmit((formData) => {
       @change="handleChangeFile"
       density="compact"
       max-height="50"
-      class="text-xs"
+      class="text-xs text-primary"
     />
     <div
       v-if="initialValues?.image?.url && !hasUploaded"
-      class="my-2 pl-4 py-2 justify-start align-center d-flex rounded border"
+      style="gap: 10px"
+      class="my-2 pa-2 justify-start align-center d-flex rounded border"
     >
       <img
         :src="initialValues?.image.url"
@@ -131,19 +132,26 @@ const onSubmit = handleSubmit((formData) => {
         width="40"
         class="rounded cover"
       />
-      <div class="d-flex flex-column ml-4 justify-space-between">
+      <div class="d-flex flex-column justify-space-between">
         <span>{{ initialValues.image.display_name }}.{{ initialValues.image.format }}</span>
         <span class="text-xs text-onSurfaceMedium">image/{{ initialValues.image.format }}</span>
       </div>
     </div>
 
-    <v-switch v-model="isActive" v-bind="isActiveAttrs" :label="$t('teamForm.isActive')" />
+    <v-switch
+      v-model="isActive"
+      v-bind="isActiveAttrs"
+      color="primary"
+      :label="$t('teamForm.isActive')"
+    />
 
     <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
       <v-btn
-        variant="flat"
+        variant="tonal"
+        color="primary"
         density="comfortable"
         @click="$router.push({ path: '/dashboard/teams', query: $route.query })"
+        class="text-capitalize font-weight-bold"
       >
         {{ $t('cancel') }}
       </v-btn>
@@ -153,6 +161,7 @@ const onSubmit = handleSubmit((formData) => {
         @click="onSubmit"
         density="comfortable"
         color="primary"
+        class="text-capitalize font-weight-bold"
         :loading="isPending"
       >
         {{ $t('submit') }}

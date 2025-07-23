@@ -7,7 +7,7 @@ export const memberSchema = z.object({
   email: z.string().email(),
   position: z.enum(companyPositions),
   phoneNumber: z.string(),
-  dateOfBirth: z.string(),
+  dateOfBirth: z.date(),
   workType: z.enum(workTypes),
 })
 
