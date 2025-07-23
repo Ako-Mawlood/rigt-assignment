@@ -60,6 +60,7 @@ export function usePaginatedData(url: string, queryKey: string) {
     searchRef,
     search,
     itemsPerPage,
+    totalItems,
     page,
   }
 }

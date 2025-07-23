@@ -2,7 +2,6 @@
 import SearchField from '@/components/SearchField.vue'
 import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
-import TheMembersTableFilters from '@/features/dashboard/pages/members/components/TheMembersTableFilters.vue'
 
 const { url, queryKey } = defineProps(['url', 'queryKey'])
 const {
@@ -17,13 +16,21 @@ const {
   search,
   searchRef,
   itemsPerPage,
+  totalItems,
 } = usePaginatedData(url, queryKey)
 </script>
 
 <template>
-  <p class="text-lg" v-if="isLoading">{{ $t('loading') }}</p>
-  <v-data-iterator v-if="data" :items="data" class="mt-10" :items-per-page="5">
-    <template #header>
+  <v-data-table-server
+    v-if="data"
+    :items="data"
+    class="mt-10"
+    :loading="isLoading"
+    :items-per-page="itemsPerPage"
+    :items-length="totalItems"
+    hide-default-header
+  >
+    <template #top>
       <v-row justify="space-between" align="center">
         <SearchField
           ref="searchRef"
@@ -45,7 +52,6 @@ const {
         <slot name="header-append" />
       </v-row>
     </template>
-
     <template #no-data>
       <div v-if="$route.query.q" class="text-center py-16">
         <h1 class="text-primary mb-4">{{ $t('noResultsFound') }}</h1>
@@ -64,13 +70,10 @@ const {
       </div>
     </template>
 
-    <template #default>
-      <v-container class="pa-2" fluid>
-        <slot name="items" :items="data" />
-      </v-container>
-    </template>
-
-    <template #footer>
+    <v-container class="pa-2" fluid>
+      <slot name="items" :items="data" />
+    </v-container>
+    <template #bottom>
       <PaginationControls
         v-if="data.length"
         v-model:page="page"
@@ -79,5 +82,5 @@ const {
         :pagesCount="pagesCount"
       />
     </template>
-  </v-data-iterator>
+  </v-data-table-server>
 </template>
