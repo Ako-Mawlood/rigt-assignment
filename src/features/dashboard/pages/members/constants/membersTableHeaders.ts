@@ -1,10 +1,38 @@
-export const headers = [
-  { title: 'id', key: 'id', sortable: false },
-  { title: 'Name', key: 'name', icon: 'mdi-account' },
-  { title: 'Email', key: 'email', icon: 'mdi-email', sortable: false },
-  { title: 'Phone', key: 'phoneNumber', icon: 'mdi-phone', sortable: false },
-  { title: 'Work Type', key: 'workType', icon: 'mdi-briefcase-variant', sortable: false },
-  { title: 'Position', key: 'position', icon: 'mdi-account-tie', sortable: false },
-  { title: 'Birthday', key: 'dateOfBirth', icon: 'mdi-cake-variant' },
-  { title: 'Actions', key: 'actions', icon: 'mdi-dots-vertical', sortable: false },
-] as const
+import { formatPhone } from '@/utils/phoneFormatter'
+import { workTypeColors } from '@/features/dashboard/pages/members/constants/colors'
+import { dateFormatter } from '@/utils/dateFormatter'
+import ActionsMenu from '@/components/ActionsMenu.vue'
+import { type MemberTableHeaderType } from '@/features/dashboard/pages/members/types/memberTableHeader.type'
+
+export const headers: MemberTableHeaderType[] = [
+  { title: 'Name', key: 'name', componentPreview: 'avatar' },
+  { title: 'Email', key: 'email', sortable: false, componentPreview: 'text' },
+  {
+    title: 'Phone',
+    key: 'phoneNumber',
+    sortable: false,
+    componentPreview: 'formatted',
+    formatFn: formatPhone,
+  },
+  {
+    title: 'Work Type',
+    key: 'workType',
+    sortable: false,
+    componentPreview: 'chip',
+    colors: workTypeColors,
+  },
+  {
+    title: 'Position',
+    key: 'position',
+    componentPreview: 'chip',
+    colors: 'purple',
+  },
+  { title: 'Birthday', key: 'dateOfBirth', componentPreview: 'formatted', formatFn: dateFormatter },
+  {
+    title: 'Actions',
+    key: 'actions',
+    sortable: false,
+    componentPreview: 'action',
+    actions: ActionsMenu,
+  },
+]

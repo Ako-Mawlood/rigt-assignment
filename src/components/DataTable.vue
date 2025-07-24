@@ -3,7 +3,13 @@ import SearchField from '@/components/SearchField.vue'
 import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
 
-const { url, queryKey } = defineProps(['url', 'queryKey'])
+import AvatarCell from '@/components/table-cells/AvatarCell.vue'
+import FormattedCell from '@/components/table-cells/FormattedCell.vue'
+import ChipCell from '@/components/table-cells/ChipCell.vue'
+import ActionCell from '@/components/table-cells/ActionCell.vue'
+import TextCell from '@/components/table-cells/TextCell.vue'
+
+const { url, queryKey, headers } = defineProps(['url', 'queryKey', 'headers'])
 const {
   data,
   isLoading,
@@ -18,6 +24,14 @@ const {
   itemsPerPage,
   totalItems,
 } = usePaginatedData(url, queryKey)
+
+const componentsMap = {
+  avatar: AvatarCell,
+  formatted: FormattedCell,
+  chip: ChipCell,
+  action: ActionCell,
+  text: TextCell,
+}
 </script>
 
 <template>
@@ -25,10 +39,10 @@ const {
     v-if="data"
     :items="data"
     class="mt-10"
+    :headers="headers"
     :loading="isLoading"
     :items-per-page="itemsPerPage"
     :items-length="totalItems"
-    hide-default-header
   >
     <template #top>
       <v-row justify="space-between" align="center">
@@ -69,10 +83,14 @@ const {
         <slot name="no-data-yet" />
       </div>
     </template>
-
-    <v-container class="pa-2" fluid>
-      <slot name="items" :items="data" />
-    </v-container>
+    <template v-for="header in headers" v-slot:[`item.${header.key}`]="{ item }" :key="header.key">
+      <component
+        :is="componentsMap[header.componentPreview] || 'span'"
+        :value="item[header.key]"
+        :header="header"
+        :item="item"
+      />
+    </template>
     <template #bottom>
       <PaginationControls
         v-if="data.length"

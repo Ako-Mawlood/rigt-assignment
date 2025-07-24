@@ -53,6 +53,7 @@ export function usePaginatedData(url: string, queryKey: string) {
 
   return {
     ...query,
+    isLoading: query.isLoading,
     filters,
     handleFilter,
     resetFilter,
