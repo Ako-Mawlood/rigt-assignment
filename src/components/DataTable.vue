@@ -1,15 +1,21 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T">
 import SearchField from '@/components/SearchField.vue'
 import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
-
 import AvatarCell from '@/components/table-cells/AvatarCell.vue'
 import FormattedCell from '@/components/table-cells/FormattedCell.vue'
 import ChipCell from '@/components/table-cells/ChipCell.vue'
 import ActionCell from '@/components/table-cells/ActionCell.vue'
 import TextCell from '@/components/table-cells/TextCell.vue'
+import type { IDataTableHeader } from '@/types/TableHeaders.type'
 
-const { url, queryKey, headers } = defineProps(['url', 'queryKey', 'headers'])
+type Props = {
+  url: string
+  queryKey: string
+  headers: IDataTableHeader<T>[]
+}
+
+const { url, queryKey, headers } = defineProps<Props>()
 const {
   data,
   isLoading,
@@ -23,7 +29,7 @@ const {
   searchRef,
   itemsPerPage,
   totalItems,
-} = usePaginatedData(url, queryKey)
+} = usePaginatedData<T>(url, queryKey)
 
 const componentsMap = {
   avatar: AvatarCell,
@@ -83,13 +89,13 @@ const componentsMap = {
         <slot name="no-data-yet" />
       </div>
     </template>
-    <template v-for="header in headers" v-slot:[`item.${header.key}`]="{ item }" :key="header.key">
-      <component
-        :is="componentsMap[header.componentPreview] || 'span'"
-        :value="item[header.key]"
-        :header="header"
-        :item="item"
-      />
+
+    <template
+      v-for="header in headers"
+      v-slot:[`item.${String(header.key)}`]="{ item }"
+      :key="header.key"
+    >
+      <component :is="componentsMap[header.componentPreview]" :header="header" :item="item" />
     </template>
     <template #bottom>
       <PaginationControls

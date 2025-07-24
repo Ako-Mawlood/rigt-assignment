@@ -5,6 +5,6 @@ const colors = header.colors
 </script>
 <template>
   <v-chip :color="isObject(colors) ? colors[item[header.key]] : header.colors" density="compact">{{
-    item[header.key]
+    header.value(item)
   }}</v-chip>
 </template>

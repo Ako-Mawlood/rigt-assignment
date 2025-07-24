@@ -2,14 +2,23 @@ import { formatPhone } from '@/utils/phoneFormatter'
 import { workTypeColors } from '@/features/dashboard/pages/members/constants/colors'
 import { dateFormatter } from '@/utils/dateFormatter'
 import ActionsMenu from '@/components/ActionsMenu.vue'
-import { type MemberTableHeaderType } from '@/features/dashboard/pages/members/types/memberTableHeader.type'
+import type { IDataTableHeader } from '@/types/TableHeaders.type'
+import type { MemberType } from '@/features/dashboard/pages/members/types/member.type'
 
-export const headers: MemberTableHeaderType[] = [
-  { title: 'Name', key: 'name', componentPreview: 'avatar' },
-  { title: 'Email', key: 'email', sortable: false, componentPreview: 'text' },
+export const headers: IDataTableHeader<MemberType>[] = [
+  { title: 'Name', key: 'name', value: (item) => item.name, componentPreview: 'avatar' },
+
+  {
+    title: 'Email',
+    key: 'email',
+    value: (item) => item.email,
+    sortable: false,
+    componentPreview: 'text',
+  },
   {
     title: 'Phone',
     key: 'phoneNumber',
+    value: (item) => item.phoneNumber,
     sortable: false,
     componentPreview: 'formatted',
     formatFn: formatPhone,
@@ -17,6 +26,7 @@ export const headers: MemberTableHeaderType[] = [
   {
     title: 'Work Type',
     key: 'workType',
+    value: (item) => item.workType,
     sortable: false,
     componentPreview: 'chip',
     colors: workTypeColors,
@@ -24,13 +34,21 @@ export const headers: MemberTableHeaderType[] = [
   {
     title: 'Position',
     key: 'position',
+    value: (item) => item.position,
     componentPreview: 'chip',
     colors: 'purple',
   },
-  { title: 'Birthday', key: 'dateOfBirth', componentPreview: 'formatted', formatFn: dateFormatter },
+  {
+    title: 'Birthday',
+    key: 'dateOfBirth',
+    value: (item) => item.dateOfBirth,
+    componentPreview: 'formatted',
+    formatFn: dateFormatter,
+  },
   {
     title: 'Actions',
     key: 'actions',
+    value: (item) => item.id,
     sortable: false,
     componentPreview: 'action',
     actions: ActionsMenu,

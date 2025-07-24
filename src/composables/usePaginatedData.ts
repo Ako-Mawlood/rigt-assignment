@@ -1,12 +1,12 @@
 import { useRoute, useRouter } from 'vue-router'
-import { computed, ref, reactive, watch } from 'vue'
+import { computed, ref, reactive } from 'vue'
 import SearchField from '@/components/SearchField.vue'
 import type { AxiosError } from 'axios'
 import axios from '@/plugins/axios'
 import { useQuery } from '@tanstack/vue-query'
 import type { SearchQueryType } from '@/types/SearchQuery.type'
 
-export function usePaginatedData(url: string, queryKey: string) {
+export function usePaginatedData<T>(url: string, queryKey: string) {
   const route = useRoute()
   const searchRef = ref<InstanceType<typeof SearchField> | null>(null)
   const search = ref(route.query.q || '')
@@ -46,7 +46,7 @@ export function usePaginatedData(url: string, queryKey: string) {
     router.push({ query: { ...route.query, ...filters } })
     query.refetch()
   }
-  const query = useQuery({
+  const query = useQuery<T[]>({
     queryKey: [queryKey, page.value, search.value, { ...route.query }],
     queryFn: () => fetchData(page.value, itemsPerPage.value, search.value),
   })

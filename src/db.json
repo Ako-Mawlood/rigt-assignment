@@ -304,6 +304,15 @@
       "phoneNumber": "+9647500000000",
       "dateOfBirth": "2025-07-22T21:00:00.000Z",
       "workType": "Remote"
+    },
+    {
+      "id": "01c7",
+      "name": "Name of The developer",
+      "email": "email@mail.com",
+      "position": "Finance Manager",
+      "phoneNumber": "+9647502222222",
+      "dateOfBirth": "2025-07-01T21:00:00.000Z",
+      "workType": "On-site"
     }
   ]
 }

@@ -3,5 +3,5 @@ const { item, header } = defineProps(['item', 'header'])
 </script>
 
 <template>
-  <span>{{ item[header.key] }}</span>
+  <span>{{ header.value(item) }}</span>
 </template>

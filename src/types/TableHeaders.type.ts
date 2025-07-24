@@ -1,55 +1,14 @@
-import type { formatPhone } from '@/utils/phoneFormatter'
-import type { workTypeColors } from '@/features/dashboard/pages/members/constants/colors'
-import type { dateFormatter } from '@/utils/dateFormatter'
 import type ActionsMenu from '@/components/ActionsMenu.vue'
 
-export type AvatarHeaderType = {
-  title: 'Name'
-  key: 'name'
-  componentPreview: 'avatar'
-}
+type componentPreviewType = 'avatar' | 'formatted' | 'chip' | 'action' | 'text'
 
-export type EmailHeaderType = {
-  title: 'Email'
-  key: 'email'
-  componentPreview: 'text'
-  sortable?: boolean
-}
-
-export type PhoneNumberHeaderType = {
-  title: 'Phone'
-  key: 'phoneNumber'
-  componentPreview: 'formatted'
-  sortable: boolean
-  formatFn: typeof formatPhone
-}
-
-export type BirthDateHeaderType = {
+export type IDataTableHeader<T> = {
   title: string
-  key: 'dateOfBirth'
-  componentPreview: 'formatted'
-  formatFn: typeof dateFormatter
-}
-
-export type workTypeHeaderType = {
-  title: string
-  key: 'workType'
-  componentPreview: 'chip'
+  key: string
+  value: (item: T) => unknown
+  componentPreview: componentPreviewType
   sortable?: boolean
-  colors: typeof workTypeColors
-}
-
-export type PositionHeaderType = {
-  title: 'Position'
-  key: 'position'
-  componentPreview: 'chip'
-  colors: string
-}
-
-export type ActionHeaderType = {
-  title: 'Actions'
-  key: 'actions'
-  componentPreview: 'action'
-  sortable?: boolean
-  actions: typeof ActionsMenu
+  colors?: string | Record<string, string>
+  actions?: typeof ActionsMenu
+  formatFn?: (number: string) => string
 }
