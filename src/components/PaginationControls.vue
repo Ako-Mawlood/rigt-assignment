@@ -82,7 +82,7 @@ watch(itemsPerPage, () => {
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .v-field__input {
   min-height: 100% !important;
   padding-top: 0 !important;
