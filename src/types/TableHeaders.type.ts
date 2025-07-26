@@ -1,12 +1,10 @@
 import type ActionsMenu from '@/components/ActionsMenu.vue'
 
-type componentPreviewType = 'avatar' | 'formatted' | 'chip' | 'action' | 'text'
-
-export type IDataTableHeader<T> = {
+export type DataTableHeader<T> = {
   title: string
   key: string
   value: (item: T) => unknown
-  componentPreview: componentPreviewType
+  componentPreview: 'avatar' | 'formatted' | 'chip' | 'action' | 'text'
   sortable?: boolean
   colors?: string | Record<string, string>
   actions?: typeof ActionsMenu

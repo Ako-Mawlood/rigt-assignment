@@ -2,10 +2,10 @@ import { formatPhone } from '@/utils/phoneFormatter'
 import { workTypeColors } from '@/features/dashboard/pages/members/constants/colors'
 import { dateFormatter } from '@/utils/dateFormatter'
 import ActionsMenu from '@/components/ActionsMenu.vue'
-import type { IDataTableHeader } from '@/types/TableHeaders.type'
+import type { DataTableHeader } from '@/types/TableHeaders.type'
 import type { MemberType } from '@/features/dashboard/pages/members/types/member.type'
 
-export const headers: IDataTableHeader<MemberType>[] = [
+export const headers: DataTableHeader<MemberType>[] = [
   { title: 'Name', key: 'name', value: (item) => item.name, componentPreview: 'avatar' },
 
   {

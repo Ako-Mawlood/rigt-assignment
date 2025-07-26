@@ -7,12 +7,12 @@ import FormattedCell from '@/components/table-cells/FormattedCell.vue'
 import ChipCell from '@/components/table-cells/ChipCell.vue'
 import ActionCell from '@/components/table-cells/ActionCell.vue'
 import TextCell from '@/components/table-cells/TextCell.vue'
-import type { IDataTableHeader } from '@/types/TableHeaders.type'
+import type { DataTableHeader } from '@/types/TableHeaders.type'
 
 type Props = {
   url: string
   queryKey: string
-  headers: IDataTableHeader<T>[]
+  headers: DataTableHeader<T>[]
 }
 
 const { url, queryKey, headers } = defineProps<Props>()
