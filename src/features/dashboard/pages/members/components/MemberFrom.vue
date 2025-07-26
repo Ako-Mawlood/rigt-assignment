@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { useRoute } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import { useMutation, useQueryClient } from '@tanstack/vue-query'
@@ -12,9 +11,12 @@ import {
 } from '@/features/dashboard/pages/members/utils/validations/member.validations'
 import type { MemberMutationType } from '@/features/dashboard/pages/members/types/member.type'
 import { workTypes } from '@/features/dashboard/pages/members/constants/workTypes'
+import { useToast } from 'vue-toastification'
 
 type Props = {
-  mutationFn: (payload: MemberMutationType) => Promise<MemberFormDataType>
+  mutationFn: (
+    payload: MemberMutationType,
+  ) => Promise<{ data: MemberFormDataType; message: string }>
   mutationKey: string[]
   initialValues?: Partial<MemberFormDataType>
 }
@@ -23,6 +25,7 @@ const { mutationFn, mutationKey, initialValues } = defineProps<Props>()
 const queryClient = useQueryClient()
 const router = useRouter()
 const route = useRoute()
+const toast = useToast()
 const id = route.params.id as string
 const isModalOpen = ref(true)
 const isDateOfBirthOpen = ref(false)
@@ -42,10 +45,14 @@ const [dateOfBirth, dateOfBirthAttrs] = defineField('dateOfBirth')
 const { mutate, isPending } = useMutation({
   mutationKey,
   mutationFn,
-  onSuccess: () => {
+  onSuccess: (res) => {
     isModalOpen.value = false
     queryClient.invalidateQueries({ queryKey: ['members'] })
     router.push({ path: '/dashboard/members', query: route.query })
+    toast.success(res.message)
+  },
+  onError: (err) => {
+    toast.error(err.message)
   },
 })
 

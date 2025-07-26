@@ -22,6 +22,7 @@ watch(page, () => {
 
 watch(itemsPerPage, () => {
   localStorage.setItem('itemsPerPage', String(itemsPerPage.value))
+  page.value = 1
   emit('refetch')
 })
 </script>
