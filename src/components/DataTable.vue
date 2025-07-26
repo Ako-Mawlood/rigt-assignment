@@ -1,4 +1,4 @@
-<script setup lang="ts" generic="T">
+<script setup lang="ts" generic="T extends { id: string }">
 import SearchField from '@/components/SearchField.vue'
 import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
@@ -95,7 +95,12 @@ const componentsMap = {
       v-slot:[`item.${String(header.key)}`]="{ item }"
       :key="header.key"
     >
-      <component :is="componentsMap[header.componentPreview]" :header="header" :item="item" />
+      <component
+        :is="componentsMap[header.componentPreview]"
+        :header="header"
+        :item="item"
+        :id="item.id"
+      />
     </template>
     <template #bottom>
       <PaginationControls

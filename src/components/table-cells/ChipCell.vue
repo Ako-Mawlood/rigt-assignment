@@ -4,7 +4,7 @@ const { item, header } = defineProps(['item', 'header'])
 const colors = header.colors
 </script>
 <template>
-  <v-chip :color="isObject(colors) ? colors[item[header.key]] : header.colors" density="compact">{{
+  <v-chip :color="isObject(colors) ? colors[item[header.key]] : colors" density="compact">{{
     header.value(item)
   }}</v-chip>
 </template>

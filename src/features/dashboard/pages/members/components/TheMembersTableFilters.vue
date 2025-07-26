@@ -37,7 +37,7 @@ onMounted(() => {
       <v-card-title class="text-lg text-primary">{{ $t('filters') }}</v-card-title>
       <v-divider />
 
-      <div style="gap: 16px" class="pa-4 d-flex flex-column">
+      <div class="pa-4 gap-1 d-flex flex-column">
         <div>
           <div class="d-flex justify-space-between pb-1 align-center">
             <p class="text-xs">{{ $t('memberForm.workType') }}</p>

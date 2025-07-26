@@ -1,11 +1,12 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T">
 import SearchField from '@/components/SearchField.vue'
 import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
 
 const { url, queryKey } = defineProps(['url', 'queryKey'])
+
 const { data, isLoading, refetch, page, pagesCount, search, searchRef, itemsPerPage } =
-  usePaginatedData(url, queryKey)
+  usePaginatedData<T>(url, queryKey)
 </script>
 
 <template>

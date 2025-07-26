@@ -56,7 +56,7 @@ const onSubmit = handleSubmit((formData) => {
 </script>
 <template>
   <v-form @submit.prevent="onSubmit" class="pa-4">
-    <div style="gap: 10px" class="d-flex">
+    <div class="d-flex gap-1">
       <v-text-field
         v-model="name"
         v-bind="nameAttrs"
@@ -92,7 +92,7 @@ const onSubmit = handleSubmit((formData) => {
       variant="solo"
     />
 
-    <div style="gap: 10px" class="d-flex">
+    <div class="d-flex gap-1">
       <v-text-field
         v-model="membersCount"
         v-bind="membersCountAttrs"
@@ -122,8 +122,7 @@ const onSubmit = handleSubmit((formData) => {
     />
     <div
       v-if="initialValues?.image?.url && !hasUploaded"
-      style="gap: 10px"
-      class="my-2 pa-2 justify-start align-center d-flex rounded border"
+      class="my-2 gap-1 pa-2 justify-start align-center d-flex rounded border"
     >
       <img
         :src="initialValues?.image.url"
@@ -145,7 +144,7 @@ const onSubmit = handleSubmit((formData) => {
       :label="$t('teamForm.isActive')"
     />
 
-    <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
+    <div class="d-flex gap-1 justify-end w-100 gap-2">
       <v-btn
         variant="tonal"
         color="primary"

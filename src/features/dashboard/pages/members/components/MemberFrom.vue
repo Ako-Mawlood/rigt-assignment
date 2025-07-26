@@ -55,7 +55,7 @@ const onSubmit = handleSubmit((formData) => {
 </script>
 <template>
   <v-form @submit.prevent="onSubmit" class="pa-4">
-    <div style="gap: 10px" class="d-flex">
+    <div class="d-flex gap-1">
       <v-text-field
         v-model="name"
         v-bind="nameAttrs"
@@ -96,7 +96,7 @@ const onSubmit = handleSubmit((formData) => {
       variant="solo"
     />
 
-    <div style="gap: 10px" class="d-flex">
+    <div class="d-flex gap-1">
       <v-select
         v-model="position"
         v-bind="positionAttrs"
@@ -127,7 +127,7 @@ const onSubmit = handleSubmit((formData) => {
       min-width="300"
     />
 
-    <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
+    <div class="d-flex justify-end w-100 gap-1">
       <v-btn
         density="comfortable"
         variant="tonal"

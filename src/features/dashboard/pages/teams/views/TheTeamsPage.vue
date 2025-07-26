@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import DataIterator from '@/components/DataIterator.vue'
 import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard.vue'
+import type { TeamType } from '../types/team.type'
+import type { MemberFormDataType } from '../../members/utils/validations/member.validations'
 </script>
 
 <template>
@@ -18,7 +20,7 @@ import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard
           color="primary"
         />
       </template>
-      <template #items="{ items }">
+      <template #items="{ items }: { items: any }">
         <v-row v-if="items.length">
           <v-col v-for="item in items" :key="item.id" cols="12" sm="6" md="4" lg="3">
             <TheTeamCard :team="item" />

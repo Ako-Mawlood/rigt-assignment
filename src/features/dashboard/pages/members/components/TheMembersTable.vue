@@ -15,7 +15,7 @@ import { headers } from '@/features/dashboard/pages/members/constants/membersTab
     </template>
 
     <template #header-append>
-      <div style="gap: 10px" class="d-flex ml-auto order-1 order-sm-2">
+      <div class="d-flex gap-2 ml-auto order-1 order-sm-2">
         <v-btn
           @click="$router.push({ path: '/dashboard/members/add', query: $route.query })"
           :text="$t('memberForm.newMember')"
