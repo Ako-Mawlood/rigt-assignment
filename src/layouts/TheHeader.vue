@@ -11,8 +11,5 @@ const { toggleSidebar } = useSidebarController()
         <v-icon>mdi-menu</v-icon>
       </v-btn>
     </template>
-    <template #append>
-      <ChangeLang />
-    </template>
   </v-app-bar>
 </template>
