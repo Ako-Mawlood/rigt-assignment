@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import DataIterator from '@/components/DataIterator.vue'
 import TheTeamCard from '@/features/dashboard/pages/teams/components/TheTeamCard.vue'
-import type { TeamType } from '../types/team.type'
-import type { MemberFormDataType } from '../../members/utils/validations/member.validations'
 </script>
 
 <template>
