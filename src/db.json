@@ -367,15 +367,6 @@
       "dateOfBirth": "2025-06-30T21:00:00.000Z",
       "workType": "Remote",
       "id": "aa42"
-    },
-    {
-      "id": "f393",
-      "name": ".lndfl",
-      "email": "jwr@gmail.com",
-      "position": "Project Manager",
-      "phoneNumber": "+96433333333",
-      "dateOfBirth": "2025-06-30T21:00:00.000Z",
-      "workType": "Remote"
     }
   ]
 }

@@ -2,7 +2,6 @@
 import SearchField from '@/components/SearchField.vue'
 import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
-import type { TeamType } from '@/features/dashboard/pages/teams/types/team.type'
 
 const { url, queryKey } = defineProps(['url', 'queryKey'])
 
@@ -46,7 +45,7 @@ const { data, isLoading, refetch, page, pagesCount, search, searchRef, itemsPerP
 
     <template #default>
       <v-container class="pa-2" fluid>
-        <slot name="items" :items="data:T[]" />
+        <slot name="items" :items="data" />
       </v-container>
     </template>
     <template #footer>
