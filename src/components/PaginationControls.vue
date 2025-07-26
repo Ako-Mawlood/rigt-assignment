@@ -51,8 +51,7 @@ watch(itemsPerPage, () => {
         density="compact"
         @click="page = 1"
         color="primary"
-      >
-      </v-btn>
+      />
 
       <v-btn
         :disabled="page === 1"
@@ -61,8 +60,7 @@ watch(itemsPerPage, () => {
         density="compact"
         @click="page = (page as number) - 1"
         color="primary"
-      >
-      </v-btn>
+      />
 
       <v-btn
         :disabled="Number(page) >= pagesCount"
@@ -83,6 +81,7 @@ watch(itemsPerPage, () => {
     </div>
   </div>
 </template>
+
 <style scoped>
 .v-field__input {
   min-height: 100% !important;

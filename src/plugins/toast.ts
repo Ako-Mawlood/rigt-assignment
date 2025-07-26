@@ -8,5 +8,5 @@ const toastOptions: PluginOptions = {
 
 export const ToastPlugin = {
   plugin: Toast,
-  optional: toastOptions,
+  options: toastOptions,
 }

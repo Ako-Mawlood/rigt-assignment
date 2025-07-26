@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import MemberForm from './MemberFrom.vue'
+import MemberForm from '@/features/dashboard/pages/members/components/MemberFrom.vue'
 import { editMember } from '@/features/dashboard/pages/members/api/members.api'
 import { useRoute } from 'vue-router'
 import { useQuery } from '@tanstack/vue-query'

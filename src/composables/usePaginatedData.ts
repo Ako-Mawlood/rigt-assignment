@@ -8,27 +8,27 @@ import type { SearchQueryType } from '@/types/SearchQuery.type'
 
 export function usePaginatedData<T>(url: string, queryKey: string) {
   const route = useRoute()
-  const searchRef = ref<InstanceType<typeof SearchField> | null>(null)
   const search = ref(route.query.q || '')
+  const searchRef = ref<InstanceType<typeof SearchField> | null>(null)
+  const page = ref(Number(route.query.page) || 1)
   const itemsPerPage = ref(Number(localStorage.getItem('itemsPerPage')) || 10)
   const totalItems = ref<number>(0)
-  const page = ref(Number(route.query.page) || 1)
   const filters = reactive<Record<string, string>>({})
 
   const router = useRouter()
   const pagesCount = computed(() => Math.ceil(totalItems.value / itemsPerPage.value))
 
   async function fetchData(page: number, itemsPerPage: number, q: SearchQueryType) {
+    const params = {
+      _page: page,
+      _per_page: itemsPerPage,
+      name: q,
+      ...route.query,
+      ...filters,
+    }
+
     try {
-      const res = await axios.get(url, {
-        params: {
-          _page: page,
-          _per_page: itemsPerPage,
-          name: q,
-          ...route.query,
-          ...filters,
-        },
-      })
+      const res = await axios.get(url, { params })
       totalItems.value = res.data.items
       return res.data.data
     } catch (err) {
@@ -36,20 +36,23 @@ export function usePaginatedData<T>(url: string, queryKey: string) {
       console.error(error.response?.data || 'Unexpected error occurred')
     }
   }
-  async function resetFilter(filterName: string[]) {
-    filterName.forEach((name) => delete filters[name])
-    await router.push({ path: route.path, query: { ...filters } })
-    query.refetch()
-  }
+
+  const query = useQuery<T[]>({
+    queryKey: [queryKey, page.value, search.value, { ...route.query }],
+    queryFn: () => fetchData(page.value, itemsPerPage.value, search.value),
+  })
+
   function handleFilter() {
     page.value = 1
     router.push({ query: { ...route.query, ...filters } })
     query.refetch()
   }
-  const query = useQuery<T[]>({
-    queryKey: [queryKey, page.value, search.value, { ...route.query }],
-    queryFn: () => fetchData(page.value, itemsPerPage.value, search.value),
-  })
+
+  async function resetFilter(filterName: string[]) {
+    filterName.forEach((name) => delete filters[name])
+    await router.push({ path: route.path, query: { ...filters } })
+    query.refetch()
+  }
 
   return {
     ...query,

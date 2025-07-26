@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { workTypes } from '../constants/workTypes'
+import { workTypes } from '@/features/dashboard/pages/members//constants/workTypes'
 import { useRoute } from 'vue-router'
 import { onMounted } from 'vue'
 import { companyPositions } from '@/constants/companyPositionOptions'
