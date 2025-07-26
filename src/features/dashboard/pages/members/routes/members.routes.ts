@@ -21,6 +21,6 @@ export const membersRoutes = {
     },
   ],
   meta: {
-    title: 'Rigt | Member',
+    title: 'Rigt | Members',
   },
 }

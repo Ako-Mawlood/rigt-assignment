@@ -7,7 +7,6 @@ import type { MemberType } from '@/features/dashboard/pages/members/types/member
 
 export const headers: DataTableHeader<MemberType>[] = [
   { title: 'Name', key: 'name', value: (item) => item.name, componentPreview: 'avatar' },
-
   {
     title: 'Email',
     key: 'email',

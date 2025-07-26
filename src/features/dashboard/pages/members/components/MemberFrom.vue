@@ -11,7 +11,7 @@ import {
   type MemberFormDataType,
 } from '@/features/dashboard/pages/members/utils/validations/member.validations'
 import type { MemberMutationType } from '@/features/dashboard/pages/members/types/member.type'
-import { workTypes } from '../constants/workTypes'
+import { workTypes } from '@/features/dashboard/pages/members/constants/workTypes'
 
 type Props = {
   mutationFn: (payload: MemberMutationType) => Promise<MemberFormDataType>
