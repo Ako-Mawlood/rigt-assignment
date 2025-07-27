@@ -211,7 +211,7 @@
       "id": "600d"
     },
     {
-      "name": "10 99",
+      "name": "99",
       "type": "Development",
       "description": "asas",
       "image": {
@@ -309,42 +309,6 @@
       "workType": "On-site"
     },
     {
-      "id": "1a0b",
-      "name": "new member",
-      "email": "hell@gmail.com",
-      "position": "Project Manager",
-      "phoneNumber": "+9647592333333",
-      "dateOfBirth": "2025-06-30T21:00:00.000Z",
-      "workType": "Remote"
-    },
-    {
-      "id": "4f39",
-      "name": "asdf;l",
-      "email": "a@gmail.com",
-      "position": "Software Developer",
-      "phoneNumber": "+964373773373",
-      "dateOfBirth": "2025-07-06T21:00:00.000Z",
-      "workType": "Remote"
-    },
-    {
-      "id": "03ad",
-      "name": "asdf",
-      "email": "d@email.com",
-      "position": "Software Developer",
-      "phoneNumber": "+9647502222222",
-      "dateOfBirth": "2025-07-13T21:00:00.000Z",
-      "workType": "Remote"
-    },
-    {
-      "id": "591b",
-      "name": "asdflj",
-      "email": "S@gmail.com",
-      "position": "Software Developer",
-      "phoneNumber": "+9647503333333",
-      "dateOfBirth": "2025-07-07T21:00:00.000Z",
-      "workType": "On-site"
-    },
-    {
       "name": "email",
       "email": "asdf@gmail.com",
       "position": "Software Developer",
@@ -354,49 +318,31 @@
       "id": "aa42"
     },
     {
-      "id": "054a",
-      "name": "slkdfj",
-      "email": "e@gmail.com",
+      "name": "Hamad Othman",
+      "email": "hamd@gmail.com",
       "position": "Operations Manager",
-      "phoneNumber": "+9647504444444",
+      "phoneNumber": "+9647504442389",
       "dateOfBirth": "2025-07-06T21:00:00.000Z",
-      "workType": "Remote"
+      "workType": "Remote",
+      "id": "054a"
     },
     {
-      "id": "b085",
-      "name": "lasjkdf",
-      "email": "emai@gmai.com",
-      "position": "Operations Manager",
-      "phoneNumber": "+9647503232323",
-      "dateOfBirth": "2025-07-08T21:00:00.000Z",
-      "workType": "On-site"
+      "id": "1ce6",
+      "name": "Arii Muhammad",
+      "email": "arii.maw3@gmail.com",
+      "position": "Human Resources Manager",
+      "phoneNumber": "+9647514408233",
+      "dateOfBirth": "1986-07-01T20:00:00.000Z",
+      "workType": "Flexible"
     },
     {
-      "id": "70a1",
-      "name": "ldsfkj",
-      "email": "f@gmail.com",
-      "position": "Finance Manager",
-      "phoneNumber": "+9647502234332",
-      "dateOfBirth": "2025-07-06T21:00:00.000Z",
-      "workType": "Remote"
-    },
-    {
-      "id": "1148",
-      "name": "asdf",
-      "email": "emsil@gmail.com",
-      "position": "Chief Executive Officer",
-      "phoneNumber": "+9647502234323",
-      "dateOfBirth": "2025-07-07T21:00:00.000Z",
-      "workType": "Remote"
-    },
-    {
-      "id": "4964",
-      "name": "asdf",
-      "email": "emil@gmail.com",
+      "id": "e6f0",
+      "name": "Karzan Sabir",
+      "email": "karzan.sabir234@gmail.com",
       "position": "Software Developer",
-      "phoneNumber": "+9647503333434",
-      "dateOfBirth": "2025-06-30T21:00:00.000Z",
-      "workType": "On-site"
+      "phoneNumber": "+9647803458739",
+      "dateOfBirth": "1965-07-12T21:00:00.000Z",
+      "workType": "Flexible"
     }
   ]
 }
