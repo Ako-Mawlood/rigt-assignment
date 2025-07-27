@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { useRoute } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
+import { useToast } from 'vue-toastification'
 import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import { useMutation, useQueryClient } from '@tanstack/vue-query'
@@ -14,7 +14,7 @@ import { useUpload } from '@/composables/useUpload'
 import type { TeamMutationType } from '@/features/dashboard/pages/teams/types/team.type'
 
 type Props = {
-  mutationFn: (payload: TeamMutationType) => Promise<TeamFormDataType>
+  mutationFn: (payload: TeamMutationType) => Promise<{ data: TeamFormDataType; message: string }>
   mutationKey: string[]
   initialValues?: Partial<TeamFormDataType>
 }
@@ -23,6 +23,8 @@ const { mutationFn, mutationKey, initialValues } = defineProps<Props>()
 const queryClient = useQueryClient()
 const router = useRouter()
 const route = useRoute()
+const toast = useToast()
+
 const id = route.params.id as string
 const isOpen = ref(true)
 
@@ -43,10 +45,14 @@ const [timezone, timezoneAttrs] = defineField('timezone')
 const { mutate, isPending } = useMutation({
   mutationKey,
   mutationFn,
-  onSuccess: () => {
+  onSuccess: (res) => {
     isOpen.value = false
     router.push('/dashboard/teams')
     queryClient.invalidateQueries({ queryKey: ['teams'] })
+    toast.success(res.message)
+  },
+  onError: (err) => {
+    toast.error(err.message)
   },
 })
 
@@ -56,7 +62,7 @@ const onSubmit = handleSubmit((formData) => {
 </script>
 <template>
   <v-form @submit.prevent="onSubmit" class="pa-4">
-    <div style="gap: 10px" class="d-flex">
+    <div class="d-flex gap-1">
       <v-text-field
         v-model="name"
         v-bind="nameAttrs"
@@ -92,7 +98,7 @@ const onSubmit = handleSubmit((formData) => {
       variant="solo"
     />
 
-    <div style="gap: 10px" class="d-flex">
+    <div class="d-flex gap-1">
       <v-text-field
         v-model="membersCount"
         v-bind="membersCountAttrs"
@@ -122,8 +128,7 @@ const onSubmit = handleSubmit((formData) => {
     />
     <div
       v-if="initialValues?.image?.url && !hasUploaded"
-      style="gap: 10px"
-      class="my-2 pa-2 justify-start align-center d-flex rounded border"
+      class="my-2 gap-1 pa-2 justify-start align-center d-flex rounded border"
     >
       <img
         :src="initialValues?.image.url"
@@ -145,7 +150,7 @@ const onSubmit = handleSubmit((formData) => {
       :label="$t('teamForm.isActive')"
     />
 
-    <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
+    <div class="d-flex gap-1 justify-end w-100 gap-2">
       <v-btn
         variant="tonal"
         color="primary"

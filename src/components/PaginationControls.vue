@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue'
+import { watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { perPageOptions } from '@/constants/perPageOptions'
 
 const router = useRouter()
 const route = useRoute()
@@ -9,7 +8,7 @@ const { pagesCount } = defineProps(['pagesCount'])
 const page = defineModel<number>('page')
 const itemsPerPage = defineModel<number>('itemsPerPage')
 const emit = defineEmits(['refetch'])
-const pages = computed(() => [...Array(pagesCount).keys()].map((i) => i + 1))
+const itemPerPageOptions = [5, 10, 15, 20]
 
 watch(page, () => {
   emit('refetch')
@@ -23,57 +22,76 @@ watch(page, () => {
 
 watch(itemsPerPage, () => {
   localStorage.setItem('itemsPerPage', String(itemsPerPage.value))
+  page.value = 1
   emit('refetch')
 })
 </script>
 
 <template>
-  <v-row class="d-flex mt-2 justify-end align-center">
-    <v-select
-      :items="perPageOptions"
-      item-title="label"
-      item-value="value"
-      v-model="itemsPerPage"
-      color="primary"
-      class="mb-2"
-      variant="plain"
-      density="compact"
-      hide-details
-      max-width="110"
-    />
-    <div class="d-flex align-center justify-center pa-4">
-      <v-btn
-        :disabled="page === 1"
-        density="comfortable"
-        icon="mdi-arrow-left"
-        variant="text"
-        rounded="lg"
-        size="x-small"
-        @click="page = (page as number) - 1"
-      >
-      </v-btn>
-      <v-btn
-        v-for="pageNumber in pages"
-        :key="pageNumber"
-        variant="flat"
-        class="ml-2"
-        size="x-small"
-        :color="page === pageNumber ? 'primary' : 'onPrimary'"
-        min-width="40"
-        @click="page = pageNumber"
-      >
-        {{ pageNumber }}
-      </v-btn>
-      <v-btn
-        :disabled="Number(page) >= pagesCount"
-        density="comfortable"
-        icon="mdi-arrow-right"
-        variant="text"
-        class="ml-2"
-        size="x-small"
-        rounded="lg"
-        @click="page = (page as number) + 1"
+  <div class="d-flex align-center gap-2 mx-1 mt-4 justify-end">
+    <div class="d-flex gap-1 align-center justify-center">
+      <span>Items per page</span>
+      <v-select
+        :items="itemPerPageOptions"
+        class="d-flex align-center justify-center"
+        variant="outlined"
+        v-model="itemsPerPage"
+        density="compact"
+        color="primary"
+        hide-details
       />
     </div>
-  </v-row>
+
+    <span>page {{ page }} of {{ pagesCount }}</span>
+    <div class="d-flex gap-2 justify-center">
+      <v-btn
+        :disabled="page === 1"
+        icon="mdi-page-first"
+        variant="text"
+        density="compact"
+        @click="page = 1"
+        color="primary"
+      />
+
+      <v-btn
+        :disabled="page === 1"
+        icon="mdi-arrow-left"
+        variant="text"
+        density="compact"
+        @click="page = (page as number) - 1"
+        color="primary"
+      />
+
+      <v-btn
+        :disabled="Number(page) >= pagesCount"
+        icon="mdi-arrow-right"
+        variant="text"
+        density="compact"
+        @click="page = (page as number) + 1"
+        color="primary"
+      />
+      <v-btn
+        :disabled="Number(page) === pagesCount"
+        color="primary"
+        variant="text"
+        icon="mdi-page-last"
+        density="compact"
+        @click="page = pagesCount"
+      />
+    </div>
+  </div>
 </template>
+
+<style scoped>
+.v-field__input {
+  min-height: 100% !important;
+  padding-top: 0 !important;
+  margin-bottom: 0;
+  padding-bottom: 0 !important;
+}
+
+.v-field {
+  padding-inline-start: 0px;
+  padding-inline-end: 4px;
+}
+</style>

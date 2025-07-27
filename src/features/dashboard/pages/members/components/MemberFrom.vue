@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { useRoute } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useForm } from 'vee-validate'
 import { toTypedSchema } from '@vee-validate/zod'
 import { useMutation, useQueryClient } from '@tanstack/vue-query'
@@ -11,10 +10,13 @@ import {
   type MemberFormDataType,
 } from '@/features/dashboard/pages/members/utils/validations/member.validations'
 import type { MemberMutationType } from '@/features/dashboard/pages/members/types/member.type'
-import { workTypes } from '../constants/workTypes'
+import { workTypes } from '@/features/dashboard/pages/members/constants/workTypes'
+import { useToast } from 'vue-toastification'
 
 type Props = {
-  mutationFn: (payload: MemberMutationType) => Promise<MemberFormDataType>
+  mutationFn: (
+    payload: MemberMutationType,
+  ) => Promise<{ data: MemberFormDataType; message: string }>
   mutationKey: string[]
   initialValues?: Partial<MemberFormDataType>
 }
@@ -23,6 +25,7 @@ const { mutationFn, mutationKey, initialValues } = defineProps<Props>()
 const queryClient = useQueryClient()
 const router = useRouter()
 const route = useRoute()
+const toast = useToast()
 const id = route.params.id as string
 const isModalOpen = ref(true)
 const isDateOfBirthOpen = ref(false)
@@ -42,10 +45,14 @@ const [dateOfBirth, dateOfBirthAttrs] = defineField('dateOfBirth')
 const { mutate, isPending } = useMutation({
   mutationKey,
   mutationFn,
-  onSuccess: () => {
+  onSuccess: (res) => {
     isModalOpen.value = false
     queryClient.invalidateQueries({ queryKey: ['members'] })
     router.push({ path: '/dashboard/members', query: route.query })
+    toast.success(res.message)
+  },
+  onError: (err) => {
+    toast.error(err.message)
   },
 })
 
@@ -55,7 +62,7 @@ const onSubmit = handleSubmit((formData) => {
 </script>
 <template>
   <v-form @submit.prevent="onSubmit" class="pa-4">
-    <div style="gap: 10px" class="d-flex">
+    <div class="d-flex gap-1">
       <v-text-field
         v-model="name"
         v-bind="nameAttrs"
@@ -96,7 +103,7 @@ const onSubmit = handleSubmit((formData) => {
       variant="solo"
     />
 
-    <div style="gap: 10px" class="d-flex">
+    <div class="d-flex gap-1">
       <v-select
         v-model="position"
         v-bind="positionAttrs"
@@ -127,7 +134,7 @@ const onSubmit = handleSubmit((formData) => {
       min-width="300"
     />
 
-    <div style="gap: 10px" class="d-flex justify-end w-100 gap-2">
+    <div class="d-flex justify-end w-100 gap-1">
       <v-btn
         density="comfortable"
         variant="tonal"

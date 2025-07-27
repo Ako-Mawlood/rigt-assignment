@@ -4,9 +4,11 @@ import { useRouter, useRoute } from 'vue-router'
 
 const search = defineModel<SearchQueryType>('search')
 const page = defineModel<number>('page')
-const emit = defineEmits(['refetch'])
+
 const router = useRouter()
 const route = useRoute()
+
+const emit = defineEmits(['refetch'])
 
 function handleSearch() {
   if ((search.value as string).trim().length) {
@@ -34,7 +36,7 @@ defineExpose({ clearSearch })
       v-model="search"
       :placeholder="$t('search')"
       variant="solo"
-      :clearable="!!search || !!$route.query.q"
+      clearable
       hide-details
       density="compact"
       prepend-inner-icon="mdi-magnify"
@@ -54,9 +56,7 @@ defineExpose({ clearSearch })
       variant="tonal"
       density="comfortable"
       rounded
-      icon
-    >
-      <v-icon>mdi-magnify</v-icon>
-    </v-btn>
+      icon="mdi-magnify"
+    />
   </v-col>
 </template>

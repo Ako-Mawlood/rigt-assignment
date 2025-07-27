@@ -1,13 +1,13 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T">
 import SearchField from '@/components/SearchField.vue'
 import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
 
 const { url, queryKey } = defineProps(['url', 'queryKey'])
-const { data, isLoading, refetch, page, pagesCount, search, searchRef, itemsPerPage } =
-  usePaginatedData(url, queryKey)
-</script>
 
+const { data, isLoading, refetch, page, pagesCount, search, searchRef, itemsPerPage } =
+  usePaginatedData<T>(url, queryKey)
+</script>
 <template>
   <p class="text-lg" v-if="isLoading">{{ $t('loading') }}</p>
   <v-data-iterator v-if="data" :items="data" class="mt-10" :items-per-page="5">

@@ -17,7 +17,7 @@
     },
     {
       "name": "Seilds",
-      "type": "Customer Support",
+      "type": "Design",
       "description": "Responsible for supporting and helping customers and make them pleased",
       "image": {
         "display_name": "2",
@@ -41,7 +41,7 @@
       },
       "location": "Sulaimani Polytechnic Area",
       "isActive": true,
-      "membersCount": 8,
+      "membersCount": 84,
       "timezone": "Sulaimani/Basra",
       "id": "3df9"
     },
@@ -56,7 +56,7 @@
       },
       "location": "Erbil Empire Street",
       "isActive": true,
-      "membersCount": 13,
+      "membersCount": 15,
       "timezone": "Erbil-Baghdad",
       "id": "2ea1"
     },
@@ -224,6 +224,51 @@
       "isActive": true,
       "membersCount": 1,
       "timezone": "GMT"
+    },
+    {
+      "id": "2e64",
+      "name": "hbljkhlkh",
+      "type": "Development",
+      "description": "lkjh",
+      "image": {
+        "display_name": "13",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753270048/bajpsdb9lnhujpmojd3q.png",
+        "format": "png"
+      },
+      "location": ";jh",
+      "isActive": true,
+      "membersCount": 88,
+      "timezone": "kjh"
+    },
+    {
+      "id": "2bdb",
+      "name": "new ",
+      "type": "Design",
+      "description": "s;ldfkj",
+      "location": "233",
+      "isActive": true,
+      "membersCount": 33,
+      "timezone": "3lasjdf"
+    },
+    {
+      "id": "8139",
+      "name": "sadf",
+      "type": "Design",
+      "description": "sdf",
+      "location": "sdf",
+      "isActive": true,
+      "membersCount": 33,
+      "timezone": "dsf"
+    },
+    {
+      "id": "340d",
+      "name": "hello",
+      "type": "Development",
+      "description": "locaiton",
+      "location": "time zone",
+      "isActive": true,
+      "membersCount": 444,
+      "timezone": "as;dlfjk"
     }
   ],
   "members": [
@@ -288,6 +333,105 @@
       "position": "Finance Manager",
       "phoneNumber": "+9647500000000",
       "dateOfBirth": "2025-07-22T21:00:00.000Z",
+      "workType": "Remote"
+    },
+    {
+      "id": "01c7",
+      "name": "Name of The developer",
+      "email": "email@mail.com",
+      "position": "Finance Manager",
+      "phoneNumber": "+9647502222222",
+      "dateOfBirth": "2025-07-01T21:00:00.000Z",
+      "workType": "On-site"
+    },
+    {
+      "id": "1745",
+      "name": "a;sldkfja",
+      "email": "member@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647503878927",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "On-site"
+    },
+    {
+      "id": "1a0b",
+      "name": "new member",
+      "email": "hell@gmail.com",
+      "position": "Project Manager",
+      "phoneNumber": "+9647592333333",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "Remote"
+    },
+    {
+      "id": "4f39",
+      "name": "asdf;l",
+      "email": "a@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+964373773373",
+      "dateOfBirth": "2025-07-06T21:00:00.000Z",
+      "workType": "Remote"
+    },
+    {
+      "id": "03ad",
+      "name": "asdf",
+      "email": "d@email.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647502222222",
+      "dateOfBirth": "2025-07-13T21:00:00.000Z",
+      "workType": "Remote"
+    },
+    {
+      "id": "591b",
+      "name": "asdflj",
+      "email": "S@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647503333333",
+      "dateOfBirth": "2025-07-07T21:00:00.000Z",
+      "workType": "On-site"
+    },
+    {
+      "name": "email",
+      "email": "asdf@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647503433343",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "Remote",
+      "id": "aa42"
+    },
+    {
+      "id": "054a",
+      "name": "slkdfj",
+      "email": "e@gmail.com",
+      "position": "Operations Manager",
+      "phoneNumber": "+9647504444444",
+      "dateOfBirth": "2025-07-06T21:00:00.000Z",
+      "workType": "Remote"
+    },
+    {
+      "id": "b085",
+      "name": "lasjkdf",
+      "email": "emai@gmai.com",
+      "position": "Operations Manager",
+      "phoneNumber": "+9647503232323",
+      "dateOfBirth": "2025-07-08T21:00:00.000Z",
+      "workType": "On-site"
+    },
+    {
+      "id": "70a1",
+      "name": "ldsfkj",
+      "email": "f@gmail.com",
+      "position": "Finance Manager",
+      "phoneNumber": "+9647502234332",
+      "dateOfBirth": "2025-07-06T21:00:00.000Z",
+      "workType": "Remote"
+    },
+    {
+      "id": "1148",
+      "name": "asdf",
+      "email": "emsil@gmail.com",
+      "position": "Chief Executive Officer",
+      "phoneNumber": "+9647502234323",
+      "dateOfBirth": "2025-07-07T21:00:00.000Z",
       "workType": "Remote"
     }
   ]

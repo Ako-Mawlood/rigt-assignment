@@ -1,10 +1,21 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T extends { id: string }">
 import SearchField from '@/components/SearchField.vue'
 import PaginationControls from '@/components/PaginationControls.vue'
 import { usePaginatedData } from '@/composables/usePaginatedData'
-import TheMembersTableFilters from '@/features/dashboard/pages/members/components/TheMembersTableFilters.vue'
+import AvatarCell from '@/components/table-cells/AvatarCell.vue'
+import FormattedCell from '@/components/table-cells/FormattedCell.vue'
+import ChipCell from '@/components/table-cells/ChipCell.vue'
+import ActionCell from '@/components/table-cells/ActionCell.vue'
+import TextCell from '@/components/table-cells/TextCell.vue'
+import type { DataTableHeader } from '@/types/TableHeaders.type'
 
-const { url, queryKey } = defineProps(['url', 'queryKey'])
+type Props = {
+  url: string
+  queryKey: string
+  headers: DataTableHeader<T>[]
+}
+
+const { url, queryKey, headers } = defineProps<Props>()
 const {
   data,
   isLoading,
@@ -17,13 +28,29 @@ const {
   search,
   searchRef,
   itemsPerPage,
-} = usePaginatedData(url, queryKey)
+  totalItems,
+} = usePaginatedData<T>(url, queryKey)
+
+const componentsMap = {
+  avatar: AvatarCell,
+  formatted: FormattedCell,
+  chip: ChipCell,
+  action: ActionCell,
+  text: TextCell,
+}
 </script>
 
 <template>
-  <p class="text-lg" v-if="isLoading">{{ $t('loading') }}</p>
-  <v-data-iterator v-if="data" :items="data" class="mt-10" :items-per-page="5">
-    <template #header>
+  <v-data-table-server
+    v-if="data"
+    :items="data"
+    class="mt-10"
+    :headers="headers"
+    :loading="isLoading"
+    :items-per-page="itemsPerPage"
+    :items-length="totalItems"
+  >
+    <template #top>
       <v-row justify="space-between" align="center">
         <SearchField
           ref="searchRef"
@@ -45,7 +72,6 @@ const {
         <slot name="header-append" />
       </v-row>
     </template>
-
     <template #no-data>
       <div v-if="$route.query.q" class="text-center py-16">
         <h1 class="text-primary mb-4">{{ $t('noResultsFound') }}</h1>
@@ -64,13 +90,19 @@ const {
       </div>
     </template>
 
-    <template #default>
-      <v-container class="pa-2" fluid>
-        <slot name="items" :items="data" />
-      </v-container>
+    <template
+      v-for="header in headers"
+      v-slot:[`item.${String(header.key)}`]="{ item }"
+      :key="header.key"
+    >
+      <component
+        :is="componentsMap[header.componentPreview]"
+        :header="header"
+        :item="item"
+        :id="item.id"
+      />
     </template>
-
-    <template #footer>
+    <template #bottom>
       <PaginationControls
         v-if="data.length"
         v-model:page="page"
@@ -79,5 +111,5 @@ const {
         :pagesCount="pagesCount"
       />
     </template>
-  </v-data-iterator>
+  </v-data-table-server>
 </template>

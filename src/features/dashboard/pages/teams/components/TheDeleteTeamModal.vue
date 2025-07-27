@@ -1,24 +1,31 @@
 <script setup lang="ts">
-import { useMutation, useQueryClient } from '@tanstack/vue-query'
 import { ref } from 'vue'
-import { deleteTeam } from '../api/teams.api'
-import { useRoute } from 'vue-router'
-import { useRouter } from 'vue-router'
+import { useMutation, useQueryClient } from '@tanstack/vue-query'
+import { deleteTeam } from '@/features/dashboard/pages/teams/api/teams.api'
+import { useRoute, useRouter } from 'vue-router'
+import { useToast } from 'vue-toastification'
 
 const isOpen = ref(true)
+
 const queryClient = useQueryClient()
 const route = useRoute()
 const router = useRouter()
+const toast = useToast()
+
 const id = route.params.id as string
 
 const { mutate, isPending } = useMutation({
   mutationKey: ['delete-team', id],
   mutationFn: () => deleteTeam(id),
 
-  onSuccess: () => {
+  onSuccess: (res) => {
     isOpen.value = false
     router.push({ path: '/dashboard/teams', query: route.query })
     queryClient.invalidateQueries({ queryKey: ['teams'] })
+    toast.success(res.message)
+  },
+  onError: (err) => {
+    toast.error(err.message)
   },
 })
 </script>

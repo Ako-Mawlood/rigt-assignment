@@ -3,21 +3,27 @@ import { useMutation, useQueryClient } from '@tanstack/vue-query'
 import { ref } from 'vue'
 import { deleteMember } from '@/features/dashboard/pages/members/api/members.api'
 import { useRoute, useRouter } from 'vue-router'
+import { useToast } from 'vue-toastification'
 
 const isOpen = ref(true)
 const queryClient = useQueryClient()
 const route = useRoute()
 const router = useRouter()
+const toast = useToast()
 const id = route.params.id as string
 
 const { mutate, isPending } = useMutation({
   mutationKey: ['delete-member', id],
   mutationFn: () => deleteMember(id),
 
-  onSuccess: () => {
+  onSuccess: (res) => {
     isOpen.value = false
     router.push({ path: '/dashboard/members', query: route.query })
     queryClient.invalidateQueries({ queryKey: ['members'] })
+    toast.success(res.message)
+  },
+  onError: (err) => {
+    toast.error(err.message)
   },
 })
 </script>

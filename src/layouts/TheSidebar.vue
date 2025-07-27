@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { sidebarTabs } from '@/constants/sidebarTabs'
+import { sidebarTabs } from '@/navigations/sidebarTabs'
 import { useSidebarController } from '@/composables/useSidebarController'
 import ChangeLang from '@/components/ChangeLang.vue'
 

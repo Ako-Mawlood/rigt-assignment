@@ -21,5 +21,13 @@
   font-family: 'kurdish-font' !important;
 }
 .v-list-item__spacer {
-  width: 12px !important;
+  width: 15px !important;
+}
+
+.gap-1 {
+  gap: 10px;
+}
+
+.gap-2 {
+  gap: 20px;
 }

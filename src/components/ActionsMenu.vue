@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { id } = defineProps<{ id: string }>()
 </script>
+
 <template>
   <v-menu>
     <template #activator="{ props }">
