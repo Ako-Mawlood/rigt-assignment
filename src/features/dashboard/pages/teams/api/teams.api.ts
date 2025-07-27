@@ -14,7 +14,7 @@ export async function deleteTeam(id: string) {
   try {
     const res = await axios.delete(`/teams/${id}`)
 
-    return { data: res.data, message: 'The team Deleted Successfully' }
+    return { data: res.data, message: `${res.data.name} team deleted Successfully` }
   } catch (err) {
     throw new Error('Could not delete the team')
   }
@@ -23,7 +23,7 @@ export async function deleteTeam(id: string) {
 export async function addTeam({ formData }: Omit<TeamMutationType, 'id'>) {
   try {
     const res = await axios.post(`/teams`, formData)
-    return { data: res.data, message: 'The team added Successfully ' }
+    return { data: res.data, message: `${res.data.name} team added Successfully` }
   } catch (err) {
     throw new Error('Could not add the team')
   }
@@ -32,7 +32,7 @@ export async function addTeam({ formData }: Omit<TeamMutationType, 'id'>) {
 export async function editTeam({ formData, id }: TeamMutationType) {
   try {
     const res = await axios.put(`/teams/${id}`, formData)
-    return { data: res.data, message: 'The team edited successfully' }
+    return { data: res.data, message: `${res.data.name} team edited successfully` }
   } catch (err) {
     throw new Error('Could not edit the team')
   }

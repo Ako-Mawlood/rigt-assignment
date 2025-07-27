@@ -211,8 +211,7 @@
       "id": "600d"
     },
     {
-      "id": "b697",
-      "name": "10",
+      "name": "10 99",
       "type": "Development",
       "description": "asas",
       "image": {
@@ -223,52 +222,8 @@
       "location": "hawler",
       "isActive": true,
       "membersCount": 1,
-      "timezone": "GMT"
-    },
-    {
-      "id": "2e64",
-      "name": "hbljkhlkh",
-      "type": "Development",
-      "description": "lkjh",
-      "image": {
-        "display_name": "13",
-        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753270048/bajpsdb9lnhujpmojd3q.png",
-        "format": "png"
-      },
-      "location": ";jh",
-      "isActive": true,
-      "membersCount": 88,
-      "timezone": "kjh"
-    },
-    {
-      "id": "2bdb",
-      "name": "new ",
-      "type": "Design",
-      "description": "s;ldfkj",
-      "location": "233",
-      "isActive": true,
-      "membersCount": 33,
-      "timezone": "3lasjdf"
-    },
-    {
-      "id": "8139",
-      "name": "sadf",
-      "type": "Design",
-      "description": "sdf",
-      "location": "sdf",
-      "isActive": true,
-      "membersCount": 33,
-      "timezone": "dsf"
-    },
-    {
-      "id": "340d",
-      "name": "hello",
-      "type": "Development",
-      "description": "locaiton",
-      "location": "time zone",
-      "isActive": true,
-      "membersCount": 444,
-      "timezone": "as;dlfjk"
+      "timezone": "GMT",
+      "id": "b697"
     }
   ],
   "members": [
@@ -433,6 +388,15 @@
       "phoneNumber": "+9647502234323",
       "dateOfBirth": "2025-07-07T21:00:00.000Z",
       "workType": "Remote"
+    },
+    {
+      "id": "4964",
+      "name": "asdf",
+      "email": "emil@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647503333434",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "On-site"
     }
   ]
 }
