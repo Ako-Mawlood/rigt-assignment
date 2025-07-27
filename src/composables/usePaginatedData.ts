@@ -1,13 +1,16 @@
 import { useRoute, useRouter } from 'vue-router'
 import { computed, ref, reactive } from 'vue'
 import SearchField from '@/components/SearchField.vue'
-import type { AxiosError } from 'axios'
 import axios from '@/plugins/axios'
 import { useQuery } from '@tanstack/vue-query'
 import type { SearchQueryType } from '@/types/SearchQuery.type'
+import { useToast } from 'vue-toastification'
 
 export function usePaginatedData<T>(url: string, queryKey: string) {
   const route = useRoute()
+  const router = useRouter()
+  const toast = useToast()
+
   const search = ref(route.query.q || '')
   const searchRef = ref<InstanceType<typeof SearchField> | null>(null)
   const page = ref(Number(route.query.page) || 1)
@@ -15,7 +18,6 @@ export function usePaginatedData<T>(url: string, queryKey: string) {
   const totalItems = ref<number>(0)
   const filters = reactive<Record<string, string>>({})
 
-  const router = useRouter()
   const pagesCount = computed(() => Math.ceil(totalItems.value / itemsPerPage.value))
 
   async function fetchData(page: number, itemsPerPage: number, q: SearchQueryType) {
@@ -32,8 +34,7 @@ export function usePaginatedData<T>(url: string, queryKey: string) {
       totalItems.value = res.data.items
       return res.data.data
     } catch (err) {
-      const error = err as AxiosError
-      console.error(error.response?.data || 'Unexpected error occurred')
+      toast.error('Error: Could not fetch the data')
     }
   }
 

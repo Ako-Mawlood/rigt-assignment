@@ -43,7 +43,7 @@ const {
 
     <v-card v-else-if="team" class="rounded-lg">
       <div class="position-relative">
-        <v-img :src="team.image.url" height="200px" cover>
+        <v-img :src="team.image?.url || '/images/default-team-image.png'" height="200px" cover>
           <v-btn
             icon
             color="surfaceOpacity"

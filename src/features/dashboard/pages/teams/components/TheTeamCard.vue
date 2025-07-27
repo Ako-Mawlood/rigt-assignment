@@ -10,7 +10,7 @@ const { team } = defineProps<{ team: TeamType }>()
     rounded="md"
     class="d-flex cursor-pointer flex-column justify-space-between"
   >
-    <v-img v-if="team.image.url" :src="team.image.url" height="150" cover />
+    <v-img :src="team.image?.url || '/images/default-team-image.png'" height="150" cover />
 
     <div class="w-100 d-flex h-2 justify-space-between align-center">
       <v-col class="py-2" cols="10">

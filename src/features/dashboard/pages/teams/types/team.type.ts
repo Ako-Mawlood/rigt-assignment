@@ -14,7 +14,7 @@ export type TeamType = {
   name: string
   type: TeamTypeOptions
   description: 'string'
-  image: {
+  image?: {
     display_name: string
     url: string
     format: string
