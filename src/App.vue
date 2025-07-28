@@ -1,19 +1,16 @@
 <script setup lang="ts">
 import { useLanguage } from '@/composables/useLanguage'
-import { watch } from 'vue'
+import { watchEffect } from 'vue'
 
-const { locale } = useLanguage()
+const { isRtl } = useLanguage()
 
-watch(
-  () => locale.value,
-  (newLocale) => {
-    if (newLocale === 'ku') {
-      document.body.classList.add('kurdish-font')
-    } else {
-      document.body.classList.remove('kurdish-font')
-    }
-  },
-)
+watchEffect(() => {
+  if (isRtl.value) {
+    document.body.classList.add('kurdish-font')
+  } else {
+    document.body.classList.remove('kurdish-font')
+  }
+})
 </script>
 
 <template>
