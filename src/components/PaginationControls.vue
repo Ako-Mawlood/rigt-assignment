@@ -4,10 +4,13 @@ import { useRoute, useRouter } from 'vue-router'
 
 const router = useRouter()
 const route = useRoute()
+
 const { pagesCount } = defineProps(['pagesCount'])
 const page = defineModel<number>('page')
 const itemsPerPage = defineModel<number>('itemsPerPage')
+
 const emit = defineEmits(['refetch'])
+
 const itemPerPageOptions = [5, 10, 15, 20]
 
 watch(page, () => {
