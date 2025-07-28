@@ -4,6 +4,7 @@ import * as directives from 'vuetify/directives'
 import type { ThemeDefinition } from 'vuetify/lib/types.mjs'
 import '@mdi/font/css/materialdesignicons.css'
 import { VFileUpload } from 'vuetify/labs/VFileUpload'
+import { i18n } from './i18n'
 
 const lightTheme: ThemeDefinition = {
   colors: {
@@ -50,10 +51,10 @@ export const vuetify = createVuetify({
     },
   },
   locale: {
-    locale: 'en',
-    fallback: 'en',
-    rtl: {
-      ku: true,
+    locale: i18n.global.locale.value,
+    messages: {
+      en: i18n.global.getLocaleMessage('en'),
+      ku: i18n.global.getLocaleMessage('ku'),
     },
   },
 })
