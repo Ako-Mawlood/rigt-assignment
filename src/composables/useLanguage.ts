@@ -1,5 +1,5 @@
 import { useI18n } from 'vue-i18n'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { vuetify } from '@/plugins/vuetify'
 
 type LangType = 'en' | 'ku'
@@ -7,6 +7,10 @@ type LangType = 'en' | 'ku'
 export function useLanguage() {
   const initialLocale = localStorage.getItem('language') as LangType | null
   const selectedLocale = ref(initialLocale || 'en')
+
+  const isRtl = computed(() => {
+    return locale.value === 'ku'
+  })
 
   const { locale } = useI18n()
 
@@ -23,5 +27,5 @@ export function useLanguage() {
     }
   })
 
-  return { locale, selectedLocale, changeLanguage }
+  return { locale, isRtl, selectedLocale, changeLanguage }
 }
