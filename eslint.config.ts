@@ -4,11 +4,6 @@ import pluginVue from 'eslint-plugin-vue'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 import unusedImports from 'eslint-plugin-unused-imports'
 
-// To allow more languages other than `ts` in `.vue` files, uncomment the following lines:
-// import { configureVueProject } from '@vue/eslint-config-typescript'
-// configureVueProject({ scriptLangs: ['ts', 'tsx'] })
-// More info at https://github.com/vuejs/eslint-config-typescript/#advanced-setup
-
 export default defineConfigWithVueTs(
   {
     name: 'app/files-to-lint',
@@ -20,6 +15,7 @@ export default defineConfigWithVueTs(
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': 'error',
       'vue/multi-word-component-names': 'off',
+      'no-console-log': 'error',
     },
   },
 

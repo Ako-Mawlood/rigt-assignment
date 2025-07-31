@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'kurdish-font';
+  src: url('/public/fonts/kurdish-font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-xs {
+  font-size: 0.75rem !important;
+}
+.text-sm {
+  font-size: 1rem !important;
+}
+.text-lg {
+  font-size: 1.125rem !important;
+}
+.text-xl {
+  font-size: 1.5rem !important;
+}
+.kurdish-font {
+  font-family: 'kurdish-font' !important;
+}
+.v-list-item__spacer {
+  width: 15px !important;
+}
+
+.gap-1 {
+  gap: 10px;
+}
+
+.gap-2 {
+  gap: 20px;
+}
