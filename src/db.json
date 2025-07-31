@@ -1,191 +1,348 @@
 {
   "teams": [
     {
-      "id": 1,
-      "name": "Engineering",
-      "type": "Tech",
-      "description": "Responsible for product development and technical infrastructure.",
-      "imageUrl": "https://images.unsplash.com/photo-1581093588401-99fcdc1f8d02?fit=crop&w=600&q=80",
-      "location": "Head Office",
-      "isActive": true,
-      "membersCount": 12,
-      "createdAt": "2023-01-10",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 2,
-      "name": "Human Resources",
-      "type": "HR",
-      "description": "Handles hiring, onboarding, and employee relations.",
-      "imageUrl": "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?fit=crop&w=600&q=80",
-      "location": "Branch Office",
-      "isActive": true,
-      "membersCount": 5,
-      "createdAt": "2023-02-15",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 3,
-      "name": "Marketing",
-      "type": "Business",
-      "description": "Manages campaigns, branding, and customer outreach.",
-      "imageUrl": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?fit=crop&w=600&q=80",
-      "location": "Head Office",
-      "isActive": true,
-      "membersCount": 8,
-      "createdAt": "2023-03-01",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 4,
-      "name": "Finance",
-      "type": "Accounting",
-      "description": "Handles budgets, expenses, and financial reporting.",
-      "imageUrl": "https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?fit=crop&w=600&q=80",
-      "location": "Branch Office",
+      "name": "Maccers",
+      "type": "Development",
+      "description": "Responsible for developing and maintaining software applications",
+      "image": {
+        "display_name": "1",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753052652/sarodndh8bow0nsbvmqx.png",
+        "format": "png"
+      },
+      "location": "Erbil 40m road",
       "isActive": false,
-      "membersCount": 4,
-      "createdAt": "2023-03-20",
-      "timezone": "Asia/Baghdad"
+      "membersCount": 15,
+      "timezone": "Erbil-Baghdad",
+      "id": "7ed7"
     },
     {
-      "id": 5,
-      "name": "Sales",
-      "type": "Business",
-      "description": "Drives revenue through client acquisition and relationship building.",
-      "imageUrl": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?fit=crop&w=600&q=80",
-      "location": "Remote",
-      "isActive": true,
-      "membersCount": 10,
-      "createdAt": "2023-04-05",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 6,
-      "name": "Customer Support",
-      "type": "Support",
-      "description": "Provides assistance to users and resolves technical issues.",
-      "imageUrl": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?fit=crop&w=600&q=80",
-      "location": "Head Office",
-      "isActive": true,
-      "membersCount": 7,
-      "createdAt": "2023-04-20",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 7,
-      "name": "Design",
-      "type": "Creative",
-      "description": "Focuses on UI/UX and visual assets across the product.",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fit=crop&w=600&q=80",
-      "location": "Remote",
+      "name": "Seilds",
+      "type": "Design",
+      "description": "Responsible for supporting and helping customers and make them pleased",
+      "image": {
+        "display_name": "2",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753052670/bljiatsutyatjr4rw5yn.png",
+        "format": "png"
+      },
+      "location": "Duhok, central bank",
       "isActive": true,
       "membersCount": 6,
-      "createdAt": "2023-05-10",
-      "timezone": "Asia/Baghdad"
+      "timezone": "Duhok/Badhdad",
+      "id": "5c96"
     },
     {
-      "id": 8,
-      "name": "Legal",
-      "type": "Compliance",
-      "description": "Ensures the company complies with regulations and legal standards.",
-      "imageUrl": "https://images.unsplash.com/photo-1588776814546-66ed95f1bc65?fit=crop&w=600&q=80",
-      "location": "Branch Office",
-      "isActive": false,
-      "membersCount": 3,
-      "createdAt": "2023-05-22",
-      "timezone": "Asia/Baghdad"
-    },
-    {
-      "id": 9,
-      "name": "Product Management",
-      "type": "Product",
-      "description": "Oversees the product lifecycle and roadmap strategy.",
-      "imageUrl": "https://images.unsplash.com/photo-1591696205602-2a1d2063c3a6?fit=crop&w=600&q=80",
-      "location": "Head Office",
+      "name": "Techsy",
+      "type": "Marketing",
+      "description": "Drives product visibility and market outreach through creative campaigns",
+      "image": {
+        "display_name": "3",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753052687/eopyedyujuqbiaffxlli.png",
+        "format": "png"
+      },
+      "location": "Sulaimani Polytechnic Area",
       "isActive": true,
-      "membersCount": 9,
-      "createdAt": "2023-06-01",
-      "timezone": "Asia/Baghdad"
+      "membersCount": 84,
+      "timezone": "Sulaimani/Basra",
+      "id": "3df9"
     },
     {
-      "id": 10,
-      "name": "Operations",
-      "type": "Logistics",
-      "description": "Manages internal processes and daily organizational logistics.",
-      "imageUrl": "https://images.unsplash.com/photo-1618221542521-558e4c7c7699?fit=crop&w=600&q=80",
-      "location": "Warehouse",
+      "name": "Inquix",
+      "type": "Sales",
+      "description": "Handles client deals and ensures revenue generation",
+      "image": {
+        "display_name": "4",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753052698/x6cjivzwkprcvyxl0tk6.png",
+        "format": "png"
+      },
+      "location": "Erbil Empire Street",
+      "isActive": true,
+      "membersCount": 15,
+      "timezone": "Erbil-Baghdad",
+      "id": "2ea1"
+    },
+    {
+      "name": "Netcore",
+      "type": "Development",
+      "description": "Full-stack team responsible for core platform development",
+      "image": {
+        "display_name": "5",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053698/b9qutskrvwnkqmi5hnfb.png",
+        "format": "png"
+      },
+      "location": "Zakho Tech Park",
+      "isActive": false,
+      "membersCount": 10,
+      "timezone": "Zakho/Basra",
+      "id": "c4f2"
+    },
+    {
+      "name": "Pixweld",
+      "type": "Design",
+      "description": "Creates user-centered designs and brand materials",
+      "image": {
+        "display_name": "6",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053710/wmqtcqggiingfiak74vh.png",
+        "format": "png"
+      },
+      "location": "Kirkuk Design District",
+      "isActive": true,
+      "membersCount": 4,
+      "timezone": "Kirkuk/Baghdad",
+      "id": "a1b3"
+    },
+    {
+      "name": "Helpify",
+      "type": "Customer Support",
+      "description": "24/7 assistance team ensuring great user experience",
+      "image": {
+        "display_name": "7",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053723/onwqjxv1k6ashspcnclp.png",
+        "format": "png"
+      },
+      "location": "Halabja Service Center",
+      "isActive": false,
+      "membersCount": 5,
+      "timezone": "Halabja/Sulaymaniyah",
+      "id": "8d94"
+    },
+    {
+      "name": "Stratix",
+      "type": "Business Strategy",
+      "description": "Planning and executing long-term business goals",
+      "image": {
+        "display_name": "8",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053737/j9cfjsvgkp7vmixxnoni.png",
+        "format": "png"
+      },
+      "location": "Erbil Tech Valley",
+      "isActive": true,
+      "membersCount": 7,
+      "timezone": "Erbil-Baghdad",
+      "id": "f713"
+    },
+    {
+      "name": "Boosters",
+      "type": "Marketing",
+      "description": "Promotes brand engagement across multiple platforms",
+      "image": {
+        "display_name": "9",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053754/kd0f3uyjd2h825tvqoim.png",
+        "format": "png"
+      },
+      "location": "Erbil Mazi Mall",
       "isActive": true,
       "membersCount": 11,
-      "createdAt": "2023-06-18",
-      "timezone": "Asia/Baghdad"
+      "timezone": "Erbil-Baghdad",
+      "id": "af22"
+    },
+    {
+      "name": "Datawise",
+      "type": "Business Strategy",
+      "description": "Analyzes market data for business insights and direction",
+      "image": {
+        "display_name": "12",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053770/qt1er3d3jwbydyg7m1f6.png",
+        "format": "png"
+      },
+      "location": "Soran Business Tower",
+      "isActive": false,
+      "membersCount": 6,
+      "timezone": "Soran/Baghdad",
+      "id": "dd51"
+    },
+    {
+      "name": "Nasters",
+      "type": "Development",
+      "description": "sdf",
+      "image": {
+        "display_name": "10",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053778/lil4b3e5laiqck8sesdk.png",
+        "format": "png"
+      },
+      "location": "asdf",
+      "isActive": true,
+      "membersCount": 33,
+      "timezone": "asdf",
+      "id": "3a85"
+    },
+    {
+      "name": "The Posemp",
+      "type": "Development",
+      "description": "afaf",
+      "image": {
+        "display_name": "13",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053804/sgbswexqam9xnk6uqnaz.png",
+        "format": "png"
+      },
+      "location": "local",
+      "isActive": true,
+      "membersCount": 55,
+      "timezone": "asdf",
+      "id": "eb7e"
+    },
+    {
+      "id": "7240",
+      "name": "Artoses",
+      "type": "Design",
+      "description": "design",
+      "image": {
+        "display_name": "15",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753053846/v0bahzawz91sooqrqpnn.png",
+        "format": "png"
+      },
+      "location": "Erbil - Kurdistan",
+      "isActive": true,
+      "membersCount": 5,
+      "timezone": "Erbil - Baghdad"
+    },
+    {
+      "name": "Postures",
+      "type": "Development",
+      "description": "asdfasdf",
+      "image": {
+        "display_name": "14",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753055405/qztp2gybez7qa9r0ediz.png",
+        "format": "png"
+      },
+      "location": "sdfasf",
+      "isActive": true,
+      "membersCount": 33,
+      "timezone": "33",
+      "id": "600d"
+    },
+    {
+      "name": "99",
+      "type": "Development",
+      "description": "asas",
+      "image": {
+        "display_name": "6",
+        "url": "http://res.cloudinary.com/dd59dvbas/image/upload/v1753090300/we2qu8k4l03mfolirtn1.png",
+        "format": "png"
+      },
+      "location": "hawler",
+      "isActive": true,
+      "membersCount": 1,
+      "timezone": "GMT",
+      "id": "b697"
     }
   ],
-  "staff": [
+  "members": [
     {
-      "id": 1,
-      "firstName": "Ako",
-      "lastName": "Mawlood",
-      "teamType": "Engineering",
-      "teamId": 1,
-      "description": "Frontend Developer specialized in React and Vue.",
-      "date": "2024-11-10",
-      "status": "active",
-      "email": "ako@example.com",
-      "phone": "+9647500000001",
-      "avatar": "https://randomuser.me/api/portraits/men/75.jpg"
+      "name": "Othman Hasan",
+      "email": "adf@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+96433388383",
+      "dateOfBirth": "2025-07-07T21:00:00.000Z",
+      "workType": "Hybrid",
+      "id": "d968"
     },
     {
-      "id": 2,
-      "firstName": "Sara",
-      "lastName": "Omar",
-      "teamType": "Creative",
-      "teamId": 2,
-      "description": "UI/UX Designer with a strong background in mobile apps.",
-      "date": "2023-07-22",
-      "status": "active",
-      "email": "sara@example.com",
-      "phone": "+9647500000002",
-      "avatar": "https://randomuser.me/api/portraits/women/65.jpg"
+      "name": "Karwan Kamaran",
+      "email": "Ako@gmail.com",
+      "position": "Marketing Specialist",
+      "phoneNumber": "+9647507981403",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "Hybrid",
+      "id": "d3f0"
     },
     {
-      "id": 3,
-      "firstName": "Rebaz",
-      "lastName": "Ahmed",
-      "teamType": "Business",
-      "teamId": 3,
-      "description": "Marketing Specialist focused on digital outreach.",
-      "date": "2024-01-12",
-      "status": "inactive",
-      "email": "rebaz@example.com",
-      "phone": "+9647500000003",
-      "avatar": "https://randomuser.me/api/portraits/men/52.jpg"
+      "id": "2123",
+      "name": "Aras",
+      "email": "asdf@gmail.com",
+      "position": "Chief Executive Officer",
+      "phoneNumber": "+9647518383833",
+      "dateOfBirth": "2025-07-01T21:00:00.000Z",
+      "workType": "On-site"
     },
     {
-      "id": 4,
-      "firstName": "Hawkar",
-      "lastName": "Karim",
-      "teamType": "Administrative",
-      "teamId": 4,
-      "description": "HR Manager handling recruitment and employee relations.",
-      "date": "2022-10-08",
-      "status": "active",
-      "email": "hawkar@example.com",
-      "phone": "+9647500000004",
-      "avatar": "https://randomuser.me/api/portraits/men/30.jpg"
+      "name": "Soran Qadr",
+      "email": "soran.qadr@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647503348921",
+      "dateOfBirth": "2025-03-12T21:00:00.000Z",
+      "workType": "Remote",
+      "id": "9c82"
     },
     {
-      "id": 5,
-      "firstName": "Dilan",
-      "lastName": "Rashid",
-      "teamType": "Engineering",
-      "teamId": 1,
-      "description": "Backend Developer working on Node.js and MongoDB.",
-      "date": "2023-09-15",
-      "status": "on leave",
-      "email": "dilan@example.com",
-      "phone": "+9647500000005",
-      "avatar": "https://randomuser.me/api/portraits/women/40.jpg"
+      "name": "Ahmad Qadr",
+      "email": "ma@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647504444444",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "Remote",
+      "id": "bece"
+    },
+    {
+      "id": "4be9",
+      "name": "Soran Qadr",
+      "email": "e@gmai.com",
+      "position": "Project Manager",
+      "phoneNumber": "+9647503333333",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "On-site"
+    },
+    {
+      "id": "1c40",
+      "name": "karaa",
+      "email": "karaa.kamaran@email.com",
+      "position": "Finance Manager",
+      "phoneNumber": "+9647500000000",
+      "dateOfBirth": "2025-07-22T21:00:00.000Z",
+      "workType": "Remote"
+    },
+    {
+      "id": "01c7",
+      "name": "Name of The developer",
+      "email": "email@mail.com",
+      "position": "Finance Manager",
+      "phoneNumber": "+9647502222222",
+      "dateOfBirth": "2025-07-01T21:00:00.000Z",
+      "workType": "On-site"
+    },
+    {
+      "id": "1745",
+      "name": "a;sldkfja",
+      "email": "member@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647503878927",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "On-site"
+    },
+    {
+      "name": "email",
+      "email": "asdf@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647503433343",
+      "dateOfBirth": "2025-06-30T21:00:00.000Z",
+      "workType": "Remote",
+      "id": "aa42"
+    },
+    {
+      "name": "Hamad Othman",
+      "email": "hamd@gmail.com",
+      "position": "Operations Manager",
+      "phoneNumber": "+9647504442389",
+      "dateOfBirth": "2025-07-06T21:00:00.000Z",
+      "workType": "Remote",
+      "id": "054a"
+    },
+    {
+      "id": "1ce6",
+      "name": "Arii Muhammad",
+      "email": "arii.maw3@gmail.com",
+      "position": "Human Resources Manager",
+      "phoneNumber": "+9647514408233",
+      "dateOfBirth": "1986-07-01T20:00:00.000Z",
+      "workType": "Flexible"
+    },
+    {
+      "id": "e6f0",
+      "name": "Karzan Sabir",
+      "email": "karzan.sabir234@gmail.com",
+      "position": "Software Developer",
+      "phoneNumber": "+9647803458739",
+      "dateOfBirth": "1965-07-12T21:00:00.000Z",
+      "workType": "Flexible"
     }
   ]
 }

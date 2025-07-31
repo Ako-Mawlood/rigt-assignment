@@ -1,16 +1,19 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue'
+import { useLanguage } from '@/composables/useLanguage'
+import { watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+
 const router = useRouter()
 const route = useRoute()
+const { isRtl } = useLanguage()
 
+const { pagesCount } = defineProps(['pagesCount'])
 const page = defineModel<number>('page')
 const itemsPerPage = defineModel<number>('itemsPerPage')
+
 const emit = defineEmits(['refetch'])
 
-const pageCount = 3
-const pages = computed(() => [...Array(pageCount).keys()].map((i) => i + 1))
-const perPageOptions = computed(() => Array.from({ length: 15 }, (_, i) => i + 1))
+const itemPerPageOptions = [5, 10, 15, 20]
 
 watch(page, () => {
   emit('refetch')
@@ -24,51 +27,74 @@ watch(page, () => {
 
 watch(itemsPerPage, () => {
   localStorage.setItem('itemsPerPage', String(itemsPerPage.value))
+  page.value = 1
   emit('refetch')
 })
 </script>
-
 <template>
-  <v-row class="d-flex justify-end align-center">
-    <v-select
-      :items="perPageOptions"
-      v-model="itemsPerPage"
-      variant="solo-filled"
-      hide-details
-      density="compact"
-      max-width="90"
-    >
-    </v-select>
-    <div class="d-flex align-center justify-center pa-4">
-      <v-btn
-        :disabled="page === 1"
-        density="comfortable"
-        icon="mdi-arrow-left"
-        variant="tonal"
-        rounded="lg"
-        @click="page = (page as number) - 1"
-      >
-      </v-btn>
-      <v-btn
-        v-for="pageNumber in pages"
-        :key="pageNumber"
-        variant="elevated"
-        class="ml-2"
-        :color="page === pageNumber ? 'primary' : 'onPrimary'"
-        min-width="40"
-        @click="page = pageNumber"
-      >
-        {{ pageNumber }}
-      </v-btn>
-      <v-btn
-        :disabled="Number(page) >= pageCount"
-        density="comfortable"
-        icon="mdi-arrow-right"
-        variant="tonal"
-        class="ml-2"
-        rounded="lg"
-        @click="page = (page as number) + 1"
+  <div class="d-flex align-center gap-2 mx-1 mt-4 justify-end">
+    <div class="d-flex gap-1 align-center justify-center">
+      <span>Items per page</span>
+      <v-select
+        :items="itemPerPageOptions"
+        class="d-flex align-center justify-center"
+        variant="outlined"
+        v-model="itemsPerPage"
+        density="compact"
+        color="primary"
+        hide-details
       />
     </div>
-  </v-row>
+
+    <span>page {{ page }} of {{ pagesCount }}</span>
+    <div class="d-flex gap-2 justify-center">
+      <!-- First Page -->
+      <v-btn
+        :disabled="page === 1"
+        variant="text"
+        density="compact"
+        @click="page = 1"
+        color="primary"
+        icon
+      >
+        <v-icon>{{ isRtl ? 'mdi-page-last' : 'mdi-page-first' }}</v-icon>
+      </v-btn>
+
+      <!-- Previous Page -->
+      <v-btn
+        :disabled="page === 1"
+        variant="text"
+        density="compact"
+        @click="page = (page as number) - 1"
+        color="primary"
+        icon
+      >
+        <v-icon>{{ isRtl ? 'mdi-arrow-right' : 'mdi-arrow-left' }}</v-icon>
+      </v-btn>
+
+      <!-- Next Page -->
+      <v-btn
+        :disabled="Number(page) >= pagesCount"
+        variant="text"
+        density="compact"
+        @click="page = (page as number) + 1"
+        color="primary"
+        icon
+      >
+        <v-icon>{{ isRtl ? 'mdi-arrow-left' : 'mdi-arrow-right' }}</v-icon>
+      </v-btn>
+
+      <!-- Last Page -->
+      <v-btn
+        :disabled="Number(page) === pagesCount"
+        color="primary"
+        variant="text"
+        density="compact"
+        @click="page = pagesCount"
+        icon
+      >
+        <v-icon>{{ isRtl ? 'mdi-page-first' : 'mdi-page-last' }}</v-icon>
+      </v-btn>
+    </div>
+  </div>
 </template>

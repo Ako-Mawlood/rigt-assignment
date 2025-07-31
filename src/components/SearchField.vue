@@ -1,49 +1,62 @@
 <script setup lang="ts">
 import type { SearchQueryType } from '@/types/SearchQuery.type'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
+
 const search = defineModel<SearchQueryType>('search')
 const page = defineModel<number>('page')
-const emit = defineEmits(['refetch'])
+
 const router = useRouter()
+const route = useRoute()
+
+const emit = defineEmits(['refetch'])
+
 function handleSearch() {
-  if (search.value?.length) {
+  if ((search.value as string).trim().length) {
     page.value = 1
     router.push({
-      query: { q: search.value },
+      query: { ...route.query, q: search.value },
     })
     emit('refetch')
   }
 }
+
 function clearSearch() {
-  router.push('/dashboard/teams')
+  const currentQuery = { ...route.query }
+  delete currentQuery.q
+  router.push({ query: currentQuery })
   search.value = ''
   emit('refetch')
 }
+
 defineExpose({ clearSearch })
 </script>
 <template>
-  <v-card className="bg-white">
-    <v-toolbar flat elevation="0" className="px-2 no-shadow">
-      <v-text-field
-        v-model="search"
-        :placeholder="$t('search')"
-        prepend-inner-icon="mdi-magnify"
-        variant="solo"
-        clearable
-        persistent-clear
-        hide-details
-        density="compact"
-        @keyup.enter="handleSearch"
-        @click:clear="clearSearch"
-        max-width="400"
-      />
-      <v-btn
-        @click.prevent="handleSearch"
-        :text="$t('search')"
-        color="primary"
-        class="ml-4"
-        variant="elevated"
-      />
-    </v-toolbar>
-  </v-card>
+  <v-col cols="12" :sm="7" :md="5" class="d-flex align-center">
+    <v-text-field
+      v-model="search"
+      :placeholder="$t('search')"
+      variant="solo"
+      clearable
+      hide-details
+      density="compact"
+      prepend-inner-icon="mdi-magnify"
+      @keyup.enter="handleSearch"
+      @click:clear="clearSearch"
+    >
+      <template #append-inner>
+        <slot name="search-append-inner" />
+      </template>
+    </v-text-field>
+
+    <v-btn
+      @click="handleSearch"
+      color="primary"
+      prepend-icon="mdi-magnify"
+      class="mx-4"
+      variant="tonal"
+      density="comfortable"
+      rounded
+      icon="mdi-magnify"
+    />
+  </v-col>
 </template>

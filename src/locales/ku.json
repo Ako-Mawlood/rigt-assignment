@@ -1,10 +1,67 @@
 {
   "rigt": "ڕایت ئۆفیشەل",
   "teams": "تیمەکان",
-  "staffs": "کارمەندەکان",
+  "members": "کارمەندەکان",
   "search": "گەڕان",
   "view team": "بینینی تیم",
   "delete": "سڕینەوە",
+  "edit": "دەستکاری",
+  "cancel": "هەڵوەشاندنەوە",
+  "submit": "ناردن",
+  "done": "تەواو",
+  "filters": "پاڵاوتنەکان",
+  "filter": "پاڵاوتن",
+  "reset": "سڕینەوە",
+  "resetAll": "سڕینەوەی پاڵاوتنەکان",
+  "noResultsFound": "هیچ ئەنجامێک نەدۆزرایەوە",
+  "clearSearch": "سڕینەوەی گەڕان",
+  "loading": "چاوەروانبە...",
+  "close": "داخستن",
+  "open": "کردنەوە",
 
-  "edit": "دەستکاری"
+  "input": {
+    "clear": "پاککردنەوە"
+  },
+
+  "deleteTeam": {
+    "deleteTitle": "سڕینەوەی تیم",
+    "deleteConfirmation": "دڵنیایت کە دەتەوێت ئەم تیمە بسڕیتەوە؟ ئەم کردارە ڕەوشتییە و ناتوانرێت وەربگرێتەوە."
+  },
+
+  "teamForm": {
+    "createNewTeam": "دروست کردنی تیم",
+    "loadError": "نەتوانرا تیمەکە وەرگیڕێ",
+    "editTeam": "دەستکاریکردنی تیم",
+    "newTeam": "تیمی نوێ",
+    "name": "ناوی تیم",
+    "type": "جۆری تیم",
+    "location": "شوێن",
+    "description": "وەسف",
+    "uploadImage": "وێنە",
+    "isActive": "ئایا چالاکە؟",
+    "membersCount": "ژمارەی ئەندامەکان",
+    "timezone": "کاتی ناوچە",
+    "submit": "دروستکردنی تیم",
+    "noTeamsCreatedYet": "هیچ تیمێک نیە"
+  },
+  "memberForm": {
+    "editMember": "دەستکاریکردنی ئەندام",
+    "newMember": "ئەندامی نوێ",
+    "addNewMember": "زیادکردنی ئەندامی نوێ",
+    "name": "ناوی ئەندام",
+    "email": "ئیمەیڵی ئەندام",
+    "phoneNumber": "ژمارەی تەلەفۆن",
+    "workType": "جۆری کار",
+    "position": "بەش",
+    "dateOfBirth": "ڕۆژی لەدایکبوون"
+  },
+
+  "memberFilter": {
+    "filterByWorkType": "پاڵاوتن بە جۆری کار",
+    "filterByPosition": "پاڵاوتن بە پۆست"
+  },
+  "deleteMember": {
+    "deleteTitle": "سڕینەوەی ئەندام",
+    "deleteConfirmation": "دڵنیایت کە دەتەوێت ئەم ئەندامە بسڕیتەوە؟ ئەم کردارە ڕەوشتییە و ناتوانرێت وەربگرێتەوە."
+  }
 }

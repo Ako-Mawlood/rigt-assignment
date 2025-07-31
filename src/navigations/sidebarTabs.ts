@@ -7,8 +7,8 @@ export const sidebarTabs = [
   },
   {
     id: 2,
-    title: 'staffs',
-    path: '/dashboard/staffs',
+    title: 'members',
+    path: '/dashboard/members',
     icon: 'mdi-briefcase-account',
   },
-]
+] as const

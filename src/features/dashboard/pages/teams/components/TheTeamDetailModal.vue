@@ -8,7 +8,7 @@ import type { TeamType } from '@/features/dashboard/pages/teams/types/team.type'
 const route = useRoute()
 const isOpen = ref(true)
 
-const id = Number(route.params.id)
+const id = route.params.id as string
 
 const {
   data: team,
@@ -24,23 +24,31 @@ const {
   <v-dialog v-model="isOpen" max-width="600" persistent style="z-index: 1000">
     <v-card v-if="isLoading" class="text-center py-8 rounded-lg">
       <v-progress-circular indeterminate color="primary" size="64" />
-      <div class="text-h6 mt-4">Loading team details...</div>
+
+      <p class="text-sm">{{ $t('loading') }}</p>
     </v-card>
 
-    <v-card v-else-if="isError" class="text-center d-flex flex-column align-center py-8 rounded-lg">
-      <v-icon color="error" size="64">mdi-alert-circle</v-icon>
-      <h3 class="mt-4 text-error">Oops... we could not fetch the data</h3>
-      <v-btn class="mt-4" color="error" to="/dashboard/teams" text="Close" />
-    </v-card>
+    <template v-else-if="isError">
+      <div class="text-center d-flex flex-column align-center py-8 rounded-lg">
+        <v-icon color="error" size="64" icon="mdi-alert-circle" />
+        <h3 class="mt-4 text-error">{{ $t('loadError') }}</h3>
+        <v-btn
+          class="mt-4"
+          color="error"
+          @click="$router.push({ path: '/dashboard/teams', query: $route.query })"
+          :text="$t('close')"
+        />
+      </div>
+    </template>
 
     <v-card v-else-if="team" class="rounded-lg">
       <div class="position-relative">
-        <v-img :src="team.imageUrl" height="200px" cover>
+        <v-img :src="team.image?.url || '/images/default-team-image.png'" height="200px" cover>
           <v-btn
             icon
-            color="white"
+            color="surfaceOpacity"
             class="position-absolute top-0 right-0 ma-4"
-            to="/dashboard/teams"
+            @click="$router.push({ path: '/dashboard/teams', query: $route.query })"
           >
             <v-icon icon="mdi-close" />
           </v-btn>
@@ -49,13 +57,13 @@ const {
 
       <v-card-title class="px-4">
         <div class="d-flex align-center flex-wrap">
-          <span class="text-h5 font-weight-bold">{{ team.name }}</span>
-          <v-chip class="ml-3" color="primary" size="small" density="compact">
+          <span class="font-weight-bold">{{ team.name }}</span>
+          <v-chip class="mx-3 font-weight-bold" color="primary" size="small" density="compact">
             {{ team.type }}
           </v-chip>
           <v-chip
             :color="team.isActive ? 'green' : 'red'"
-            class="font-weight-bold mx-2"
+            class="font-weight-bold"
             size="small"
             density="compact"
           >
@@ -67,13 +75,13 @@ const {
       <v-card-subtitle class="px-4 pb-0 d-flex align-center mt-1">
         <v-icon icon="mdi-map-marker" size="small" class="mr-1" />
         <span>{{ team.location }}</span>
-        <v-divider vertical class="mx-3"></v-divider>
+        <v-divider vertical class="mx-3" />
         <v-icon icon="mdi-clock" size="small" class="mr-1" />
         <span>{{ team.timezone }}</span>
       </v-card-subtitle>
 
       <v-card-text class="px-4 pt-3">
-        <p class="text-body-1 mb-4">{{ team.description }}</p>
+        <p class="text-sm mb-4">{{ team.description }}</p>
 
         <v-divider class="my-3" />
 
@@ -83,14 +91,6 @@ const {
               <v-icon icon="mdi-account-group" size="small" class="mr-2" />
               <span>Members: </span>
               <span class="text-black ml-1">{{ team.membersCount }}</span>
-            </div>
-          </v-col>
-
-          <v-col cols="12" md="6">
-            <div class="d-flex align-center text-medium-emphasis">
-              <v-icon icon="mdi-calendar" size="small" class="mr-2" />
-              <span>Created: </span>
-              <span class="text-black ml-1">{{ team.createdAt }}</span>
             </div>
           </v-col>
         </div>
