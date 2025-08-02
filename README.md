@@ -22,6 +22,13 @@ then
 bun install
 ```
 
+then
+
+```sh
+ bunx json-server --watch src/db.json --port 8000
+
+```
+
 and
 
 ```sh
